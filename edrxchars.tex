@@ -1,0 +1,322 @@
+% Usage:
+% \input edrxchars.tex
+% Used by: (find-LATEXgrep "grep --color -nH -e edrxchars.tex *.tex")
+%
+% Complements: (find-LATEX "edrxaccents.tex")
+% Supersedes:  (find-LATEX "istanbuldefs.tex")
+% Conversion:  (find-fline "~/LUA/texcatcodes.lua")
+%
+% See:     (find-LATEX "2015logicandcats.tex")
+%          (find-istfile "quotes.tex")
+%
+% «.chars»	(to "chars")
+% «.ttchars»	(to "ttchars")
+
+
+% «chars» (to ".chars")
+% Define the behaviour of special chars in normal text.
+%
+% A macro to convert a single-char line into a catcode/def thing:
+% (setq last-kbd-macro (kbd "C-SPC <right> M-w C-y C-a \\ catcode` <right> =13 SPC \\ def <right> {}\n C-a <down>"))
+%
+% Note that \phi and \varphi are inverted... =(
+%
+\catcode`°=13 \def°{^\circ}
+\catcode`¹=13 \def¹{^{-1}}
+\catcode`²=13 \def²{^2}
+\catcode`³=13 \def³{^3}
+%\catcode`¼=13 \def¼{}
+%\catcode`½=13 \def½{}
+%\catcode`¾=13 \def¾{}
+\catcode`±=13 \def±{\pm}
+\catcode`÷=13 \def÷{\div}
+\catcode`·=13 \def·{\cdot}
+\catcode`×=13 \def×{\times}
+\catcode`¬=13 \def¬{\neg}
+\catcode`§=13 \def§{\S}
+\catcode`¡=13 \def¡{\text{\textexclamdown}}
+
+\catcode`Δ=13 \defΔ{\Delta}
+\catcode`Γ=13 \defΓ{\Gamma}
+\catcode`Θ=13 \defΘ{\Theta}
+\catcode`Π=13 \defΠ{\Pi}
+\catcode`Λ=13 \defΛ{\Lambda}
+\catcode`Σ=13 \defΣ{\Sigma}
+\catcode`Φ=13 \defΦ{\Phi}
+\catcode`Ψ=13 \defΨ{\Psi}
+\catcode`Ω=13 \defΩ{\Omega}
+
+\catcode`α=13 \defα{\alpha}
+\catcode`β=13 \defβ{\beta}
+\catcode`γ=13 \defγ{\gamma}
+\catcode`δ=13 \defδ{\delta}
+\catcode`ε=13 \defε{\epsilon}
+\catcode`ζ=13 \defζ{\zeta}
+\catcode`η=13 \defη{\eta}
+\catcode`θ=13 \defθ{\theta}
+\catcode`ι=13 \defι{\iota}
+\catcode`κ=13 \defκ{\kappa}
+\catcode`λ=13 \defλ{\lambda}
+\catcode`μ=13 \defμ{\mu}
+\catcode`ν=13 \defν{\nu}
+\catcode`ξ=13 \defξ{\xi}
+\catcode`π=13 \defπ{\pi}
+\catcode`ρ=13 \defρ{\rho}
+\catcode`σ=13 \defσ{\sigma}
+\catcode`τ=13 \defτ{\tau}
+\catcode`φ=13 \defφ{\phi}
+\catcode`ϕ=13 \defϕ{\origphi}
+\catcode`χ=13 \defχ{\chi}
+\catcode`ψ=13 \defψ{\psi}
+\catcode`ω=13 \defω{\omega}
+
+\catcode`•=13 \def•{\bullet}
+\catcode`ℓ=13 \defℓ{\ell}
+\catcode`⅋=13 \def⅋{\bindnasrepma}
+\catcode`←=13 \def←{\ot}
+\catcode`↑=13 \def↑{\upto}
+\catcode`→=13 \def→{\to}
+\catcode`↓=13 \def↓{\dnto}
+\catcode`↔=13 \def↔{\bij}
+\catcode`↕=13 \def↕{\updownarrow}
+\catcode`↖=13 \def↖{\nwarrow}
+\catcode`↗=13 \def↗{\nearrow}
+\catcode`↘=13 \def↘{\searrow}
+\catcode`↙=13 \def↙{\swarrow}
+\catcode`↣=13 \def↣{\epito}
+\catcode`↣=13 \def↣{\twoheadrightarrow}
+\catcode`↤=13 \def↤{\mapsfrom}
+\catcode`↦=13 \def↦{\mapsto}
+\catcode`⇐=13 \def⇐{\Leftarrow}
+\catcode`⇒=13 \def⇒{\funto}
+\catcode`⇔=13 \def⇔{\Leftrightarrow}
+\catcode`∀=13 \def∀{\forall}
+\catcode`∂=13 \def∂{\partial}
+\catcode`∃=13 \def∃{\exists}
+\catcode`∅=13 \def∅{\emptyset}
+\catcode`∇=13 \def∇{\nabla}
+\catcode`∈=13 \def∈{\in}
+\catcode`∖=13 \def∖{\backslash}
+\catcode`∘=13 \def∘{\circ}
+\catcode`√=13 \def√{\sqrt}
+\catcode`∞=13 \def∞{\infty}
+\catcode`∧=13 \def∧{\land}
+\catcode`∨=13 \def∨{\lor}
+\catcode`∩=13 \def∩{\cap}
+\catcode`∩=13 \def∩{\cap}
+\catcode`∪=13 \def∪{\cup}
+\catcode`≃=13 \def≃{\simeq}
+\catcode`≅=13 \def≅{\cong}
+\catcode`≠=13 \def≠{\neq}
+\catcode`≤=13 \def≤{\le}
+\catcode`≥=13 \def≥{\ge}
+\catcode`⊂=13 \def⊂{\subset}
+\catcode`⊃=13 \def⊃{\supset}
+\catcode`⊆=13 \def⊆{\subseteq}
+\catcode`⊇=13 \def⊇{\supseteq}
+\catcode`⊓=13 \def⊓{\sqcap}
+\catcode`⊔=13 \def⊔{\sqcup}
+\catcode`⊢=13 \def⊢{\vdash}
+\catcode`⊣=13 \def⊣{\dashv}
+\catcode`⊤=13 \def⊤{\top}
+\catcode`⊥=13 \def⊥{\bot}
+\catcode`⊨=13 \def⊨{\vDash}
+\catcode`⋀=13 \def⋀{\bigwedge}
+\catcode`⋁=13 \def⋁{\bigvee}
+\catcode`⋂=13 \def⋂{\bigcap}
+\catcode`⋃=13 \def⋃{\bigcup}
+\catcode`♭=13 \def♭{\flat}
+\catcode`♮=13 \def♮{\natural}
+\catcode`♯=13 \def♯{\sharp}
+\catcode`⟦=13 \def⟦{\llbracket}
+\catcode`⟧=13 \def⟧{\rrbracket}
+\catcode`⠆=13 \def⠆{{:}}
+
+\catcode`∼=13 \def∼{\sim}
+\catcode`≈=13 \def≈{\approx}
+\catcode`≡=13 \def≡{\equiv}
+
+\catcode`⋄=13 \def⋄{\lozenge}
+\catcode`⋅=13 \def⋅{\Box}
+\catcode`◻=13 \def◻{\Box}
+\catcode`□=13 \def□{\Box}
+\catcode`…=13 \def…{\ldots}
+\catcode`∫=13 \def∫{\int}
+\catcode`⇀=13 \def⇀{\rightharpoonup}
+\catcode`〈=13 \def〈{\langle}
+\catcode`〉=13 \def〉{\rangle}
+\catcode`⊙=13 \def⊙{\odot}
+\catcode`⊖=13 \def⊖{\ominus}
+\catcode`⊕=13 \def⊕{\oplus}
+\catcode`⊘=13 \def⊘{\oslash}
+\catcode`⊗=13 \def⊗{\otimes}
+\catcode`▁=13 \def▁{\_}
+
+\catcode`𝐛=13 \def𝐛{\mathbf}
+\catcode`𝐢=13 \def𝐢{\textsl}
+\catcode`𝐫=13 \def𝐫{\mathrm}
+\catcode`𝐭=13 \def𝐭{\text}
+\catcode`𝐬=13 \def𝐬{\mathsf}
+
+\catcode`𝓐=13 \def𝓐{\mathcal{A}}
+\catcode`𝓑=13 \def𝓑{\mathcal{B}}
+\catcode`𝓒=13 \def𝓒{\mathcal{C}}
+\catcode`𝓓=13 \def𝓓{\mathcal{D}}
+\catcode`𝓔=13 \def𝓔{\mathcal{E}}
+\catcode`𝓕=13 \def𝓕{\mathcal{F}}
+\catcode`𝓖=13 \def𝓖{\mathcal{G}}
+\catcode`𝓗=13 \def𝓗{\mathcal{H}}
+\catcode`𝓘=13 \def𝓘{\mathcal{I}}
+\catcode`𝓙=13 \def𝓙{\mathcal{J}}
+\catcode`𝓚=13 \def𝓚{\mathcal{K}}
+\catcode`𝓛=13 \def𝓛{\mathcal{L}}
+\catcode`𝓜=13 \def𝓜{\mathcal{M}}
+\catcode`𝓝=13 \def𝓝{\mathcal{N}}
+\catcode`𝓞=13 \def𝓞{\mathcal{O}}
+\catcode`𝓟=13 \def𝓟{\mathcal{P}}
+\catcode`𝓠=13 \def𝓠{\mathcal{Q}}
+\catcode`𝓡=13 \def𝓡{\mathcal{R}}
+\catcode`𝓢=13 \def𝓢{\mathcal{S}}
+\catcode`𝓣=13 \def𝓣{\mathcal{T}}
+\catcode`𝓤=13 \def𝓤{\mathcal{U}}
+\catcode`𝓥=13 \def𝓥{\mathcal{V}}
+\catcode`𝓦=13 \def𝓦{\mathcal{W}}
+\catcode`𝓧=13 \def𝓧{\mathcal{X}}
+\catcode`𝓨=13 \def𝓨{\mathcal{Y}}
+\catcode`𝓩=13 \def𝓩{\mathcal{Z}}
+
+\catcode`𝐀=13 \def𝐀{\catA}
+\catcode`𝐁=13 \def𝐁{\catB}
+\catcode`𝐂=13 \def𝐂{\catC}
+\catcode`𝐃=13 \def𝐃{\catD}
+\catcode`𝐄=13 \def𝐄{\catE}
+\catcode`𝐅=13 \def𝐅{\catF}
+\catcode`𝐆=13 \def𝐆{\catG}
+\catcode`𝐇=13 \def𝐇{\catH}
+\catcode`𝐈=13 \def𝐈{\catI}
+\catcode`𝐉=13 \def𝐉{\catJ}
+\catcode`𝐊=13 \def𝐊{\catK}
+\catcode`𝐋=13 \def𝐋{\catL}
+\catcode`𝐌=13 \def𝐌{\catM}
+\catcode`𝐍=13 \def𝐍{\catN}
+\catcode`𝐎=13 \def𝐎{\catO}
+\catcode`𝐏=13 \def𝐏{\catP}
+\catcode`𝐐=13 \def𝐐{\catQ}
+\catcode`𝐑=13 \def𝐑{\catR}
+\catcode`𝐒=13 \def𝐒{\catS}
+\catcode`𝐓=13 \def𝐓{\catT}
+\catcode`𝐔=13 \def𝐔{\catU}
+\catcode`𝐕=13 \def𝐕{\catV}
+\catcode`𝐖=13 \def𝐖{\catW}
+\catcode`𝐗=13 \def𝐗{\catX}
+\catcode`𝐘=13 \def𝐘{\catY}
+\catcode`𝐙=13 \def𝐙{\catZ}
+
+%\catcode`=13    \def{\ensuremath{\bullet}}
+%\catcode`\^^O=13 \def{\ensuremath{\bullet}}
+
+%\catcode`=13 \def{\mathscr}
+
+%\catcode`=13 \def{\mathbf}
+%\catcode`=13 \def{\par\noindent}
+%\catcode`=13 \def{\par}
+%\catcode`=13 \def{\mathcal}
+%\catcode`ö=13 \defö{o}
+
+
+
+% «ttchars» (to ".ttchars")
+% Define the behaviour of special chars in verbatim environments.
+% See: (find-es "tex" "ttchars")
+% Update with: (find-ist "all.lua" "ttchars")
+% or with this macro, that converts a catcode/def line into a def/ttchar line:
+% (setq last-kbd-macro (kbd "C-a 13*<delete> SPC 7*<right> \\ ttchar{$ C-e <left> $} C-a <down>"))
+%
+\def\ttchar#1{\setbox0=\hbox{\texttt{a}}\leavevmode\hbox to \wd0{\hss#1\hss}}
+\def\basicttchars{
+  % \def{\ttchar{$\bullet$}}
+  \def¡{\ttchar{$\text{\textexclamdown}$}}
+  \def§{\ttchar{$\S$}}
+  \def¬{\ttchar{$\neg$}}
+  \def°{\ttchar{${}^\circ$}}
+  \def±{\ttchar{$\pm$}}
+  \def·{\ttchar{$\cdot$}}
+  \def¹{\ttchar{${}^{-1}$}}
+  \def×{\ttchar{$\times$}}
+  \defö{\ttchar{o}}
+  \def÷{\ttchar{$\div$}}
+  \defΔ{\ttchar{$\Delta$}}
+  \defΘ{\ttchar{$\Theta$}}
+  \defΩ{\ttchar{$\Omega$}}
+  \defα{\ttchar{$\alpha$}}
+  \defβ{\ttchar{$\beta$}}
+  \defγ{\ttchar{$\gamma$}}
+  \defδ{\ttchar{$\delta$}}
+  \defε{\ttchar{$\epsilon$}}
+  \defζ{\ttchar{$\zeta$}}
+  \defη{\ttchar{$\eta$}}
+  \defθ{\ttchar{$\theta$}}
+  \defι{\ttchar{$\iota$}}
+  \defλ{\ttchar{$\lambda$}}
+  \defπ{\ttchar{$\pi$}}
+  \defω{\ttchar{$\omega$}}
+  \def•{\ttchar{$\bullet$}}
+  \def←{\ttchar{$\ot$}}
+  \def↑{\ttchar{$\upto$}}
+  \def→{\ttchar{$\to$}}
+  \def↓{\ttchar{$\dnto$}}
+  \def↔{\ttchar{$\bij$}}
+  \def↕{\ttchar{$\updownarrow$}}
+  \def↖{\ttchar{$\nwarrow$}}
+  \def↗{\ttchar{$\nearrow$}}
+  \def↘{\ttchar{$\searrow$}}
+  \def↙{\ttchar{$\swarrow$}}
+  \def↣{\ttchar{$\epito$}}
+  \def↣{\ttchar{$\twoheadrightarrow$}}
+  \def↦{\ttchar{$\mapsto$}}
+  \def⇒{\ttchar{$\funto$}}
+  \def∀{\ttchar{$\forall$}}
+  \def∃{\ttchar{$\exists$}}
+  \def∈{\ttchar{$\in$}}
+  \def∘{\ttchar{$\circ$}}
+  \def∞{\ttchar{$\infty$}}
+  \def∧{\ttchar{$\&$}}         % override
+  \def∧{\ttchar{$\land$}}
+  \def∨{\ttchar{$\lor$}}
+  \def∩{\ttchar{$\cap$}}
+  \def∪{\ttchar{$\cup$}}
+  \def∼{\ttchar{$\sim$}}
+  \def≃{\ttchar{$\simeq$}}
+  \def≅{\ttchar{$\cong$}}
+  \def≈{\ttchar{$\approx$}}
+  \def≠{\ttchar{$\neq$}}
+  \def≡{\ttchar{$\equiv$}}
+  \def≤{\ttchar{$\le$}}
+  \def≥{\ttchar{$\ge$}}
+  \def⊂{\ttchar{$\subset$}}
+  \def⊃{\ttchar{$\supset$}}
+  \def⊆{\ttchar{$\subseteq$}}
+  \def⊇{\ttchar{$\supseteq$}}
+  \def⊢{\ttchar{$\vdash$}}
+  \def⊣{\ttchar{$\dashv$}}
+  \def⊤{\ttchar{$\top$}}
+  \def⊥{\ttchar{$\bot$}}
+  \def⋄{\ttchar{$\lozenge$}}
+  \def⋅{\ttchar{$\Box$}}
+  \def◻{\ttchar{$\Box$}}
+  \def♭{\ttchar{$\flat$}}
+  \def♯{\ttchar{$\sharp$}}
+  \def…{\ttchar{$...$}}
+}
+
+
+
+
+
+
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-anchor-format: "«%s»"
+% End:
+

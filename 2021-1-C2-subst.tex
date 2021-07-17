@@ -1,0 +1,1197 @@
+% (find-LATEX "2021-1-C2-subst.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C2-subst.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C2-subst.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-subst.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-subst.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C2-subst.tex"))
+% (defun o () (interactive) (find-LATEX "2021-1-C2-subst.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C2-subst"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C2-subst.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2021-1-C2-subst")
+% (find-pdf-page   "~/LATEX/2021-1-C2-subst.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-subst.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-subst.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C2-subst.pdf")
+%   file:///home/edrx/LATEX/2021-1-C2-subst.pdf
+%               file:///tmp/2021-1-C2-subst.pdf
+%           file:///tmp/pen/2021-1-C2-subst.pdf
+% http://angg.twu.net/LATEX/2021-1-C2-subst.pdf
+% (find-LATEX "2019.mk")
+% (find-CN-aula-links "2021-1-C2-subst" "2" "c2m211subst" "c2s")
+%
+% Video:
+% (find-ssr-links "c2m211subst" "2021-1-C2-subst")
+% (code-video     "c2m211substvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-subst.mp4")
+% (find-c2m211substvideo "0:00")
+
+% «.defs»			(to "defs")
+% «.title»			(to "title")
+% «.corrigir-igual»		(to "corrigir-igual")
+% «.subst-box»			(to "subst-box")
+% «.subst-zoomed»		(to "subst-zoomed")
+% «.testar-hipoteses»		(to "testar-hipoteses")
+% «.regra-da-cadeia»		(to "regra-da-cadeia")
+% «.regra-da-cadeia-2»		(to "regra-da-cadeia-2")
+% «.acrescentamos»		(to "acrescentamos")
+% «.dicas-subst»		(to "dicas-subst")
+% «.igual-depois-de-subst»	(to "igual-depois-de-subst")
+% «.dicas-subst-2»		(to "dicas-subst-2")
+% «.dicas-subst-3»		(to "dicas-subst-3")
+% «.dicas-subst-5»		(to "dicas-subst-5")
+% «.dicas-subst-6»		(to "dicas-subst-6")
+% «.exercicios-1-e-2»		(to "exercicios-1-e-2")
+% «.somatorios»			(to "somatorios")
+% «.soma-PG»			(to "soma-PG")
+% «.somatorio-expansao»		(to "somatorio-expansao")
+% «.somatorios-exercs»		(to "somatorios-exercs")
+% «.para-todo-e-existe»		(to "para-todo-e-existe")
+% «.visualizando-fas-e-exs»	(to "visualizando-fas-e-exs")
+% «.visualizando-fas-e-exs-2»	(to "visualizando-fas-e-exs-2")
+% «.visualizando-fas-e-exs-3»	(to "visualizando-fas-e-exs-3")
+%
+% «.djvuize»			(to "djvuize")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx15}               % (find-LATEX "edrx15.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrxchars.tex              % (find-LATEX "edrxchars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%
+%\usepackage[backend=biber,
+%   style=alphabetic]{biblatex}            % (find-es "tex" "biber")
+%\addbibresource{catsem-slides.bib}        % (find-LATEX "catsem-slides.bib")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+%\catcode`\^^J=10
+%\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+% %L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+% %L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+% \pu
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx15.sty" "colors-2019")
+\long\def\ColorRed   #1{{\color{Red1}#1}}
+\long\def\ColorViolet#1{{\color{MagentaVioletLight}#1}}
+\long\def\ColorViolet#1{{\color{Violet!50!black}#1}}
+\long\def\ColorGreen #1{{\color{SpringDarkHard}#1}}
+\long\def\ColorGreen #1{{\color{SpringGreenDark}#1}}
+\long\def\ColorGreen #1{{\color{SpringGreen4}#1}}
+\long\def\ColorGray  #1{{\color{GrayLight}#1}}
+\long\def\ColorGray  #1{{\color{black!30!white}#1}}
+\long\def\ColorBrown #1{{\color{Brown}#1}}
+\long\def\ColorBrown #1{{\color{brown}#1}}
+\long\def\ColorOrange#1{{\color{orange}#1}}
+
+\long\def\ColorShort #1{{\color{SpringGreen4}#1}}
+\long\def\ColorLong  #1{{\color{Red1}#1}}
+
+\def\frown{\ensuremath{{=}{(}}}
+\def\True {\mathbf{V}}
+\def\False{\mathbf{F}}
+\def\D    {\displaystyle}
+
+\def\V    {\mathbf{V}}
+\def\F    {\mathbf{F}}
+\def\ph#1 {\phantom{#1}}
+\def\ph   {\phantom}
+
+\def\drafturl{http://angg.twu.net/LATEX/2021-1-C2.pdf}
+\def\drafturl{http://angg.twu.net/2021.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+
+% «subst-defs»  (to ".subst-defs")
+% (find-LATEX "2020-1-C2-TFC2-2.tex" "subst-defs")
+
+\def\pfo#1{\ensuremath{\mathsf{[#1]}}}
+\def\veq{\rotatebox{90}{$=$}}
+\def\Rd{\ColorRed}
+\def\D{\displaystyle}
+
+% Difference with mathstrut
+\def\Difms #1#2#3{\left. \mathstrut #3 \right|_{s=#1}^{s=#2}}
+\def\Difmu #1#2#3{\left. \mathstrut #3 \right|_{u=#1}^{u=#2}}
+\def\Difmx #1#2#3{\left. \mathstrut #3 \right|_{x=#1}^{x=#2}}
+\def\Difmth#1#2#3{\left. \mathstrut #3 \right|_{θ=#1}^{θ=#2}}
+
+\def\iequationbox#1#2{
+    \left(
+    \begin{array}{rcl}
+    \D{ #1 } &=& \D{ #2 } \\
+    \end{array}
+    \right)
+  }
+\def\isubstbox#1#2#3#4#5{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \end{array}
+    \right)
+  }}
+\def\isubstboxT#1#2#3#4#5#6{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \multicolumn{3}{l}{\text{#6}} \\%[5pt]
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \end{array}
+    \right)
+  }}
+\def\isubstboxTT#1#2#3#4#5#6#7{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \multicolumn{3}{l}{\text{#6}} \\%[5pt]
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \multicolumn{3}{l}{\text{#7}} \\%[5pt]
+    \end{array}
+    \right)
+  }}
+
+% Definição das fórmulas para integração por substituição.
+% Algumas são pmatrizes 3x3 usando isubstbox.
+
+\def\TFCtwo{
+  \iequationbox {\Intx{a}{b}{F'(x)}}
+                {\Difmx{a}{b}{F(x)}}
+}
+\def\TFCtwoI{
+  \iequationbox {\intx{F'(x)}}
+                {F(x)}
+}
+
+\def\Sone{
+  \isubstbox
+    {\Difmx{a}{b}{f(g(x))}}  {\Intx{a}{b}{f'(g(x))g'(x)}}
+    {\ph{mmm}}
+    {\Difmu{g(a)}{g(b)}{f(u)}} {\Intu{g(a)}{g(b)}{f'(u)}}
+}
+\def\SoneI{
+  \isubstbox
+    {f(g(x))} {\intx{f'(g(x))g'(x)}}
+    {\ph{m}}
+    {f(u)}    {\intu{f'(u)}}
+}
+
+\def\Stwo{
+  \isubstboxT
+    {\Difmx{a}{b}{F(g(x))}}   {\Intx{a}{b}{f(g(x))g'(x)}}
+    {\ph{mmm}}
+    {\Difmu{g(a)}{g(b)}{F(u)}}  {\Intu{g(a)}{g(b)}{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+}
+\def\StwoI{
+  \isubstboxT
+    {F(g(x))}  {\intx{f(g(x))g'(x)}}
+    {\ph{m}}
+    {F(u)}     {\intu{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+}
+\def\StwoI{
+  \isubstboxTT
+    {F(g(x))}  {\intx{f(g(x))g'(x)}}
+    {\ph{m}}
+    {F(u)}     {\intu{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+    {Obs: $u=g(x)$.}
+}
+
+\def\Sthree{
+  \iequationbox {\Intx{a}{b}{f(g(x))g'(x)}}
+                {\Intu{g(a)}{g(b)}{f(u)}}
+}
+\def\SthreeI{
+  \iequationbox {\intx{f(g(x))g'(x)}}
+                {\intu{f(u)}
+                 \qquad [u=g(x)]
+                }
+  % [u=g(x)]
+}
+
+\def\Sthree{
+  \pmat{
+    \D \Intx{a}{b}{f(g(x))g'(x)} \\
+    \veq \\
+    \D \Intu{g(a)}{g(b)}{f(u)}
+  }}
+
+\def\SthreeI{
+  \pmat{
+    \D \intx{f(g(x))g'(x)} \\
+       \veq \\
+    \D \intu{f(u)} \\
+    \text{Obs: $u=g(x)$.} \\
+  }}
+
+
+
+\def\Subst#1{\bmat{#1}}
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m211substp 1 "title")
+% (c2m211subst    "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2021.1}
+
+\bsk
+
+% Aula nn: ponha o título aqui
+
+Aula 1: O operador de substituição `$[:=]$'
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://angg.twu.net/2021.1-C2.html}
+
+\end{center}
+
+\newpage
+
+% «corrigir-igual»  (to ".corrigir-igual")
+% (c2m211substp 2 "corrigir-igual")
+% (c2m211substa   "corrigir-igual")
+
+{\bf ``Eu só vou corrigir os sinais de igual''}
+
+Uma dos slogans que eu mais vou repetir quando estiver tirando dúvidas
+ou corrigindo exercícios de vocês é ``\ColorRed{Eu só vou corrigir os
+  sinais de igual}''.
+
+Em Cálculo 1 muita gente se enrola com a fórmula da regra da cadeia --
+porque se enrola na hora de substituir os `$f$'s, `$g$'s, `$f'$'s e
+`$g'$'s nela... uma das fórmulas mais importantes, e mais difíceis de
+acreditar, de Cálculo 2 é a da \ColorRed{Integração por Substituição},
+que é BEEEEM pior do que a Regra da Cadeia. O \ColorRed{operador de
+  substituição}, `$[:=]$', que não tem \ColorRed{nada a ver} com a
+Integração por Substituição, vai nos ajudar bastante a aplicar essas
+fórmulas passo a passo sem a gente se perder.
+
+\newpage
+
+% «subst-box»  (to ".subst-box")
+% (c2m211substp 3 "subst-box")
+% (c2m211substa   "subst-box")
+
+Nós vamos reescrever isto:
+
+\msk
+
+\begin{center}
+\fbox{\begin{minipage}{7cm}
+Se substituirmos $x$ por $10a+b$
+
+e $y$ por $3c+4d$ em:
+%
+$$x^y + 2x$$
+%
+obtemos:
+%
+$$(10a+b)^{3c+4d} + 2(10a+b)$$
+\end{minipage}}
+\end{center}
+
+\msk
+
+deste jeito:
+
+$$(x^y+2x) \bmat{x:=10a+b \\ y:=3c+4d} = (10a+b)^{3c+4d} + 2(10a+b)$$
+
+\newpage
+
+% «subst-zoomed»  (to ".subst-zoomed")
+% (c2m211substp 4 "subst-zoomed")
+% (c2m211substa   "subst-zoomed")
+
+Repare: em
+%
+$$\scalebox{2.0}{$
+  \begin{array}{l}
+  (x^y+2x) \bmat{x:=10a+b \\ y:=3c+4d} \\[12pt]
+  = (10a+b)^{3c+4d} + 2(10a+b)
+  \end{array}
+  $}
+$$
+
+a notação é
+%
+$$\text{(expressão original)[substituições] = (expressão nova)}$$
+
+e cada uma das substituições é da forma:
+%
+$$\text{variável} := \text{expressão}$$
+
+
+\newpage
+
+% «testar-hipoteses»  (to ".testar-hipoteses")
+% (c2m211substp 5 "testar-hipoteses")
+% (c2m211substa   "testar-hipoteses")
+
+A notação `$[:=]$' vai ser bem prática pra gente fazer hipóteses e
+testá-las. Por exemplo, digamos que queremos testar se 2 e 3 são
+soluções da equação $x+2=5$...
+%
+$$\begin{array}{rcl}
+  (x+2=5)[x:=2] &=& (2+2=5) \\
+                &=& (4=5) \\
+                &=& \False \\[5pt]
+  (x+2=5)[x:=3] &=& (3+2=5) \\
+                &=& (5=5) \\
+                &=& \True \\[5pt]
+  \end{array}
+$$
+
+Note que os `$=$'s das expressões entre parênteses são
+\ColorRed{comparações} -- como a operação `\texttt{==}' do \texttt{C}
+-- e retornam ou $\True$ (``Verdadeiro'') ou $\False$ (``Falso'').
+
+\newpage
+
+% «regra-da-cadeia»  (to ".regra-da-cadeia")
+% (c2m211substp 6 "regra-da-cadeia")
+% (c2m211substa   "regra-da-cadeia")
+
+{\bf Exemplo: regra da cadeia}
+
+Primeiro vou inventar uma abreviação para a regra da cadeia.
+
+\ColorRed{Obs: vários dos truques que vamos usar agora são inspirados
+  em notações de Teoria da Computação e não são padrão!!! Não use eles
+  em outros cursos!!! {\bf Os professores podem não entender e podem
+    ficar putos!!!}}
+
+\msk
+
+O `$:=$' abaixo é uma \ColorRed{atribuição}, como o `\texttt{=}' do
+\texttt{C}. A linha abaixo quer dizer: ``\ColorRed{a partir de agora}
+o valor de $[RC]$ vai ser a \ColorRed{expressão} entre os parênteses
+grandes.
+%
+$$[RC] \;\; := \;\; \left( \ddx f(g(x)) = f'(g(x))g'(x) \right)$$
+
+\newpage
+
+% «regra-da-cadeia-2»  (to ".regra-da-cadeia-2")
+% (c2m211substp 7 "regra-da-cadeia-2")
+% (c2m211substa   "regra-da-cadeia-2")
+
+{\bf Exemplo: regra da cadeia (2)}
+
+Continuando...
+%
+$$[RC] \;\; := \;\; \left( \ddx f(g(x)) = f'(g(x))g'(x) \right)$$
+
+Então:
+%
+$$\begin{array}{rcl}
+  [RC] \bmat{f := \sen} &=&
+     \left( \ddx \sen(g(x)) = \sen'(g(x))g'(x) \right) \\[5pt]
+  [RC] \bmat{f(u) := \sen u} &=&
+     \left( \ddx \sen(g(x)) = \sen'(g(x))g'(x) \right) \\[5pt]
+  [RC] \bmat{f(u) := u^4 \\ f'(u) := 4u^3 } &=&
+     \left( \ddx (g(x))^4 = 4(g(x))^3g'(x) \right) \\
+  \end{array}
+$$
+
+Repare que agora estamos substituindo o `$f$' \ColorRed{como se ele
+  fosse uma variável} -- mas precisamos de gambiarras novas. No caso
+do meio escrevemos $f(u) := \sen u$ ao invés de $f := \sen$, e...
+
+
+\newpage
+
+% «acrescentamos»  (to ".acrescentamos")
+% (c2m211substp 8 "acrescentamos")
+% (c2m211substa   "acrescentamos")
+
+$$[RC] \;\; := \;\; \left( \ddx f(g(x)) = f'(g(x))g'(x) \right)$$
+
+$$\begin{array}{rcl}
+  [RC] \bmat{f := \sen} &=&
+     \left( \ddx \sen(g(x)) = \sen'(g(x))g'(x) \right) \\[5pt]
+  [RC] \bmat{f(u) := \sen u} &=&
+     \left( \ddx \sen(g(x)) = \sen'(g(x))g'(x) \right) \\[5pt]
+  [RC] \bmat{f(u) := u^4 \\ f'(u) := 4u^3 } &=&
+     \left( \ddx (g(x))^4 = 4(g(x))^3g'(x) \right) \\
+  \end{array}
+$$
+%
+...e no caso de baixo acrescentamos uma linha ``$f'(u) := 4u^3$'' na
+lista de substituições. Essa linha é uma \ColorRed{consequencia} da
+linha ``$f(u) := u^4$'', e ela está lá só pra ajudar a gente a se
+enrolar menos.
+
+
+\newpage
+
+% «dicas-subst»  (to ".dicas-subst")
+% (c2m211substp 9 "dicas-subst")
+% (c2m211substa   "dicas-subst")
+% (c2m202isp 6 "dicas-subst")
+% (c2m202isa   "dicas-subst")
+
+% «igual-depois-de-subst»  (to ".igual-depois-de-subst")
+% (c2m211substp 9 "igual-depois-de-subst")
+% (c2m211substa   "igual-depois-de-subst")
+
+{\bf Uma regra estranha: o `$=$' depois da operação `$[:=]$'}
+
+\ssk
+
+Nas duas substituições abaixo a primeira está certa
+
+e a segunda está errada:
+%
+$$\begin{array}{rll}
+  (x + 2 = 5) \, [x:=4] &=& (4 + 2 = 5) \\
+  (x + 2 = 5) \, [x:=4] &=& (6 = 5) \\
+  \end{array}
+$$
+
+O `$=$' depois de uma substituição tem um significado especial: a
+pronúncia dele é ``o resultado da substituição à esquerda é a
+expressão à direita'', e na segunda linha a gente fez mais coisas além
+de só substituir todos os `$x$'s por `4's.
+
+Note que isto aqui está certo:
+%
+$$\begin{array}{rll}
+  (x + 2 = 5) \, [x:=4] &=& (4 + 2 = 5) \\
+                        &=& (6 = 5) \\
+  \end{array}
+$$
+
+\newpage
+
+{\bf A explicação pra regra estranha}
+
+Vocês já devem ter visto em Prog que vocês podem definir as funções de
+vocês, e nas matérias de Matemática vocês também vão aprender a fazer
+definições de vários tipos. A operação `$[:=]$' que nós estamos usando
+é uma operação \ColorRed{que eu defini} baseada em operações parecidas
+com ela que aparecem em muitos lugares, mas que geralmente ficam meio
+disfarçadas --- e que ficam disfarçadas de ``óbvias''.
+
+Então, esse nosso `$[:=]$' é uma operação nova, e a gente tem que
+definir todas as regras de como ela vai funcionar. Tem vários detalhes
+em que a gente poderia definir se ela iria funcionar de um jeito ou de
+outro, e eu \ColorRed{escolhi} que ela vai funcionar do jeito que vai
+nos ajudar mais a fazer contas fáceis de entender...
+
+\ColorRed{...e eu vi que a restricão do slide anterior faz com que as
+  pessoas (incluindo eu!) se enrolem muito menos nas contas.}
+
+\newpage
+
+{\bf A explicação pra regra estranha (2)}
+
+No primeiro vídeo deste semestre eu mostrei que o SymPy, que e' um
+programa de computação simbólica, tem uma espécie de `$[:=]$', que ele
+chama de `{\tt subs}'. A definição do {\tt subs} no SymPy é MUITO mais
+difícil do que a gente vai precisar aqui em Cálculo 2 --- ela envolve
+recursão, ela tem um truque pra lidar do jeito ``certo'' com variáveis
+livres, e ela tem um truque complicadíssimo --- que o Bruno Macedo,
+que foi monitor no semestre passado, descobriu e me mostrou --- pra
+substituir coisas que não são só variáveis.
+
+
+\newpage
+
+% «dicas-subst-2»  (to ".dicas-subst-2")
+% (c2m211substp 10 "dicas-subst-2")
+% (c2m211substa    "dicas-subst-2")
+
+{\bf Outro exemplo de uso errado do `$[:=]$'}
+
+Aqui a primeira substituição está certa e a segunda está errada...
+
+Na segunda um `$u$' foi substituido por `$e^{2x}$'!!!!!!!! $\;\;\;=\!($
+%
+$$\scalebox{0.9}{$
+  \begin{array}{rcl}
+  \SthreeI [g(x):=e^{2x}] & = &
+     \pmat{ \D \intx{f(2^{2x})(2e^{2x})} \\
+            \veq \\
+            \D \intu{f(u)} \\
+            \text{Obs: $u=e^{2x}$.} \\
+          }
+  \\
+  \\
+  \SthreeI [g(x):=e^{2x}] & = &
+     \pmat{ \D \intx{f(2^{2x})(2e^{2x})} \\
+            \veq \\
+            \D \intu{f(\ColorRed{e^{2x}})} \\
+            \text{Obs: $u=e^{2x}$.} \\
+          }
+  \end{array}
+  $}
+$$
+
+
+
+\newpage
+
+% «dicas-subst-3»  (to ".dicas-subst-3")
+% (c2m211substp 11 "dicas-subst-3")
+% (c2m211substa    "dicas-subst-3")
+
+{\bf Mais dicas sobre a operação `$[:=]$' (3)}
+
+No primeiro PDF do curso nós usamos a operação `$[:=]$' para testar
+EDOs como $f'(x)=x^4$ em vários ``valores'' de $f$, pra tentar
+resolver EDOs por chutar-e-testar... Em
+%
+$$(f'(x)=x^4)\, [f(x):=x^2] = (2x = x^4)$$
+%
+na expressão original, $(f'(x)=x^4)$, o símbolo $f$ faz o papel de uma
+função qualquer, ou de uma variável cujo valor é uma função; a
+substiuição ``$[f(x):=x^2]$'' diz como substituir a $f$ original,
+genérica, pela $f$ que tem esta {\sl definição} aqui: $f(x)=x^2$... e
+nós já temos bastante prática com obter consequências de uma definição
+como $f(x)=x^2$. Por exemplo:
+%
+$$\begin{array}{rclcrcl}
+  f(200)  &=& 200^2            && f'(x) &=& 2x \\
+  f(3u+4) &=& (3u+4)^2         && f'(3u+4) &=& 2(3u+4) \\
+  f(42x^3+99) &=& (42x^3+99)^2 && f'(42x^3+99) &=& 2(42x^3+99) \\
+  \end{array}
+$$
+
+
+\newpage
+
+{\bf Mais dicas sobre a operação `$[:=]$' (4)}
+
+No slide anterior eu disse que
+%
+$$f(x)=x^2$$
+
+tem estas consequências, entre muitas outras:
+%
+$$\begin{array}{rclcrcl}
+  f(200)  &=& 200^2            && f'(x) &=& 2x \\
+  f(3u+4) &=& (3u+4)^2         && f'(3u+4) &=& 2(3u+4) \\
+  f(42x^3+99) &=& (42x^3+99)^2 && f'(42x^3+99) &=& 2(42x^3+99) \\
+  \end{array}
+$$
+
+Vamos entender isso em português.
+
+Se $f(x)=x^2$ é verdade para todo $x$
+
+então $f'(x)=2x$ para todo $x$.
+
+Obs: aqui você também pode pensar graficamente!
+
+A curva $y=f(x)$ é uma parábola, e $f'(x)$
+
+é o coeficiente angular dela.
+
+\newpage
+
+% «dicas-subst-5»  (to ".dicas-subst-5")
+% (c2m211substp 13 "dicas-subst-5")
+% (c2m211substa    "dicas-subst-5")
+
+{\bf Mais dicas sobre a operação `$[:=]$' (5)}
+
+Continuando: temos
+%
+$$\begin{array}{rcl}
+   f(x) &=& x^2 \quad \text{e} \\
+  f'(x) &=& 2x, \\
+  \end{array}
+$$
+
+então no ponto $x=200$ temos $f(x)=200^2$ e $f'(x)=2·200$,
+
+e em $x=3u+4$ temos
+%
+$$\begin{array}{rcl}
+   f(3u+4) &=& (3u+4)^2 \quad \text{e}\\
+  f'(3u+4) &=& 2(3u+4). \\
+  \end{array}
+$$
+
+para todo $u∈\R$.
+
+Muitos livros fingem que isso é óbvio ---
+
+eles dizem só ``podemos substituir $x$ por $3u+4$'' ---
+
+mas eu acho que não é óbvio não... quando eu estava na
+
+graduação eu tive que pensar vários dias pra entender isso.
+
+\newpage
+
+% «dicas-subst-6»  (to ".dicas-subst-6")
+% (c2m211substp 14 "dicas-subst-6")
+% (c2m211substa    "dicas-subst-6")
+
+{\bf Mais dicas sobre a operação `$[:=]$' (6)}
+
+A operação `$[:=]$' nos permite fazer a substituição
+
+de $x$ por $3u+4$ ``mecanicamente'' ---
+
+ou melhor: ``sintaticamente'' ---
+
+sem a gente ter que pensar muito em {\sl porque} essa
+
+substituição faz sentido. Por exemplo:
+
+
+\def\prcl#1{ \left( \begin{array}{rcl} #1 \end{array} \right) }
+
+$$\begin{array}{c}
+  \prcl{
+    f(x) &=& x^2 \quad \text{e} \\
+    f'(x) &=& 2x
+    }
+  \;
+  [x:=3u+4]
+  \\[10pt]
+  = \prcl{
+       f(3u+4) &=& (3u+4)^2 \quad \text{e}\\
+       f'(3u+4) &=& 2(3u+4) \\
+    }
+  \end{array}
+$$
+
+O fato é que \ColorRed{variáveis são feitas para serem substituídas}.
+
+Um modo da gente se acostumar com como isso funciona é
+
+testando \ColorRed{muitos} casos particulares --- como no exercício
+
+do próximo slide.
+
+\newpage
+
+% «exercicios-1-e-2»  (to ".exercicios-1-e-2")
+% (c2m211substp 15 "exercicios-1-e-2")
+% (c2m211substa    "exercicios-1-e-2")
+
+{\bf Exercício 1}
+
+Digamos que $f(x)=x^2$...
+
+a) e que $u=0$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+b) e que $u=1$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+c) e que $u=10$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+\msk
+
+{\bf Exercício 2}
+
+Digamos que $f(x)=42$...
+
+a) e que $u=0$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+b) e que $u=1$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+c) e que $u=10$. Neste caso é verdade que $f(3u+4) = (3u+4)^2$?
+
+\bsk
+
+Note que nós não testamos todos os valores possíveis de $u$,
+
+nem todos as funções `$f$' possíveis, e nem usamos
+
+a notação `$[:=]$'...
+
+\newpage
+
+A operação `$[:=]$' nos permite fazer substituições como
+
+`$[x:=10x+2]$', que parecem bem estranhas à primeira vista.
+
+\bsk
+
+{\bf Exercício 3.}
+
+Calcule o resultado das substituições abaixo --- ou seja,
+
+calcule o que você deve pôr no lugar do `$\ColorRed{?}$' em cada item.
+
+\bsk
+
+(Ooops -- ainda não terminei de escrever esse exercício)
+
+\newpage
+
+%  ____                        _             _           
+% / ___|  ___  _ __ ___   __ _| |_ ___  _ __(_) ___  ___ 
+% \___ \ / _ \| '_ ` _ \ / _` | __/ _ \| '__| |/ _ \/ __|
+%  ___) | (_) | | | | | | (_| | || (_) | |  | | (_) \__ \
+% |____/ \___/|_| |_| |_|\__,_|\__\___/|_|  |_|\___/|___/
+%                                                        
+% «somatorios»  (to ".somatorios")
+% (c2m211substp 19 "somatorios")
+% (c2m211substa    "somatorios")
+
+{\bf Somatórios}
+
+Antigamente somatórios eram matéria de ensino médio,
+
+mas hoje em dia muita gente chega em Cálculo 2 sem
+
+nunca ter visto somatórios...
+
+\ssk
+
+As fórmulas para somas de progressões aritméticas (PAs) e para
+
+somas de progressões geométricas (PGs) usam `$\sum$'s. Veja:
+
+\bsk
+
+{\footnotesize
+
+% https://pt.wikipedia.org/wiki/Progress%C3%A3o_aritm%C3%A9tica
+\url{https://pt.wikipedia.org/wiki/Progress\%C3\%A3o_aritm\%C3\%A9tica}
+
+% https://pt.wikipedia.org/wiki/Progress%C3%A3o_geom%C3%A9trica
+\url{https://pt.wikipedia.org/wiki/Progress\%C3\%A3o_geom\%C3\%A9trica}
+
+% https://pt.wikipedia.org/wiki/Somat%C3%B3rio
+\url{https://pt.wikipedia.org/wiki/Somat\%C3\%B3rio}
+
+}
+
+\newpage
+
+% «soma-PG»  (to ".soma-PG")
+% (c2m211substp 13 "soma-PG")
+% (c2m211substa    "soma-PG")
+
+Relembre:
+%
+$$\scalebox{0.9}{$
+  \begin{array}{rcl}
+         \sum_{k=2}^{5} 10^k &=& 10^2 + 10^3 + 10^4 + 10^5 \\
+                             &=& 100 + 1000 + 10000 + 100000 \\
+                             &=& 111100 \\
+  (1-10) \sum_{k=2}^{5} 10^k &=& (1-10)(100 + 1000 + 10000 + 100000) \\
+                             &=& (100 + 1000 + 10000 + 100000) \\
+                              && - (1000 + 10000 + 100000 + 1000000) \\
+                             &=& 100 - 1000000 \\
+                             &=& 10^2 - 10^{5+1} \\
+         \sum_{k=2}^{5} 10^k &=& \D \frac{10^2 - 10^{5+1}}{1-10} \\
+  \end{array}
+  $}
+$$
+
+A fórmula geral é: \quad
+%
+$\D \sum_{k=a}^{b} x^k
+ \; = \;
+ \D \frac{x^a - x^{b+1}}{1 - x}
+ \; = \;
+ \D \frac{x^{b+1}- x^a}{x - 1}
+$
+\;.
+
+\newpage
+
+% «somatorio-expansao»  (to ".somatorio-expansao")
+
+Repare que dá pra calcular o somatório do início
+
+do slide anterior em mais passos usando o `$[:=]$'...
+
+$$\scalebox{0.9}{$
+  \begin{array}{rcl}
+         \sum_{k=2}^{5} 10^k &=& 10^2 + 10^3 + 10^4 + 10^5 \\[5pt]
+         \sum_{k=2}^{5} 10^k &=& (10^k) [k:=2] \\
+                             &+& (10^k) [k:=3] \\
+                             &+& (10^k) [k:=4] \\
+                             &+& (10^k) [k:=5] \\[2.5pt]
+                             &=& 10^2 + 10^3 + 10^4 + 10^5 \\
+  \end{array}
+  $}
+$$
+
+Às vezes a gente vai usar esse passo intermediário com `$[:=]$'s
+
+pra não se enrolar em somatórios de expressões complicadas...
+
+Por exemplo aqui, e nas páginas seguintes:
+
+\ssk
+
+% (c2m211somas1p 12 "partition-sum")
+% (c2m211somas1a    "partition-sum")
+% http://angg.twu.net/LATEX/2021-1-C2-somas-1.pdf#page=12
+{\footnotesize
+
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-1.pdf\#page=12}
+
+}
+
+
+\newpage
+
+% «somatorios-exercs»  (to ".somatorios-exercs")
+% (c2m211substp 22 "somatorios-exercs")
+% (c2m211substa    "somatorios-exercs")
+
+{\bf Exercícios básicos de somatórios}
+
+\msk
+
+Expanda e calcule:
+
+a) $\sum_{n=1}^5 (2n-1)$
+
+\ssk
+
+b) $\sum_{n=0}^4 (2n+1)$
+
+\msk
+
+c) $\sum_{k=0}^2 (k+1)$
+
+\msk
+
+d) $\sum_{k=0}^2 k + 1$
+
+\msk
+
+e) $\left( \sum_{k=0}^2 k \right) +1$
+
+\msk
+
+Expanda e calcule/simplifique até onde der:
+
+f) $\sum_{n=1}^5 (2k-1)$
+
+\ssk
+
+g) $\sum_{k=1}^5 (2n-1)$
+
+\ssk
+
+h) $\sum_{n=4}^6 f(10n)$
+
+\ssk
+
+i) $\sum_{n=4}^6 f(10n)$, onde $f(x) = 10x$
+
+
+\newpage
+
+% «para-todo-e-existe»  (to ".para-todo-e-existe")
+% (c2m211substp 23 "para-todo-e-existe")
+% (c2m211substa    "para-todo-e-existe")
+% (lodp 5 "dm-layer-1")
+% (loda   "dm-layer-1")
+
+{\bf ``Para todo'' ($∀$) e ``existe'' ($∃$)}
+
+\msk
+
+$\scalebox{0.9}{$
+  \begin{array}{rcl}
+  (∀a∈\{2,3,5\}.a^2<10) &=& (a^2<10)[a:=2] \;∧ \\&&
+                            (a^2<10)[a:=3] \;∧ \\&&
+                            (a^2<10)[a:=5] \\
+                        &=& (2^2<10) ∧
+                            (3^2<10) ∧
+                            (4^2<10) \\
+                        &=& (4<10) ∧
+                            (9<10) ∧
+                            (16<10) \\
+                        &=& \V ∧ \V ∧ \F \\
+                        &=& \F \\[5pt]
+  (∃a∈\{2,3,5\}.a^2<10) &=& (a^2<10)[a:=2] \;∨ \\&&
+                            (a^2<10)[a:=3] \;∨ \\&&
+                            (a^2<10)[a:=5] \\
+                        &=& (2^2<10) ∨
+                            (3^2<10) ∨
+                            (4^2<10) \\
+                        &=& (4<10) ∨
+                            (9<10) ∨
+                            (16<10) \\
+                        &=& \V ∨ \V ∨ \F \\
+                        &=& \V \\
+  \end{array}
+ $}
+$
+
+\newpage
+
+% «visualizando-fas-e-exs»  (to ".visualizando-fas-e-exs")
+% (c2m211substp 24 "visualizando-fas-e-exs")
+% (c2m211substa    "visualizando-fas-e-exs")
+
+{\bf Visualizando `$∀$'s e `$∃$'s}
+
+Repare...
+
+\msk
+
+{
+\def\V    {\mathbf{V}}
+\def\F    {\mathbf{F}}
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\F    {\mbc{\mathbf{F}}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.2≤x)            &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mm}x<4)     &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.2≤x<4)          &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmm}x=6) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.2≤x<4∨     x=6) &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\msk
+
+...que dá pra {\sl visualizar} o que a expressão
+
+$(∀x∈\{1,\ldots,7\}.2≤x<4∨x=6)$
+
+``quer dizer'' visualizando os `$\V$'s e `$\F$'s
+
+de expressões mais simples, e combinando
+
+esses ``mapas'' de `$\V$'s e `$\F$'s.
+
+\newpage
+
+% «visualizando-fas-e-exs-2»  (to ".visualizando-fas-e-exs-2")
+% (c2m211substp 20 "visualizando-fas-e-exs-2")
+% (c2m211substa    "visualizando-fas-e-exs-2")
+
+{\bf Visualizando `$∀$'s e `$∃$'s (2)}
+
+Às vezes vai valer a pena \ColorRed{definir proposições}
+
+como nomes mais curtos, como $F(x) = (2≤x)$,
+
+$G(x) = (x≤4)$, $H(x) = (x=6)$... Aí:
+
+\msk
+
+{
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\F    {\mbc{\mathbf{F}}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.F(x))              &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmii}G(x))    &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x))         &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmmmi}H(x)) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x)∨ H(x))   &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\msk
+
+É isso que a gente vai fazer pra analisar expressões
+
+como $(∀x∈A.▁▁▁)$ e $(∃x∈A.▁▁▁)$ e descobrir quais
+
+são verdadeiras e quais não --- \ColorRed{mesmo quando o conjunto
+
+$A$ é um conjunto infinito}, como $\N$, $\R$ ou $[2,10]$.
+
+
+\newpage
+
+% «visualizando-fas-e-exs-3»  (to ".visualizando-fas-e-exs-3")
+% (c2m211substp 26 "visualizando-fas-e-exs-3")
+% (c2m211substa    "visualizando-fas-e-exs-3")
+
+{\bf Visualizando `$∀$'s e `$∃$'s (3)}
+
+Às vezes vamos ter que fazer figuras com muitos `$\V$'s e `$\F$'s,
+
+e vai ser mais fácil visualizar onde estão os `$\V$'s e `$\F$'s
+
+delas se usarmos sinais mais fáceis de distinguir...
+
+\msk
+
+Por exemplo, se $•:=\V$ e $∘:=\F$ então:
+
+\msk
+
+{
+\def\mbc#1{\hbox to 8pt{\hss$#1$\hss}}
+\def\V    {\mbc{\mathbf{V}}}
+\def\V    {\mbc{•}}
+\def\F    {\mbc{∘}}
+
+$\scalebox{0.9}{$
+  \begin{array}{lcl}
+  (∀x∈\{1,\ldots,7\}.F(x))              &=& \F∧\V∧\V∧\V∧\V∧\V∧\V \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmii}G(x))    &=& \V∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x))         &=& \F∧\V∧\V∧\F∧\F∧\F∧\F \\
+  (∀x∈\{1,\ldots,7\}.\ph{mmmmmmmi}H(x)) &=& \F∧\F∧\F∧\F∧\F∧\V∧\F \\
+  (∀x∈\{1,\ldots,7\}.F(x)∧G(x)∨ H(x))   &=& \F∧\V∧\V∧\F∧\F∧\V∧\F \\
+  \end{array}
+  $}
+$
+}
+
+\bsk
+
+Você \ColorRed{pode} fazer as suas próprias definições ---
+
+como o meu ``$•:=\V$ e $∘:=\F$'' acima --- mas elas
+
+têm que ficar claras o suficiente... lembre desta dica:
+
+% (c2m211somas1dp 7 "dica-7")
+% (c2m211somas1da   "dica-7")
+% http://angg.twu.net/LATEX/2021-1-C2-somas-1-dicas.pdf#page=7
+
+\ssk
+
+{\footnotesize
+
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-1-dicas.pdf\#page=7}
+
+}
+
+
+\newpage
+
+
+
+
+
+
+% http://angg.twu.net/LATEX/2020-2-C2-int-subst.pdf#page=7
+% http://angg.twu.net/LATEX/2020-2-C2-subst-trig.pdf#page=9
+% http://angg.twu.net/LATEX/2020-2-C2-subst-trig.pdf#page=14
+
+
+%\printbibliography
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2021.1-C2/")
+# (find-fline "~/LATEX/2021-1-C2/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2021.1-C2/
+       cp -fv        $1.pdf ~/LATEX/2021-1-C2/
+       cat <<%%%
+% (find-latexscan-links "C2" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2021-1-C2-subst veryclean
+make -f 2019.mk STEM=2021-1-C2-subst pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2m211subst"
+% End:
