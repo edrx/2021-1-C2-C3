@@ -95,6 +95,10 @@
 %\let\origphi=\phi
 %\def\phi{\varphi}
 
+\def\superscriptOne  {^1}
+\def\superscriptTwo  {^2}
+\def\superscriptThree{^3}
+
 
 
 \def\calA{\mathcal{A}}
@@ -119,33 +123,6 @@
 
 \def\compr{\operatorname{compr}}
 \def\Int  {\operatorname{Int}}
-
-\def\setof    #1{\{\,#1\,\}}
-\def\setofst#1#2{\{\,#1\;|\;#2\,\}}
-\def\setofsc#1#2{\{\,#1\;;\;#2\,\}}
-\def\Pts        {\mathcal{P}}
-
-
-
-\def\nameof#1{\ulcorner#1\urcorner}
-%
-% (find-es "tex" "llangle-and-rrangle")
-% (find-es "tex" "llbracket-and-rrbracket")
-%
-\def\llangle{\langle\!\langle}
-\def\rrangle{\rangle\!\rangle}
-\def\ang #1{\langle #1 \rangle}
-\def\angg#1{\llangle#1\rrangle}
-\def\angc  {\ang{\,,}}
-%\def\<{\langle}
-%\def\>{\rangle}
-%
-% Bananas
-\def\ban#1{(\mskip-1.2\thinmuskip| #1 |\mskip-1.2\thinmuskip)}
-
-
-
-
 
 \def\adj   {\operatorname{adj}}
 
@@ -172,6 +149,39 @@
 \def\FV     {\operatorname{FV}}
 \def\welldef{{\operatorname{wd}}}
 \def\welld  {{\operatorname{wd}}}
+
+
+
+
+\def\setof    #1{\{\,#1\,\}}
+\def\setofst#1#2{\{\,#1\;|\;#2\,\}}
+\def\setofsc#1#2{\{\,#1\;;\;#2\,\}}
+\def\Pts        {\mathcal{P}}
+
+
+
+\def\ovl{\overline}
+
+\def\nameof#1{\ulcorner#1\urcorner}
+%
+% (find-es "tex" "llangle-and-rrangle")
+% (find-es "tex" "llbracket-and-rrbracket")
+%
+\def\llangle{\langle\!\langle}
+\def\rrangle{\rangle\!\rangle}
+\def\ang #1{\langle #1 \rangle}
+\def\angg#1{\llangle#1\rrangle}
+\def\angc  {\ang{\,,}}
+%\def\<{\langle}
+%\def\>{\rangle}
+%
+% Bananas
+\def\ban#1{(\mskip-1.2\thinmuskip| #1 |\mskip-1.2\thinmuskip)}
+
+
+
+
+
 
 
 % Calculus:
@@ -232,103 +242,6 @@
 % Often redefined to:
 %\def\und#1#2{\underbrace{#1}_{#2}}
 
-
-%\def\ssapp#1#2{(#1,#2)\text{-app}}
-%\def\ssabs#1#2{(#1,#2)\text{-abs}}
-
-%\let\sweddot\r
-
-% Tipos,
-%
-%\def\nn{\mathbblow{n}}
-%\def\r{\mathbblow{r}}
-%\def\z{\mathbblow{z}}
-%\def\lefto{\mathcal{L}}
-%\def\righto{\mathcal{R}}
-
-%\def\mon{{\mathop{[\;]}}}
-
-%\def\conetr#1#2#3{(\O_{#3},\, #3 \to #1,\, #3 \to #2)}
-%\def\coneab#1{\conetr{a}{b}{#1}}
-
-
-%\renewcommand\O{\mathbf{O}}
-%\renewcommand\o{\mathbf{o}}
-%\renewcommand\t{\tau}
-%\def\typ{\mathbf{t}}
-%
-
-%\def\virg{{,\,\,}}
-
-
-% NSA e SSA,
-%
-%\def\ii{\iota}
-%\def\ii{\mathbblow{i}}
-%\def\I{\mathbb{I}}
-%\def\F{\mathcal{F}}
-%\def\cofiN{\mathcal{N}}
-%\def\U{\mathcal{U}}
-%\def\OO{\mathcal{O}}
-%\def\jj{\mathbblow{j}}
-
-%\def\littlo{o}
-%\def\bigO{O}
-
-% Coisas para o capítulo sobre análise não-standard
-%
-% (find-lsrcfile "amsmath/amsmath.dtx" "\\newcommand{\\sideset}[3]")
-
-%\makeatletter
-%\def\sidesetscript#1#2#3{%
-%  \@mathmeasure\z@\scriptstyle{#3}%
-%  \global\setbox\@ne\vbox to\ht\z@{}\dp\@ne\dp\z@
-%  \setbox\tw@\box\@ne
-%  \@mathmeasure4\scriptstyle{\copy\tw@#1}%
-%  \@mathmeasure6\scriptstyle{#3\nolimits#2}%
-%  \dimen@-\wd6 \advance\dimen@\wd4 \advance\dimen@\wd\z@
-%  \hbox to\dimen@{}\mathop{\kern-\dimen@\box4\box6}%
-%}
-%\makeatother
-%%
-%\def\B{\mathcal{B}}
-%\def\interfin{\bigcap_{\rm fin}}
-%\def\ns#1{\sideset{^*}{}{\mathop{#1}}}
-%\def\nss#1{\sidesetscript{^*}{}{\mathop{#1}}}
-%\def\raiseset{\mathord{\uparrow}}
-
-
-
-% Set_A,
-%
-%\def\A{\mathcal{A}}
-%\def\SetA{{\bf Set_{\mathcal A}}}
-%
-%\def\Aplus{{\A^\ast}}
-%\def\LA{\Lambda_\A}
-
-%\def\lbe{{\lambda\beta\eta}}
-%%\def\lbeto{\underset{\lbe}{\epito}}
-%\def\lbeto{\epito}
-%\def\lbeot{{\twoheadleftarrow}}
-%\def\lbes{{\lambda\beta\eta^\ast}}
-%%\def\lbeto{{\epito^\ast}}
-
-% Bold connectives
-%
-% (find-fline "/usr/lib/texmf/tex/latex/misc/program.sty" "poor man's bold")
-% (find-fline "/usr/lib/texmf/tex/latex/amslatex/amsbsy.sty" "pmb")
-% (find-fline "/usr/lib/texmf/tex/latex/amslatex/amstex.sty" "pmb")
-% (find-fline "/usr/lib/texmf/tex/latex/tools/bm.sty" "pmb")
-%\def\pmb{\protect\ppmb}
-%\def\ppmb#1{\setbox0=\hbox{\bf #1}
-%            \kern-.025em\copy0\kern-\wd0
-%           \kern.05em\copy0\kern-\wd0
-%           \kern-.025em\raise.0433em\box0 }}
-%\def\LAND{\pmb{\land}}
-%\def\LOR {\pmb{\lor}}
-%\def\TO  {\pmb{\to}}
-%\def\TO  {\funto}
 
 
 

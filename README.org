@@ -26,7 +26,7 @@ Este repositório contém a fonte em LaTeX dos slides, testes e provas
 dos meus cursos de Cálculo 2 e Cálculo 3 do semestre 2021.1 da UFF -
 que por conta da pandemia acontece(u) de fevereiro a junho de 2021.
 
-Páginas dos cursos (com links pra todos os PDFs e vídeos): [[http://angg.twu.net/2021.1-C2.html][C2]], [[http://angg.twu.net/2021.1-C2.html][C3]].
+Páginas dos cursos (com links pra todos os PDFs e vídeos): [[http://angg.twu.net/2021.1-C2.html][C2]], [[http://angg.twu.net/2021.1-C3.html][C3]].
 
 [[http://angg.twu.net/2021aulas-por-telegram.html][Sobre aulas por Telegram]].
 

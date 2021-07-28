@@ -1,0 +1,321 @@
+% (find-LATEX "2021-1-C2-integral-figuras.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C2-integral-figuras.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C2-integral-figuras.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-integral-figuras.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-integral-figuras.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C2-integral-figuras.tex"))
+% (defun l () (interactive) (find-LATEX "2021-1-C2-critical-points.lua"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C2-integral-figuras"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C2-integral-figuras.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2021-1-C2-integral-figuras")
+% (find-pdf-page   "~/LATEX/2021-1-C2-integral-figuras.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-integral-figuras.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-integral-figuras.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C2-integral-figuras.pdf")
+%   file:///home/edrx/LATEX/2021-1-C2-integral-figuras.pdf
+%               file:///tmp/2021-1-C2-integral-figuras.pdf
+%           file:///tmp/pen/2021-1-C2-integral-figuras.pdf
+% http://angg.twu.net/LATEX/2021-1-C2-integral-figuras.pdf
+% (find-LATEX "2019.mk")
+% (find-CN-aula-links "2021-1-C2-integral-figuras" "2" "c2m211figs" "c2fi")
+%
+% Video (not yet):
+% (find-ssr-links "c2m211figs" "2021-1-C2-integral-figuras")
+% (code-video     "c2m211figsvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-integral-figuras.mp4")
+% (find-c2m211figsvideo "0:00")
+
+% «.title»	(to "title")
+% «.defs»	(to "defs")
+% «.defs-int»	(to "defs-int")
+%
+% «.all-in-one»	(to "all-in-one")
+% «.array»	(to "array")
+%
+% «.djvuize»	(to "djvuize")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrxchars.tex              % (find-LATEX "edrxchars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%
+%\usepackage[backend=biber,
+%   style=alphabetic]{biblatex}            % (find-es "tex" "biber")
+%\addbibresource{catsem-slides.bib}        % (find-LATEX "catsem-slides.bib")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+%L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+\pu
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx15.sty" "colors-2019")
+%\long\def\ColorRed   #1{{\color{Red1}#1}}
+%\long\def\ColorViolet#1{{\color{MagentaVioletLight}#1}}
+%\long\def\ColorViolet#1{{\color{Violet!50!black}#1}}
+%\long\def\ColorGreen #1{{\color{SpringDarkHard}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreenDark}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorGray  #1{{\color{GrayLight}#1}}
+%\long\def\ColorGray  #1{{\color{black!30!white}#1}}
+%\long\def\ColorBrown #1{{\color{Brown}#1}}
+%\long\def\ColorBrown #1{{\color{brown}#1}}
+%\long\def\ColorOrange#1{{\color{orange}#1}}
+%
+%\long\def\ColorShort #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorLong  #1{{\color{Red1}#1}}
+%
+%\def\frown{\ensuremath{{=}{(}}}
+%\def\True {\mathbf{V}}
+%\def\False{\mathbf{F}}
+%\def\D    {\displaystyle}
+
+\def\drafturl{http://angg.twu.net/LATEX/2021-1-C2.pdf}
+\def\drafturl{http://angg.twu.net/2021.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m211figsp 1 "title")
+% (c2m211figsa   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2021.1}
+
+\bsk
+
+Aula 12: Algumas figuras
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://angg.twu.net/2021.1-C2.html}
+
+\end{center}
+
+\newpage
+
+
+% (c2m211somas2p 8 "imagens-de-intervalos")
+% (c2m211somas2a   "imagens-de-intervalos")
+% (c2m211somas2p 37 "exemplao")
+% (c2m211somas2a    "exemplao")
+
+
+% «defs-int»  (to ".defs-int")
+% (c2m211figsa    "defs-int")
+
+% (find-LATEX "2021-1-C2-critical-points.lua" "Approxer-tests")
+%L dofile     "2021-1-C2-critical-points.lua"
+%L appr = Approxer {
+%L     f      = f_do_slide_8,
+%L     allcps = {3,8},
+%L     a      = 2,
+%L     b      = 10,
+%L     N      = 4,
+%L     method = "supin",
+%L     what   = "ac",
+%L   }
+\pu
+
+\long\def\ColorUpperA#1{{\color{red!20!white}#1}}
+\long\def\ColorUpperB#1{{\color{Gold1!20!white}#1}}
+\long\def\ColorUpperC#1{{\color{Green1!20!white}#1}}
+\long\def\ColorUpperD#1{{\color{Blue1!20!white}#1}}
+\long\def\ColorLowerA#1{{\color{red!80!white}#1}}
+\long\def\ColorLowerB#1{{\color{Gold1!80!white}#1}}
+\long\def\ColorLowerC#1{{\color{Green1!80!white}#1}}
+\long\def\ColorLowerD#1{{\color{Blue1!80!white}#1}}
+\long\def\ColorRealInt#1{{\color{Purple0!90!white}#1}}
+
+\def\fwithapprs#1{%
+  \vcenter{\hbox{%
+    \beginpicture(0,0)(11,7)
+    \pictgrid%
+    #1%
+    \pictpiecewise{(0,3)--(3,6)--(8,1)--(11,4)}%
+    \pictaxes%
+    \end{picture}%
+  }}}
+
+\def\UpperA{\ColorUpperA{\expr{appr:pict(2,  "supin", "c")}}}
+\def\UpperB{\ColorUpperB{\expr{appr:pict(4,  "supin", "c")}}}
+\def\UpperC{\ColorUpperC{\expr{appr:pict(8,  "supin", "c")}}}
+\def\UpperD{\ColorUpperD{\expr{appr:pict(16, "supin", "c")}}}
+\def\LowerD{\ColorLowerD{\expr{appr:pict(16, "infin", "c")}}}
+\def\LowerC{\ColorLowerC{\expr{appr:pict(8,  "infin", "c")}}}
+\def\LowerB{\ColorLowerB{\expr{appr:pict(4,  "infin", "c")}}}
+\def\LowerA{\ColorLowerA{\expr{appr:pict(2,  "infin", "c")}}}
+
+\def\fUpperA{\fwithapprs{\UpperA}}
+\def\fUpperB{\fwithapprs{\UpperB}}
+\def\fUpperC{\fwithapprs{\UpperC}}
+\def\fUpperD{\fwithapprs{\UpperD}}
+\def\fLowerA{\fwithapprs{\LowerA}}
+\def\fLowerB{\fwithapprs{\LowerB}}
+\def\fLowerC{\fwithapprs{\LowerC}}
+\def\fLowerD{\fwithapprs{\LowerD}}
+\def\fUpperLowerA{\fwithapprs{\UpperA\LowerA}}
+\def\fUpperLowerB{\fwithapprs{\UpperB\LowerB}}
+\def\fUpperLowerC{\fwithapprs{\UpperC\LowerC}}
+\def\fUpperLowerD{\fwithapprs{\UpperD\LowerD}}
+\def\fUpperLowerABCD{\fwithapprs{%
+    \UpperA%
+    \UpperB%
+    \UpperC%
+    \UpperD%
+    \LowerD%
+    \LowerC%
+    \LowerB%
+    \LowerA%
+  }}
+\def\fRealInt{\fwithapprs{\ColorRealInt{%
+  \polygon*(2,0)(2,5)(3,6)(8,1)(10,3)(10,0)%
+  }}}
+
+\newpage
+
+% «all-in-one»  (to ".all-in-one")
+% (c2fip 2 "all-in-one")
+% (c2fia   "all-in-one")
+
+\unitlength=6.5pt
+
+$\fUpperLowerA
+  \quad
+  \fUpperLowerB
+  \quad
+  \fUpperLowerC
+  \quad
+  \fUpperLowerD
+$
+
+\bsk
+
+\unitlength=20pt
+
+$\fUpperLowerABCD
+$
+
+\newpage
+
+% «array»  (to ".array")
+% (c2fip 3 "array")
+% (c2fia   "array")
+
+\unitlength=5pt
+
+$\begin{array}{ccccccccc}
+ \fUpperA &≥& \fUpperB &≥& \fUpperC &≥& \ldots \\
+                                 &&&&&& \rotl{≤} \\
+                                 &&&&&& \fRealInt \\
+                                 &&&&&& \rotl{≤} \\
+ \fLowerA &≤& \fLowerB &≤& \fLowerC &≤& \ldots \\
+ \end{array}
+$
+
+
+
+%\printbibliography
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2021.1-C2/")
+# (find-fline "~/LATEX/2021-1-C2/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2021.1-C2/
+       cp -fv        $1.pdf ~/LATEX/2021-1-C2/
+       cat <<%%%
+% (find-latexscan-links "C2" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2021-1-C2-integral-figuras veryclean
+make -f 2019.mk STEM=2021-1-C2-integral-figuras pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2fi"
+% ee-tla: "c2m211figs"
+% End:

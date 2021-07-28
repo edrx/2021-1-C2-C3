@@ -13,6 +13,10 @@
 % «.psm-and-pmat»	(to "psm-and-pmat")
 % «.pmtt-and-smtt»	(to "pmtt-and-smtt")
 % «.dednat6»		(to "dednat6")
+%   «.defzha»		(to "defzha")
+%   «.deftcg»		(to "deftcg")
+%   «.defub»		(to "defub")
+%   «.sa-and-ga»	(to "sa-and-ga")
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -113,6 +117,7 @@
 % «fcded» (to ".fcded")
 \def\cded #1{\begin{matrix}\ded {#1}\end{matrix}}
 \def\cdiag#1{\begin{matrix}\diag{#1}\end{matrix}}
+\def\pdiag#1{\left( \diag{#1} \right)}
 
 \def\fcded#1{\fbox{$\cded{#1}$}}
 \def\fbded#1{\fbox{$\ded{#1}$}}
@@ -127,6 +132,7 @@
 
 \def\myvcenter#1{\begin{matrix}#1\end{matrix}}
 
+\def\rotl#1{\rotatebox{90}{$#1$}}
 
 
 %           _              _       __     
@@ -142,46 +148,15 @@
 \def\msk{\medskip}
 \def\ssk{\smallskip}
 
-% "set of ...", and
-% "set of ... such that ..."
-%\def\sof #1{\{\,#1\,\}}
-%\def\sst #1#2{\{\,#1\;|\;#2\,\}}
-%\def\ssst#1#2{\{\,#1\;||\;#2\,\}}
-
 \def\Opens{\mathcal{O}}
 \def\compl{{\text{\,compl}}}
 %\def\interior{{\text{int}}}
 \def\sh{\sharp}
 \def\fl{\flat}
 
-% (find-angg ".emacs.papers" "stmaryrd")
-%\def\Dbr#1{\left\llbracket#1\right\rrbracket}
-%\def\dbr#1{\llbracket#1\rrbracket}
-%\def\Dbrnat#1{\Dbr{#1}^\natural}
-%\def\dbrnat#1{\dbr{#1}^\natural}
 
 
-% Extra:
-% (find-dn4ex "edrxslides.tex")
-%\def\myslide#1#2{{\bf #1}}
-%\def\tocline#1#2{\par #1 \dotfill #2}
-% This is useful for slides:
-% \setlength{\parindent}{0em}
 
-
-% «slides»  (to ".slides")
-% % «colors»  (to ".colors")
-% % «dags»  (to ".dags")
-
-
-% For my notes on sheaves and presheaves
-%\def\dbul{{\bullet\bullet}}      % supersaturated cover
-%\def\bulm{{\bullet-}}            % minimal saturated cover
-%\def\bul{\bullet}                % saturated cover
-%\def\bol{\circ}                  % cover
-%\def\dtri{{\blacktriangle\blacktriangle}}  % supersaturated subcover
-%\def\tri{\blacktriangle}                   % saturated subcover
-%\def\tro{\vartriangle}                     % subcover
 
 \def\calU{{\mathcal{U}}}
 \def\calV{{\mathcal{V}}}
@@ -253,6 +228,12 @@
 
 
 
+%  ____           _             _    __   
+% |  _ \  ___  __| |_ __   __ _| |_ / /_  
+% | | | |/ _ \/ _` | '_ \ / _` | __| '_ \ 
+% | |_| |  __/ (_| | | | | (_| | |_| (_) |
+% |____/ \___|\__,_|_| |_|\__,_|\__|\___/ 
+%                                         
 % «dednat6» (to ".dednat6")
 % (find-dn6 "output.lua")
 \def\expr#1{\directlua{output(tostring(#1))}}
@@ -262,7 +243,40 @@
 % (find-dn6 "texfile.lua" "TexFile" "pu =")
 \def\pu{\directlua{pu()}}
 
+% «defzha»  (to ".defzha")
+% «deftcg»  (to ".deftcg")
+% (find-es "dednat" "defzha-and-deftcg")
+\def\defzha#1#2{\expandafter\def\csname zha-#1\endcsname{#2}}
+\def\ifzhaundefined#1{\expandafter\ifx\csname zha-#1\endcsname\relax}
+\def\zha#1{\ifzhaundefined{#1}
+    \errmessage{UNDEFINED ZHA: #1}
+  \else
+    \csname zha-#1\endcsname
+  \fi
+}
+\def\deftcg#1#2{\expandafter\def\csname tcg-#1\endcsname{#2}}
+\def\iftcgundefined#1{\expandafter\ifx\csname tcg-#1\endcsname\relax}
+\def\tcg#1{\iftcgundefined{#1}
+    \errmessage{UNDEFINED TCG: #1}
+  \else
+    \csname tcg-#1\endcsname
+  \fi
+}
 
+% «defub»  (to ".defub")
+% (find-es "dednat" "defub")
+\def\defub#1#2{\expandafter\def\csname ub-#1\endcsname{#2}}
+\def\ifubundefined#1{\expandafter\ifx\csname ub-#1\endcsname\relax}
+\def\ub#1{\ifubundefined{#1}
+    \errmessage{UNDEFINED UB: #1}
+  \else
+    \csname ub-#1\endcsname
+  \fi
+}
+
+% «sa-and-ga»  (to ".sa-and-ga")
+\def\sa#1#2{\expandafter\def\csname myarg#1\endcsname{#2}}
+\def\ga#1{\csname myarg#1\endcsname}
 
 
 
