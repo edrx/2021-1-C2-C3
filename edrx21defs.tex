@@ -9,6 +9,7 @@
 % «.greek-letters»	(to "greek-letters")
 % «.combinators»	(to "combinators")
 % «.colors»		(to "colors")
+% «.bhbox»		(to "bhbox")
 
 
 \def\N{\mathbb{N}}
@@ -226,6 +227,26 @@
 \long\def\ColorBrown #1{{\color{brown}#1}}
 \long\def\ColorOrange#1{{\color{orange}#1}}
 
+% See: (find-es "tex" "xcolor")
+%      (find-es "tex" "xcolor" "fcolorbox")
+\def\standout#1{\fcolorbox{red}{yellow}{#1}}
+
+
+% «bhbox»  (to ".bhbox")
+% See: (find-es "tex" "bhbox")
+\def\smashedvrule#1#2#3{\vrule width#1 height#2 depth#3 \kern-#1}
+\def\bhboxuppercolor{yellow}
+\def\bhboxlowercolor{orange}
+\def\bhboxm#1{\bhbox{$#1$}}
+\def\bhbox #1{\hbox{\bhboxz{#1}}}
+\def\bhboxz#1{%
+    \setbox0\hbox{#1}%
+    {\color{\bhboxuppercolor}{\smashedvrule{\wd0}{\ht0}{0pt}}}%
+    {\color{\bhboxlowercolor}{\smashedvrule{\wd0}{0pt}{\dp0}}}%
+    \box0%
+  }
+
+
 
 \def\frown{\ensuremath{{=}{(}}}
 \def\smile{\ensuremath{{=}{)}}}
@@ -233,7 +254,6 @@
 \def\False{\mathbf{F}}
 \def\D    {\displaystyle}
 \def\ph   {\phantom}
-
 
 
 %\def\comp {\operatorname{comp}}

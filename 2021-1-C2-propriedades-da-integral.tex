@@ -5,6 +5,7 @@
 % (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-propriedades-da-integral.pdf"))
 % (defun e () (interactive) (find-LATEX "2021-1-C2-propriedades-da-integral.tex"))
 % (defun o () (interactive) (find-LATEX "2021-1-C2-propriedades-da-integral.tex"))
+% (defun l () (interactive) (find-LATEX "2021-1-C2-critical-points.lua"))
 % (defun u () (interactive) (find-latex-upload-links "2021-1-C2-propriedades-da-integral"))
 % (defun v () (interactive) (find-2a '(e) '(d)))
 % (defun d0 () (interactive) (find-ebuffer "2021-1-C2-propriedades-da-integral.pdf"))
@@ -22,14 +23,62 @@
 % (find-CN-aula-links "2021-1-C2-propriedades-da-integral" "2" "c2m211pr" "c2pr")
 %
 % Video:
-% (find-ssr-links "c2m211pr" "2021-1-C2-propriedades-da-integral")
+% (find-ssr-links "c2m211pr" "2021-1-C2-propriedades-da-integral" "ORfsWiwelV8")
 % (code-video     "c2m211prvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-propriedades-da-integral.mp4")
-% (find-c2m211prvideo "0:00")
+% (find-c2m211prvideo "0:00" "4/agosto")
 
-% «.defs»	(to "defs")
-% «.title»	(to "title")
+% (find-ssr-links "c2m211prs" "2021-1-C2-propriedades-da-integral-2" "MmlQTtH5jFo")
+% (code-video "c2m211prsvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-propriedades-da-integral-2.mp4")
+% (find-c2m211prsvideo "0:00" "11/agosto")
+
+% (find-ssr-links "c2m211prex9" "2021-1-C2-propriedades-da-integral-3" "J97x7MNpr90")
+% (code-video "c2m211prex9video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-propriedades-da-integral-3.mp4")
+% (find-c2m211prex9video "0:00" "12/agosto")
+% (find-c2m211prex9video "0:25" "TFC1")
+% (find-c2m211prex9video "0:45" "resolvendo uma EDO")
+% (find-c2m211prex9video "1:10" "no MT1 eu dava essa função f(x)")
+% (find-c2m211prex9video "2:00" "F(2)=0")
+
+
+
+% «.defs»			(to "defs")
+% «.title»			(to "title")
+% «.introducao»			(to "introducao")
+% «.introducao-2»		(to "introducao-2")
+% «.introducao-3»		(to "introducao-3")
+% «.introducao-4»		(to "introducao-4")
+% «.parabola-complicada»	(to "parabola-complicada")
+% «.largura-particao»		(to "largura-particao")
+% «.particoes-cvmf»		(to "particoes-cvmf")
+% «.particoes-cvmf-2»		(to "particoes-cvmf-2")
+% «.seq-parts-n-imp»		(to "seq-parts-n-imp")
+% «.seq-parts-n-imp-2»		(to "seq-parts-n-imp-2")
+% «.seq-parts-n-imp-3»		(to "seq-parts-n-imp-3")
+% «.figuras-teorema-horrivel»	(to "figuras-teorema-horrivel")
+% «.dirichlet-incl»		(to "dirichlet-incl")
+% «.pierluigi»			(to "pierluigi")
+% «.aditividade-d»		(to "aditividade-d")
+% «.integrais-de-fs-constantes»	(to "integrais-de-fs-constantes")
+% «.mudando-finitos-pontos»	(to "mudando-finitos-pontos")
+% «.integrando-escadas»		(to "integrando-escadas")
+% «.mudando-limites»		(to "mudando-limites")
+% «.exercicio-1»		(to "exercicio-1")
+% «.mt1-semestre-passado»	(to "mt1-semestre-passado")
+% «.exercicio-3»		(to "exercicio-3")
+% «.retangulos-degenerados»	(to "retangulos-degenerados")
+% «.retangulos-degenerados-2»	(to "retangulos-degenerados-2")
+% «.exercicio-4»		(to "exercicio-4")
+% «.dicas-plotar»		(to "dicas-plotar")
+% «.exercicio-5»		(to "exercicio-5")
+% «.exercicio-5-cont»		(to "exercicio-5-cont")
+% «.exercicio-6»		(to "exercicio-6")
+% «.exercicio-6-cont»		(to "exercicio-6-cont")
+% «.exercicio-7»		(to "exercicio-7")
+% «.exercicio-8»		(to "exercicio-8")
+% «.TFC1-escadas»		(to "TFC1-escadas")
+% «.exercicio-9»		(to "exercicio-9")
 %
-% «.djvuize»	(to "djvuize")
+% «.djvuize»			(to "djvuize")
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
@@ -48,7 +97,7 @@
 %
 \usepackage{edrx15}               % (find-LATEX "edrx15.sty")
 \input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
-\input edrxchars.tex              % (find-LATEX "edrxchars.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
 \input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
 \input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
 %
@@ -63,12 +112,12 @@
 %
 \begin{document}
 
-%\catcode`\^^J=10
-%\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
 
-% %L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
-% %L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
-% \pu
+%L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+\pu
 
 % «defs»  (to ".defs")
 % (find-LATEX "edrx15.sty" "colors-2019")
@@ -92,9 +141,68 @@
 \def\False{\mathbf{F}}
 \def\D    {\displaystyle}
 
+\def\Intover     #1#2{\overline {∫}_{#1}#2\,dx}
+\def\Intunder    #1#2{\underline{∫}_{#1}#2\,dx}
+\def\Intoverunder#1#2{\Intover{#1}{#2} - \Intunder{#1}{#2}}
+
+\def\Intxover     #1#2#3{\overline {∫}_{x=#1}^{x=#2}#3\,dx}
+\def\Intxunder    #1#2#3{\underline{∫}_{x=#1}^{x=#2}#3\,dx}
+
+\def\Intoverunder   #1#2{\overline{\underline{∫}}_{#1}      #2\,dx}
+\def\Intxoverunder#1#2#3{\overline{\underline{∫}}_{x=#1}^{x=#2} #3\,dx}
+
+\def\sumiN#1{\sum_{i=1}^N #1 (b_i-a_i)}
+\def\mname#1{\text{[#1]}}
+
 \def\drafturl{http://angg.twu.net/LATEX/2021-1-C2.pdf}
 \def\drafturl{http://angg.twu.net/2021.1-C2.html}
 \def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+% (c2m211somas2p 37 "exercicio-16-defs")
+% (c2m211somas2a    "exercicio-16-defs")
+
+% (find-LATEX "2021-1-C2-critical-points.lua" "Approxer-tests")
+%L dofile     "2021-1-C2-critical-points.lua"
+%L appr = Approxer {
+%L     f      = f_do_slide_8,
+%L     allcps = {3,8},
+%L     a      = 2,
+%L     b      = 10,
+%L     N      = 4,
+%L     method = "supin",
+%L     what   = "ac",
+%L   }
+\pu
+
+\long\def\ColorUpperA#1{{\color{red!20!white}#1}}
+\long\def\ColorUpperB#1{{\color{Gold1!20!white}#1}}
+\long\def\ColorUpperC#1{{\color{Green1!20!white}#1}}
+\long\def\ColorUpperD#1{{\color{Blue1!20!white}#1}}
+\long\def\ColorLowerA#1{{\color{red!80!white}#1}}
+\long\def\ColorLowerB#1{{\color{Gold1!80!white}#1}}
+\long\def\ColorLowerC#1{{\color{Green1!80!white}#1}}
+\long\def\ColorLowerD#1{{\color{Blue1!80!white}#1}}
+\long\def\ColorRealInt#1{{\color{Purple0!90!white}#1}}
+
+\def\fwithapprs#1{%
+  \vcenter{\hbox{%
+    \beginpicture(0,0)(11,7)
+    \pictgrid%
+    #1%
+    \pictpiecewise{(0,3)--(3,6)--(8,1)--(11,4)}%
+    \pictaxes%
+    \end{picture}%
+  }}}
+
+%L pol = function (x,y,dx,dy)
+%L     local x0, y0, x1, y1 = x,y,x+dx,y+dy
+%L     return pformat("\\polygon*(%s,%s)(%s,%s)(%s,%s)(%s,%s)",
+%L                    x0,y0, x0,y1, x1,y1, x1,y0)
+%L   end
+\pu
+
+
 
 
 
@@ -119,7 +227,7 @@
 
 \bsk
 
-Aula 13: Propriedades da integral
+Aula 15: Propriedades da integral
 
 \bsk
 
@@ -131,15 +239,1582 @@ Eduardo Ochs - RCN/PURO/UFF
 
 \newpage
 
-area
+% «introducao»  (to ".introducao")
+% (c2m211prp 1 "introducao")
+% (c2m211pra   "introducao")
 
-soma horizontal
+{\bf Introdução}
 
-soma vertical
+No último PDF vocês aprenderam a visualizar coisas como:
+%
+\unitlength=7pt
+%
+$$\begin{array}{l}
+  \Intoverunder{[2,10]_{2^1}}{f(x)} \\[10pt]
+  = \Intoverunder{\{2,6,10\}}{f(x)} \\[10pt]
+  =    \Intover {\{2,6,10\}}{f(x)}     \\
+  - \; \Intunder{\{2,6,10\}}{f(x)}     \\[10pt]
+  =    (\sup(F([2,6])) - \inf(F([2,6]))(6 - 2)       \\
+  + \; (\sup(F([6,10])) - \inf(F([6,10]))(10 - 6) \\[10pt]
+  = \fwithapprs{{%
+     \color{Orange1}%
+     \expr{pol(2,3, 4,3)}%
+     \expr{pol(6,1, 4,2)}%
+    }}
+  \end{array}
+$$
 
-multiplicacao por constante h
+\newpage
 
-multiplicacao por constante v
+% «introducao-2»  (to ".introducao-2")
+% (c2m211prp 3 "introducao-2")
+% (c2m211pra   "introducao-2")
+
+{\bf Introdução (2)}
+
+\def\Iou#1{\Intoverunder {[a,b]_{2^{#1}}} {f(x)}}
+
+...e vocês aprenderam a visualizar isto aqui,
+
+para várias `$f(x)$'s diferentes:
+%
+$$\lim_{k→∞} \left( \Iou{k} \right)$$
+
+e viram que existem funções não integráveis,
+
+como a função de Dirichlet, e viram argumentos
+
+olhométricos que devem ter convencido vocês de que
+
+isto aqui é verdade:
+
+\begin{quotation}
+
+{\bf Corolário 11.} Seja $f: [a, b] → \R$ contínua
+
+com a possível exceção de um número finito
+
+de pontos e limitada. Então, $f$ é integrável.
+
+\end{quotation}
+
+
+\newpage
+
+% «introducao-3»  (to ".introducao-3")
+% (c2m211prp 4 "introducao-3")
+% (c2m211pra   "introducao-3")
+
+{\bf Introdução (3)}
+
+\ssk
+
+Esse ``Corolário 11'' é da página 9 das notas
+
+do Pierluigi Beneveri. Dê uma olhada:
+
+\ssk
+
+{\footnotesize
+
+% (find-books "__analysis/__analysis.el" "beneveri")
+% (find-pierluigipage  9    "Corolário 11")
+% (find-pierluigitext  9    "Corolário 11")
+\url{https://www.ime.usp.br/~pluigi/registro-MAT121-15.pdf#page=9}
+
+}
+
+\bsk
+
+A abordagem dele é bem diferente da nossa ---
+
+quase todos os exercícios dele são da forma
+
+``demonstre a afirmação tal''... mas eu vou
+
+pedir pra vocês consultarem as notas dele
+
+de vez em quando, e vou tentar complementar
+
+as notas dele mostrando como visualizar certas
+
+coisas que ele afirma.
+
+\newpage
+
+% «introducao-4»  (to ".introducao-4")
+% (c2m211prp 5 "introducao-4")
+% (c2m211pra   "introducao-4")
+
+{\bf Introdução (4)}
+
+\ssk
+
+\def\Iou#1{\Intoverunder {[a,b]_{2^{#1}}} {f(x)}}
+\def\Iou#1{\Intoverunder {[0,8]_{2^{#1}}} {f(x)}}
+
+Dá pra gente se convencer de que o Corolário 11 é verdade
+
+olhando um exemplo ``que seja suficientemente não-trivial''...
+
+Tente visualizar $\lim_{k→∞} \Iou{k}$ para a função abaixo.
+
+Você vai ver que em torno dos pontos de descontinuidade
+
+os retângulos continuam com a mesma altura mas se tornam
+
+cada vez mais finos, e fora desses lugares os retângulos
+
+se tornam cada vez mais baixos.
+
+% «parabola-complicada»  (to ".parabola-complicada")
+% (c2m211prp 5 "parabola-complicada")
+% (c2m211pra   "parabola-complicada")
+% (c2m211somas2p 43 "claramente-integravel-p")
+% (c2m211somas2a    "claramente-integravel-p")
+
+% (find-LATEX "2021-1-C2-critical-points.lua" "f_parabola_preferida")
+% (find-LATEX "2021-1-C2-critical-points.lua" "Piecewisify-tests")
+%
+%L f_parabola_complicada = function (x)
+%L     if x <= 4 then return f_parabola_preferida(x) end
+%L     if x <  5 then return 5 - x end
+%L     if x <  6 then return 7 - x end
+%L     if x <  7 then return 3 end
+%L     if x == 7 then return 4 end
+%L     return 0.5
+%L   end
+%L f_funcao_complicada = f_parabola_complicada
+%L
+%L pwi = Piecewisify.new(f_funcao_complicada, seq(0, 4, 0.25), 5, 6, 7)
+\pu
+
+\def\fwithapprs#1{%
+  \vcenter{\hbox{%
+    \beginpicture(0,0)(8,5)
+    \pictgrid%
+    #1%
+    \pictaxes%
+    \expr{pwi:pw(0, 8)}
+    \end{picture}%
+  }}}
+
+\unitlength=16pt
+
+$$f(x) =
+ \fwithapprs{%
+  %\ColorOrange{%
+  %\expr{pwi:pol(0, 8, "*")}
+  %}
+  }
+$$
+
+
+
+\newpage
+
+\unitlength=25pt
+
+\def\Iou#1{\Intoverunder {[a,b]_{2^{#1}}} {f(x)}}
+\def\Iou#1{\Intoverunder {[0,8]_{2^{#1}}} {f(x)}}
+
+\def\FIG#1{%
+  \fwithapprs{%
+  \ColorOrange{%
+  \expr{pwi:rects(Partition.new(0, 8):splitn(2^#1), "sup", "inf")}
+  }}}
+\def\FFIG#1{\Iou{#1} \;\; = \;\; \FIG{#1}}
+
+$$\FFIG2$$
+\newpage
+
+$$\FFIG3$$
+\newpage
+
+$$\FFIG4$$
+\newpage
+
+$$\FFIG5$$
+\newpage
+
+$$\FFIG6$$
+\newpage
+
+$$\FFIG7$$
+\newpage
+
+% «largura-particao»  (to ".largura-particao")
+% (c2m211prp 12 "largura-particao")
+% (c2m211pra    "largura-particao")
+
+{\bf A largura de uma partição}
+
+\ssk
+
+Def: a \ColorRed{largura} de uma partição $P$ é
+
+a ``largura de seu \ColorRed{maior} subintervalo''.
+
+A notação para a largura de uma partição $P$ é $||P||$.
+
+Exemplo: $||\{2, 2.5, 3, 7, 7.5\}|| = 4$.
+
+Formalmente:
+%
+$$||P|| = \sup(\setofst {b_i-a_i} {i∈\{1,\ldots,N\}})$$
+
+No exemplo:
+%
+$$\begin{array}{rcl}
+  ||\{2, 2.5, 3, 7, 7.5\}|| &=& \sup(\{0.5, 0.5, 4, 0.5\}) \\
+                            &=& \sup(\{0.5, 4 \}) \\
+                            &=& 4. \\
+  \end{array}
+$$
+
+\newpage
+
+% «particoes-cvmf»  (to ".particoes-cvmf")
+% (c2m211prp 13 "particoes-cvmf")
+% (c2m211pra    "particoes-cvmf")
+
+{\bf Partições cada vez mais finas}
+
+\ssk
+
+Def: $(P_1, P_2, P_3, \ldots)$ é uma sequência de partições
+
+\ColorRed{cada vez mais finas} do intervalo $[a,b]$ se:
+
+\ssk
+
+1) Cada $P_i$ é uma partição de $[a,b]$, e
+
+2) $\lim_{i→∞} ||P_i|| = 0$.
+
+\msk
+
+Vamos usar esta notação (estranha!):
+%
+$$(P_1, P_2, P_3, \ldots) \dashrightarrow [a,b]$$
+
+pra indicar que $(P_1, P_2, P_3, \ldots)$ é uma sequência
+
+de partições cada vez mais finas do intervalo $[a,b]$.
+
+\msk
+
+Lembre que cada $P_i$ é um conjunto finito,
+
+mas $[a,b]$ é um conjunto infinito.
+
+
+\newpage
+
+% «particoes-cvmf-2»  (to ".particoes-cvmf-2")
+% (c2m211prp 14 "particoes-cvmf-2")
+% (c2m211pra    "particoes-cvmf-2")
+
+{\bf Partições cada vez mais finas (2)}
+
+\ssk
+
+Exemplo óbvio:
+%
+$$\begin{array}{rcl}
+  ([a,b]_{2^1},
+   [a,b]_{2^2},
+   [a,b]_{2^3},
+   \ldots) &\dashrightarrow& [a,b]
+  \end{array}
+$$
+
+Um exemplo menos óbvio:
+%
+$$\begin{array}{rcl}
+  ([a,b]_1,
+   [a,b]_2,
+   [a,b]_3,
+   \ldots) &\dashrightarrow& [a,b], \\
+  ([0,6]_1,
+   [0,6]_2,
+   [0,6]_3,
+   \ldots) &\dashrightarrow& [0,6], \\
+  (\{0,6\},
+   \{0,3,6\},
+   \{0,2,4,6\},
+   \ldots) &\dashrightarrow& [0,6], \\
+  \end{array}
+$$
+
+Note que o subintervalo $[2,4]$ da partição $[0,6]_3 = \{0,2,4,6\}$ contém
+
+uma parte do subintervalo $[0,3]$ da partição $[0,6]_2 = \{0,3,6\}$ e
+
+uma parte do subintervalo $[3,6]$ da partição $[0,6]_2 = \{0,3,6\}$...
+
+\newpage
+
+
+% «seq-parts-n-imp»  (to ".seq-parts-n-imp")
+% (c2m211prp 12 "seq-parts-n-imp")
+% (c2m211pra    "seq-parts-n-imp")
+
+{\bf A sequência de partições não importa}
+
+\ssk
+
+Lembra que nós definimos ``$f$ é integrável em $[a,b]$'' usando
+
+esta sequência de partições cada vez mais finas de $[a,b]$:
+%
+$$([a,b]_{2^1},
+   [a,b]_{2^2},
+   [a,b]_{2^3},
+   \ldots) \dashrightarrow [a,b]
+$$
+
+Lembrando a definição:
+
+$f$ é integrável em $[a,b]$ se e só se:
+%
+$$\lim_{k→∞} \mname{sup}_{[a,b]_{2^k}} =
+  \lim_{k→∞} \mname{inf}_{[a,b]_{2^k}}
+$$
+
+Vamos fazer uma versão mais flexível dessa definição...
+
+$f$ é \ColorRed{$(P_1, P_2, P_3, \ldots)$-integrável} em $[a,b]$ se e só se:
+%
+$$\lim_{k→∞} \mname{sup}_{P_k} =
+  \lim_{k→∞} \mname{inf}_{P_k}
+$$
+
+
+
+\newpage
+
+% «seq-parts-n-imp-2»  (to ".seq-parts-n-imp-2")
+% (c2m211prp 16 "seq-parts-n-imp-2")
+% (c2m211pra    "seq-parts-n-imp-2")
+
+{\bf A sequência de partições não importa (2)}
+
+{\bf Teorema (horrível).}
+
+Sejam
+%
+$$\begin{array}{rcl}
+  (P_1, P_2, P_3, \ldots) &\dashrightarrow& [a,b], \\
+  (Q_1, Q_2, Q_3, \ldots) &\dashrightarrow& [a,b]
+  \end{array}
+$$
+
+duas sequências de partições cada vez mais finas
+
+do intervalo $[a,b]$. Então 
+``$(P_1, P_2, P_3, \ldots)$-integrabilidade''
+
+e ``$(Q_1, Q_2, Q_3, \ldots)$-integrabilidade'' são equivalentes, no
+
+seguinte sentido:
+
+\msk
+
+Pegue \ColorRed{qualquer} função $f:[a,b]→\R$.
+
+Então $f$ é $(P_1, P_2, P_3, \ldots)$-integrável em $[a,b]$
+
+se e só se $f$ é $(Q_1, Q_2, Q_3, \ldots)$-integrável em $[a,b]$, e:
+%
+$$\begin{array}{rcl}
+  \lim_{k→∞} \mname{sup}_{P_k} &=& \lim_{k→∞} \mname{sup}_{Q_k} \\
+  \lim_{k→∞} \mname{inf}_{P_k} &=& \lim_{k→∞} \mname{inf}_{Q_k} \\
+  \end{array}
+$$
+
+\newpage
+
+% «seq-parts-n-imp-3»  (to ".seq-parts-n-imp-3")
+% (c2m211prp 17 "seq-parts-n-imp-3")
+% (c2m211pra    "seq-parts-n-imp-3")
+
+{\bf A sequência de partições não importa (3)}
+
+A demonstração do Teorema Horrível é bem trabalhosa, e é
+
+bem difícil visualizar o que certos passos dela querem dizer...
+
+\msk
+
+
+Alguns textos, como o livro dos dois Martins/Martins, as notas
+
+de aula da Cristiane Hernández, e a página da Wikipedia sobre
+
+Somas de Riemann usam o Teorema Horrível implicitamente,
+
+sem nem contarem quanta sujeira eles estão escondendo
+
+debaixo do tapete.
+
+% (find-books "__analysis/__analysis.el" "hernandez")
+% (find-hernandezpage (+ 10 4) "sobre todas as possíveis partições")
+% (find-hernandeztext (+ 10 4) "sobre todas as possíveis partições")
+%
+% (find-books "__analysis/__analysis.el" "martins-martins")
+% (find-martinscdipage (+ 10 203) "6.5        Integral Definida")
+% (find-martinscditext (+ 10 203) "6.5        Integral Definida")
+%
+% https://pt.wikipedia.org/wiki/Soma_de_Riemann
+
+\msk
+
+Quando nós usamos a sequência 
+
+$([a,b]_{2^1},
+   [a,b]_{2^2},
+   [a,b]_{2^3},
+   \ldots) \dashrightarrow [a,b]$
+
+as nossas aproximação pelos métodos do sup e do inf melhoram
+
+a cada passo, mas se usamos outras sequências, como
+
+$([a,b]_1,
+   [a,b]_2,
+   [a,b]_3,
+   \ldots) \dashrightarrow [a,b]$
+
+os resultados podem oscilar bastante antes de convergir...
+
+
+\newpage
+
+% «figuras-teorema-horrivel»  (to ".figuras-teorema-horrivel")
+% (c2m211prp 18 "figuras-teorema-horrivel")
+% (c2m211pra    "figuras-teorema-horrivel")
+
+\unitlength=25pt
+
+\def\Iou#1{\Intoverunder {[a,b]_{2^{#1}}} {f(x)}}
+\def\Iou#1{\Intoverunder {[0,8]_   {#1} } {f(x)}}
+
+\def\FIG#1{%
+  \fwithapprs{%
+  \ColorOrange{%
+  \expr{pwi:rects(Partition.new(0, 8):splitn( #1), "sup", "inf")}
+  }}}
+\def\FFIG#1{\Iou{#1} \;\; = \;\; \FIG{#1}}
+
+$$\FFIG4$$
+\newpage
+
+$$\FFIG5$$
+\newpage
+
+$$\FFIG6$$
+\newpage
+
+$$\FFIG7$$
+\newpage
+
+$$\FFIG8$$
+\newpage
+
+$$\FFIG9$$
+\newpage
+
+% «dirichlet-incl»  (to ".dirichlet-incl")
+% (c2m211prp 24 "dirichlet-incl")
+% (c2m211pra    "dirichlet-incl")
+
+{\bf Relembrando funções não integráveis...}
+
+\ssk
+
+Sejam $g(x) = \begin{cases}
+              x     & \text{quando $x∈\Q$}, \\
+              x + 1 & \text{quando $x∈\R∖\Q$} \\
+              \end{cases}$
+
+e $d_k = \D \Intoverunder{[0,1]_{2^k}}{g(x)}$.
+
+
+\msk
+
+%L dirichlet_incl_Q = SetL.new()
+%L dirichlet_incl   = function (x)
+%L     if dirichlet_incl_Q:has(x) then return x end
+%L     return x+1
+%L   end
+%L for _,x in ipairs(seq(0, 1, 1/64)) do
+%L   dirichlet_incl_Q:add(x)
+%L end
+%L pwid = Piecewisify.new(dirichlet_incl, seq(0, 1, 1/64))
+\pu
+%
+\def\gwithapprs#1{%
+  \vcenter{\hbox{%
+    \beginpicture(0,0)(1,2)
+    \pictgrid%
+    #1%
+    \pictpiecewise{(0,0)--(1,1) (0,1)--(1,2)}%
+    \pictaxes%
+    \end{picture}%
+  }}}
+\def\dirichletincldk#1{%
+  \expr{pwid:rects(Partition.new(0, 1):splitn(2^#1), "sup", "inf")}}
+\def\gwithapprsdk#1{\gwithapprs{\ColorOrange{\dirichletincldk{#1}}}}
+
+
+Então a sequência $(d_0, d_1, d_2, d_3, d_4, d_5, \ldots)$
+
+pode ser representada \ColorRed{graficamente} como:
+%
+$$\unitlength=25pt
+  \left(
+  \gwithapprsdk{0},
+  \gwithapprsdk{1},
+  \gwithapprsdk{2},
+  \gwithapprsdk{3},
+  \gwithapprsdk{4},
+  \gwithapprsdk{5},
+  \ldots
+  \right)
+$$
+
+e se interpretarmos cada $d_k$ como um número
+
+temos $\lim_{k→∞} d_k = 1$.
+
+\newpage
+
+% «pierluigi»  (to ".pierluigi")
+% (c2m211prp 25 "pierluigi")
+% (c2m211pra    "pierluigi")
+
+{\bf Introdução às propriedade da integral do Pierluigi}
+
+\ssk
+
+A partir de agora eu vou tentar convencer vocês
+
+de que algumas propriedades da integral são verdade,
+
+mas ao invés de demonstrá-las eu vou mostrar o que elas
+
+``querem dizer'' graficamente e geometricamente, usando
+
+exemplos. Eu vou tentar \ColorRed{complementar} as explicações
+
+das páginas 6 até 8 das notas do Pierluigi Beneveri,
+
+\ssk
+
+{\footnotesize
+
+% https://www.ime.usp.br/~pluigi/registro-MAT121-15.pdf#page=6
+\url{https://www.ime.usp.br/~pluigi/registro-MAT121-15.pdf#page=6}
+
+}
+
+\ssk
+
+...mas tente ler as notas dele, e considere que as explicações
+
+``de verdade'' estão lá, e não aqui.
+
+
+\newpage
+
+% «aditividade-d»  (to ".aditividade-d")
+% (c2m211prp 26 "aditividade-d")
+% (c2m211pra    "aditividade-d")
+% (find-books "__analysis/__analysis.el" "beneveri")
+% (find-pierluigipage 7 "Proposição 8 (Propriedade 4: aditividade a respeito do domínio")
+% (find-pierluigitext 7 "Proposição 8 (Propriedade 4: aditividade a respeito do domínio")
+
+{\bf Aditividade no domínio}
+
+Leia a ``Proposição 8'' do Pierluigi --- que ele chama de
+
+``Propriedade 4: aditividade a respeito do domínio''.
+
+Exemplo:
+
+\unitlength=8pt
+
+
+$$\Intx{0}{4}{f(x)} + 
+  \Intx{4}{7}{f(x)} =
+  \Intx{0}{7}{f(x)}
+$$
+%
+$$
+  \fwithapprs{%
+  \ColorOrange{%
+  \expr{pwi:pol(0, 4, "*")}
+  }}
+  +
+  \fwithapprs{%
+  \ColorOrange{%
+  \expr{pwi:pol(4, 7, "*")}
+  }}
+  =
+  \fwithapprs{%
+  \ColorOrange{%
+  \expr{pwi:pol(0, 7, "*")}
+  }}
+$$
+
+\newpage
+
+% «integrais-de-fs-constantes»  (to ".integrais-de-fs-constantes")
+% (c2m211prp 27 "integrais-de-fs-constantes")
+% (c2m211pra    "integrais-de-fs-constantes")
+% (find-pierluigipage 5 "Exercício 18. Seja f (x) = c constante")
+% (find-pierluigitext 5 "Exercício 18. Seja f (x) = c constante")
+
+{\bf Integrais de funções constantes (e áreas negativas)}
+
+Leia o ``Exercício 18'' do Pierluigi,
+
+que diz que $\Intx{a}{b}{c} = c(b-a)$.
+
+Isto vale também para $c$ negativo...
+
+\msk
+
+Leia a ``Definição 9'' do Pierluigi na página 8 da notas dele.
+
+Ele usa um truque parecido com o que usamos aqui,
+
+\ssk
+
+{\footnotesize
+
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2.pdf#page=22}
+
+}
+
+\ssk
+
+em que \ColorRed{redefinimos} (temporariamente!) os termos ``acima''
+
+e ``abaixo'' pra adequá-los a conceitos matemáticos que
+
+queríamos ter como pronunciar em português...
+
+Então:
+%
+%L pwic = Piecewisify.new(function () return -3 end)
+\pu
+%
+$$\unitlength=7.5pt
+  %
+  \Area \left(
+    \vcenter{\hbox{%
+      \beginpicture(-1,-4)(5,1)
+      \pictgrid%
+      \ColorOrange{\expr{pwic:pol(2, 4, "*")}}%
+      \pictpiecewise{(-1,-3)--(5,-3)}%
+      \pictaxes%
+      \end{picture}%
+    }}
+    \right)
+  =
+  \Intx{2}{4}{-3}
+  =
+  (-3)(4-2)
+  =
+  -6
+$$
+
+% (find-pierluigipage 8 "Definição 9" "ideia intuitiva de área")
+% (find-pierluigitext 8 "Definição 9" "ideia intuitiva de área")
+% (c2m211somas2p 22 "sups-e-infs-em-portugues")
+% (c2m211somas2a    "sups-e-infs-em-portugues")
+
+\newpage
+
+% «mudando-finitos-pontos»  (to ".mudando-finitos-pontos")
+% (c2m211prp 28 "mudando-finitos-pontos")
+% (c2m211pra    "mudando-finitos-pontos")
+
+{\bf Mudando um número finito de pontos}
+
+Exemplo: digamos que $f(x)$ seja a nossa parábola preferida,
+
+e $g(x)$ seja esta ``parabola com anteninhas'':
+%
+$$g(x) = 
+  \begin{cases}
+  f(x) & \text{quando $x≠1$ e  $x≠3$}, \\
+  4    & \text{quando $x=1$ ou $x=3$}. \\
+  \end{cases}
+$$
+
+Então:
+%
+%L f_parabola_com_antenas = function (x)
+%L     if x == 1 then return 4 end
+%L     if x == 3 then return 4 end
+%L     return f_parabola_preferida(x)
+%L   end
+%L f_funcao_complicada = f_parabola_complicada
+%L
+%L pwip  = Piecewisify.new(f_parabola_preferida,   seq(0, 4, 0.25))
+%L pwipa = Piecewisify.new(f_parabola_com_antenas, seq(0, 4, 0.25), 1, 2, 3)
+\pu
+%
+$$\unitlength=15pt
+  %
+  \Area \left(
+    \vcenter{\hbox{%
+      \beginpicture(0,0)(4,4)
+      \pictgrid%
+      \ColorOrange{\expr{pwip:pol(0, 4, "*")}}%
+      \expr{pwip:pw(0, 4)}%
+      \pictaxes%
+      \end{picture}%
+    }}
+    \right)
+  %
+  =
+  %
+  \Area \left(
+    \vcenter{\hbox{%
+      \beginpicture(0,0)(4,4)
+      \pictgrid%
+      \ColorOrange{\expr{pwipa:pol(0, 4, "*")}}%
+      \expr{pwipa:pw(0, 4)}%
+      \pictaxes%
+      \end{picture}%
+    }}
+    \right)
+$$
+
+
+
+\newpage
+
+% «integrando-escadas»  (to ".integrando-escadas")
+% (c2m211prp 29 "integrando-escadas")
+% (c2m211pra    "integrando-escadas")
+
+{\bf Integrando funções escada}
+
+%L f_funcao_complicada = function (x)
+%L     if x <=  2 then return 0 end
+%L     if x <=  4 then return 2 end
+%L     if x <=  6 then return 4 end
+%L     if x <=  8 then return 6 end
+%L     if x <= 10 then return 4 end
+%L     if x <= 12 then return 2 end
+%L     return 0
+%L   end
+%L
+%L pwi = Piecewisify.new(f_funcao_complicada, 2, 3, 4, 6, 8, 10, 12, 14)
+\pu
+
+\def\fwithapprs#1{%
+  \vcenter{\hbox{%
+    \beginpicture(0,0)(14,7)
+    \pictgrid%
+    #1%
+    \pictaxes%
+    \expr{pwi:pw(0, 14)}
+    \end{picture}%
+  }}}
+\def\fwithapprsc#1{\fwithapprs{\ColorOrange{#1}}}
+
+\unitlength=6.5pt
+
+Digamos que $f(x)$ seja esta função aqui:
+
+$$f(x) =
+  \fwithapprsc{%\expr{pwi:pol(0, 14, "*")}
+              }
+$$
+
+Então:
+%
+$$\Intx{3}{7}{f(x)} =
+  \fwithapprsc{\expr{pwi:pol(3, 7, "*")}}
+  = \pmat{2·(4-3) \\
+     + \; 4·(6-4) \\
+     + \; 6·(7-6) },
+$$
+$$\Intx{5}{11}{f(x)} =
+  \fwithapprsc{\expr{pwi:pol(5, 11, "*")}}
+  = \pmat{4·(6-5) \\
+     + \; 6·(8-6) \\
+     + \; 4·(10-8) \\
+     + \; 2·(11-10) },
+$$
+
+\newpage
+
+% «mudando-limites»  (to ".mudando-limites")
+% (c2m211prp 30 "mudando-limites")
+% (c2m211pra    "mudando-limites")
+
+{\bf Mudando os limites de integração }
+
+Em $\Intx{3}{7}{f(x)}$ o intervalo de integração ia de $x=3$ até $x=7$,
+
+e pra expressar $\Intx{3}{7}{f(x)}$ como uma soma de retângulos nós
+
+precisamos de:
+
+um retângulo com $y=2$ indo de $x=3$ até $x=4$,
+
+um retângulo com $y=4$ indo de $x=4$ até $x=6$,
+
+um retângulo com $y=6$ indo de $x=6$ até $x=7$...
+
+
+\msk
+
+e pra expressar $\Intx{5}{11}{f(x)}$ como uma soma de retângulos nós
+
+precisamos de:
+
+um retângulo com $y=4$ indo de $x=5$ até $x=6$,
+
+um retângulo com $y=6$ indo de $x=6$ até $x=8$,
+
+um retângulo com $y=4$ indo de $x=8$ até $x=10$,
+
+um retângulo com $y=2$ indo de $x=10$ até $x=11$...
+
+\msk
+
+{\bf O número de intervalos e retângulos é diferente!!!!!!}
+
+
+\newpage
+
+% «exercicio-1»  (to ".exercicio-1")
+% (c2m211prp 31 "exercicio-1")
+% (c2m211pra    "exercicio-1")
+
+{\bf Exercício 1.}
+
+Seja $f(x)$ a função definida dois slides atrás.
+
+Em cada um dos itens abaixo represente graficamente a
+
+integral --- lembre que integrais são áreas!!! --- e expresse
+
+ela como uma soma, como o que fizemos dois slides atrás.
+
+\msk
+
+{\bf MUITO, MUITO, MUITO IMPORTANTE:}
+
+{\bf O NÚMERO DE INTERVALOS PODE MUDAR}
+
+{\bf DE UM ITEM PRO OUTRO!!!}
+
+\msk
+
+a) $\Intx{3}{5}{f(x)}$
+
+\ssk
+
+b) $\Intx{3}{6.5}{f(x)}$
+
+\ssk
+
+c) $\Intx{3}{9}{f(x)}$
+
+\ssk
+
+d) $\Intx{4.5}{9}{f(x)}$
+
+\ssk
+
+e) $\Intx{7.5}{9}{f(x)}$
+
+
+\newpage
+
+% «mt1-semestre-passado»  (to ".mt1-semestre-passado")
+% (c2m211prp 32 "mt1-semestre-passado")
+% (c2m211pra    "mt1-semestre-passado")
+
+{\bf O mini-teste 1 do semestre passado}
+
+\ssk
+
+Dê uma olhada nele:
+
+{\footnotesize
+
+% (c2m202mt1p 4 "miniteste-funcao")
+% (c2m202mt1a   "miniteste-funcao")
+%    http://angg.twu.net/LATEX/2020-2-C2-MT1.pdf#page=4
+\url{http://angg.twu.net/LATEX/2020-2-C2-MT1.pdf#page=4}
+
+}
+
+\ssk
+
+Nos próximos exercícios nós vamos resolver uns problemas
+
+bem parecidos com as questões desse mini-teste, mas
+
+vamos fazer eles bem passo a passo.
+
+
+\newpage
+
+{\bf Exercício 2.}
+
+Sejam:
+%
+$$f(x) = 
+  \unitlength=12pt
+  \vcenter{\hbox{%
+    \beginpicture(0,-3)(9,3)
+    \pictgrid%
+    \pictaxes%
+    \pictpiecewise{(0,0)--(1,0)o
+                   (1,1)c--(2,1)o
+                   (2,2)c--(3,2)o
+                   (3,1)c--(4,1)o
+                   (4,0)c--(5,0)o
+                   (5,-1)c--(6,-1)o
+                   (6,-2)c--(7,-2)o
+                   (7,-1)c--(8,-1)o
+                   (8,0)c--(9,0)
+                  }%
+    \celllower=2.5pt%
+    \def\cellfont{\scriptsize}%
+    \put(1,-0.5){\cell{1}}%
+    \put(2,-0.5){\cell{2}}%
+    \put(3,-0.5){\cell{3}}%
+    \put(4,-0.5){\cell{4}}%
+    \put(5,-0.5){\cell{5}}%
+    \put(6,-0.5){\cell{6}}%
+    \put(7,-0.5){\cell{7}}%
+    \put(8,-0.5){\cell{8}}%
+    \end{picture}%
+  }}
+$$
+
+e $F(b) = \Intx{0}{b}{f(x)}$.
+
+\msk
+
+a) Tente visualizar $F(2.5)$ e $F(3)$ de cabeça, sem desenhar nada.
+
+b) Tente visualizar $F(3) - F(2.5)$ de cabeça, sem desenhar nada.
+
+c) A diferença $F(3) - F(2.5)$ é um retângulo. Diga a largura da base
+
+dele, a altura dele, e a área dele. Faça tudo de cabeça.
+
+d) Visualize $F(3.5) - F(2.5)$ de cabeça e veja que não é um retângulo.
+
+
+\newpage
+
+% «exercicio-3»  (to ".exercicio-3")
+% (c2m211prp 34 "exercicio-3")
+% (c2m211pra    "exercicio-3")
+
+{\bf Exercício 3.}
+
+Sejam:
+%
+$$f(x) = 
+  \unitlength=12pt
+  \vcenter{\hbox{%
+    \beginpicture(0,-3)(9,3)
+    \pictgrid%
+    \pictaxes%
+    \pictpiecewise{(0,0)--(1,0)o
+                   (1,1)c--(2,1)o
+                   (2,2)c--(3,2)o
+                   (3,1)c--(4,1)o
+                   (4,0)c--(5,0)o
+                   (5,-1)c--(6,-1)o
+                   (6,-2)c--(7,-2)o
+                   (7,-1)c--(8,-1)o
+                   (8,0)c--(9,0)
+                  }%
+    \celllower=2.5pt%
+    \def\cellfont{\scriptsize}%
+    \put(1,-0.5){\cell{1}}%
+    \put(2,-0.5){\cell{2}}%
+    \put(3,-0.5){\cell{3}}%
+    \put(4,-0.5){\cell{4}}%
+    \put(5,-0.5){\cell{5}}%
+    \put(6,-0.5){\cell{6}}%
+    \put(7,-0.5){\cell{7}}%
+    \put(8,-0.5){\cell{8}}%
+    \end{picture}%
+  }}
+$$
+
+e $F(b) = \Intx{0}{b}{f(x)}$.
+
+\msk
+
+Calcule as áreas das figuras abaixo de cabeça quando elas forem
+
+retângulos. Quando a figura não for um retângulo basta dizer
+
+``não é um retângulo''.
+
+\ssk
+
+\begin{tabular}{l}
+a) $F(2.6)-F(2.5)$ \\
+b) $F(3.9)-F(3.8)$ \\
+c) $F(4.0)-F(3.9)$ \\
+\end{tabular}
+\qquad
+\begin{tabular}{l}
+d) $F(4.1)-F(4.0)$ \\
+e) $F(5.3)-F(5.2)$ \\
+f) $F(6.1)-F(5.9)$ \\
+\end{tabular}
+
+
+\newpage
+
+% «retangulos-degenerados»  (to ".retangulos-degenerados")
+% (c2m211prp 35 "retangulos-degenerados")
+% (c2m211pra    "retangulos-degenerados")
+
+{\bf Retângulos degenerados}
+
+\ssk
+
+Várias pessoas ficaram em dúvida sobre se os retângulos com
+
+altura 0 do exercício 3 deveriam ser considerados retângulos
+
+ou não... eu tinha certeza que sim, mas aí a gente foi olhar
+
+a definição de retângulo na Wikipedia e a gente descobriu
+
+que segundo a definição usual de retângulo eles \ColorRed{não são}
+
+considerados retângulos... $\frown$
+
+\msk
+
+...mas eles são \ColorRed{retângulos degenerados}. Links:
+
+\ssk
+
+{\scriptsize
+
+% https://pt.wikipedia.org/wiki/Degenera%C3%A7%C3%A3o_(matem%C3%A1tica)
+\url{https://pt.wikipedia.org/wiki/Degenera%C3%A7%C3%A3o_(matem%C3%A1tica)}
+
+% https://pt.wikipedia.org/wiki/Ret%C3%A2ngulo
+\url{https://pt.wikipedia.org/wiki/Ret%C3%A2ngulo}
+
+% https://en.wikipedia.org/wiki/Rectangle
+\url{https://en.wikipedia.org/wiki/Rectangle}
+
+}
+
+\newpage
+
+% «retangulos-degenerados-2»  (to ".retangulos-degenerados-2")
+% (c2m211prp 36 "retangulos-degenerados-2")
+% (c2m211pra    "retangulos-degenerados-2")
+
+{\bf Retângulos degenerados (2)}
+
+\ssk
+
+Trechos principais:
+
+\begin{quotation}
+
+Em matemática, um caso degenerado é um caso li\-mite no qual uma
+classe de objeto altera sua natureza para aproximar-se muito a um
+objeto de outra classe, normal\-mente, mais simples.
+
+\msk
+
+(...)
+
+\msk
+
+Um segmento é uma forma degenerada de um retângulo se este tem um dos
+lados de comprimento zero.
+
+\end{quotation}
+
+
+
+
+
+\newpage
+
+% «exercicio-4»  (to ".exercicio-4")
+% (c2m211prp 37 "exercicio-4")
+% (c2m211pra    "exercicio-4")
+
+{\bf Exercício 4.}
+
+Sejam:
+%
+$$f(x) = 
+  \unitlength=10pt
+  \vcenter{\hbox{%
+    \beginpicture(0,-3)(9,3)
+    \pictgrid%
+    \pictaxes%
+    \pictpiecewise{(0,0)--(1,0)o
+                   (1,1)c--(2,1)o
+                   (2,2)c--(3,2)o
+                   (3,1)c--(4,1)o
+                   (4,0)c--(5,0)o
+                   (5,-1)c--(6,-1)o
+                   (6,-2)c--(7,-2)o
+                   (7,-1)c--(8,-1)o
+                   (8,0)c--(9,0)
+                  }%
+    \celllower=2.5pt%
+    \def\cellfont{\scriptsize}%
+    \put(1,-0.5){\cell{1}}%
+    \put(2,-0.5){\cell{2}}%
+    \put(3,-0.5){\cell{3}}%
+    \put(4,-0.5){\cell{4}}%
+    \put(5,-0.5){\cell{5}}%
+    \put(6,-0.5){\cell{6}}%
+    \put(7,-0.5){\cell{7}}%
+    \put(8,-0.5){\cell{8}}%
+    \end{picture}%
+  }}
+$$
+
+e $F(b) = \Intx{0}{b}{f(x)}$.
+
+\ssk
+
+Agora você vai fazer um gráfico da função $F(b)$. O \ColorRed{primeiro passo}
+
+é plotar nesse gráfico os pontos $(b,F(b))$ com $b∈\{0, 0.5, 1,
+\ldots, 9\}$.
+
+\ColorRed{Faça isso direto no gráfico, fazendo todas as contas de cabeça.}
+
+O truque é que $(0,F(0)) = (0,0)$ e é fácil encontrar cada ponto
+
+novo a partir do anterior... por exemplo, $F(3.5)-F(3)=0.5$,
+
+então pra passar de $(3,F(3))$ pra $(3.5,F(3.5))$ você anda 0.5
+
+pra direita e 0.5 pra cima.
+
+
+
+\newpage
+
+% «dicas-plotar»  (to ".dicas-plotar")
+% (c2m211prp 38 "dicas-plotar")
+% (c2m211pra    "dicas-plotar")
+
+{\bf Dicas sobre como plotar os pontos do exercício 4}
+
+\newpage
+
+% «exercicio-5»  (to ".exercicio-5")
+% (c2m211prp 39 "exercicio-5")
+% (c2m211pra    "exercicio-5")
+
+{\bf Exercício 5.}
+
+A gente ainda não tem o gráfico da função $F(b)$, só alguns 
+
+pontos dele... qual é o jeito certo de ligar esses pontos?
+
+Vamos começar desenhando mais pontos desse gráfico.
+
+No exercício 4 você desenhou uma série de pontos do gráfico
+
+de $F(b)$: os pontos correspondentes a $b∈\{0, 0.5, 1, 1.5, \ldots, 9\}$.
+
+A distância horizontal entre cada ponto desses e o seguinte
+
+era 0.5; agora nós vamos acrescentar mais pontos a esse
+
+gráfico, até a gente ter todos os pontos correspondentes
+
+a $b∈\{0, 0.1, 0.2, \ldots, 9\}$, com espaçamento horizontal 0.1
+
+entre cada ponto e o seguinte...
+
+\newpage
+
+% «exercicio-5-cont»  (to ".exercicio-5-cont")
+% (c2m211prp 40 "exercicio-5-cont")
+% (c2m211pra    "exercicio-5-cont")
+
+{\bf Exercício 5 (cont.)}
+
+...descubra como fazer isso. É possível que nos primeiros
+
+pontos você vá ter que fazer algumas contas --- faça todas
+
+de cabeça!!! --- mas assim que você descobrir os padrões
+
+você vai ser capaz de desenhar todos os pontos muito rápido.
+
+\msk
+
+{\bf IMPORTANTE:} faça esse gráfico com mais pontos
+
+como se você estivesse fazendo ele pra um ``leitor
+
+que seja muito amigo seu'' que não vai contar quantos
+
+pontos você desenhou entre, por exemplo, $x=3$ e $x=4$.
+
+Se você desenhar só 7 pontos ali ao invés de 9 (ou ao
+
+invés de 10, ou de 11... depende do jeito de contar)
+
+esse seu amigo não vai notar. Lembre destes truques:
+
+\ssk
+
+{\footnotesize
+
+% (c2m211somas2p 48)
+%    http://angg.twu.net/LATEX/2021-1-C2-somas-2.pdf#page=48
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2.pdf#page=48}
+
+% (c2m211somas24p 34)
+%    http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=34
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=34}
+
+}
+
+% (c2m211somas2p 48 "dirichlet-3")
+% (c2m211somas2a    "dirichlet-3")
+% (c2m211somas24p 34 "que-finja-ter-infinitas")
+% (c2m211somas24a    "que-finja-ter-infinitas")
+
+
+\newpage
+
+% «exercicio-6»  (to ".exercicio-6")
+% (c2m211prp 41 "exercicio-6")
+% (c2m211pra    "exercicio-6")
+
+{\bf Exercício 6.}
+
+Agora vamos fazer algo mais chique.
+
+Em Cálculo 1 você deve ter visto muitos argumentos
+
+que começavam com ``considere que $ε$ é um número real
+
+muito pequeno''. Esses argumentos eram sempre meio
+
+informais, e eles às vezes até usavam passos como
+
+``então $ε^2$ é desprezível''... e depois eles eram formalizados
+
+usando limites.
+
+\msk
+
+Ainda usando a $f(x)$ e a $F(x)$ dos slides anteriores,
+
+calcule o resultado das expressões abaixo considerando
+
+que $ε$ é um real positivo muito pequeno. Quase todos
+
+os seus resultados vão dar expressões contendo $ε$.
+
+% (c2m211somas2p 44 "funcoes-escada")
+% (c2m211somas2a    "funcoes-escada")
+
+\msk
+
+a) $F(1.5+ε)$, $F(1.5+ε) - F(1.5)$, $\frac{F(1.5+ε) - F(1.5)}{ε}$
+
+b) $F(2.5+ε)$, $F(2.5+ε) - F(2.5)$, $\frac{F(2.5+ε) - F(2.5)}{ε}$
+
+\newpage
+
+% «exercicio-6-cont»  (to ".exercicio-6-cont")
+% (c2m211prp 42 "exercicio-6-cont")
+% (c2m211pra    "exercicio-6-cont")
+
+{\bf Exercício 6 (cont.)}
+
+\msk
+
+c) $F(3.5+ε)$, $F(3.5+ε) - F(3.5)$, $\frac{F(3.5+ε) - F(3.5)}{ε}$
+
+d) $F(3.2+ε)$, $F(3.2+ε) - F(3.2)$, $\frac{F(3.2+ε) - F(3.2)}{ε}$
+
+e) $F(3.9+ε)$, $F(3.9+ε) - F(3.9)$, $\frac{F(3.9+ε) - F(3.9)}{ε}$
+
+\bsk
+
+E agora lembre da definição de derivada.
+
+Para cada $b_0$ no domínio da $F$ temos:
+%
+$$F'(b_0) = \lim_{ε→0} \frac{F(b_0+ε) - F(b_0)}{ε}$$
+
+Use isto pra calcular:
+
+\begin{tabular}{l}
+f) $F'(1.5)$, \\
+g) $F'(2.5)$, \\
+h) $F'(3.5)$, \\
+\end{tabular}
+\quad
+\begin{tabular}{l}
+i) $F'(3.2)$, \\
+j) $F'(3.9)$, \\
+k) $F'(4.5)$, \\
+\end{tabular}
+\quad
+\begin{tabular}{l}
+l) $F'(5.2)$, \\
+m) $F'(6.3)$, \\
+n) $F'(2.0)$. \\
+\end{tabular}
+
+
+\newpage
+
+% «exercicio-7»  (to ".exercicio-7")
+% (c2m211prp 43 "exercicio-7")
+% (c2m211pra    "exercicio-7")
+
+{\bf Exercício 7.}
+
+(Vai ser sobre derivadas pela esquerda...)
+
+\newpage
+
+% «exercicio-8»  (to ".exercicio-8")
+% (c2m211prp 44 "exercicio-8")
+% (c2m211pra    "exercicio-8")
+
+{\bf Exercício 8.}
+
+(Vai ser sobre a continuidade da $F$...)
+
+
+
+\newpage
+
+% «TFC1-escadas»  (to ".TFC1-escadas")
+% (c2m211prp 45 "TFC1-escadas")
+% (c2m211pra    "TFC1-escadas")
+
+{\bf O TFC1 (para funções escada)}
+
+\ssk
+
+Nos exercícios 6, 7 e 8 você descobriu --- num caso particular,
+
+mas dá pra provar que isso vale sempre --- que quando $f$ é
+
+uma função escada e
+%
+$$\begin{array}{rcl}
+  F(b) &=& \D \Intx{a}{b}{f(x)} \,, \quad \text{ou:} \\[10pt]
+  F(x) &=& \D \Intt{a}{x}{f(t)} \\
+  \end{array}
+$$
+
+então:
+
+1) $F(a) = 0$,
+
+2) a função $F$ é contínua,
+
+3) $F'(x) = f(x)$ em todo $x$ onde a derivada $f'(x)$ existe...
+
+\msk
+
+Ou seja, dá pra encontrar a função $F$ \ColorRed{resolvendo uma EDO}.
+
+\newpage
+
+{\bf O TFC1 para funções escada: um método}
+
+\ssk
+
+Quando a função $f$ é uma função escada simples --- como as
+
+que estamos vendo nos exercícios, ou como as do MT1 do
+
+semestre passado --- a gente consegue encontrar a função
+
+$F(x) = \Intt{a}{x}{f(t)}$ desenhando ela no gráfico...
+
+\msk
+
+O método é o seguinte. Vou mostrar ele pra função $G$ do MT1,
+
+mas chamando ela de $F$. As figuras estão no próximo slide.
+
+Repare que na função $G$ do MT1 tínhamos $a=2$...
+
+\newpage
+
+\unitlength=10pt
+
+$$
+ f(x) \;\; = \;\;
+ \vcenter{\hbox{%
+ \beginpicture(0,-4)(10,4)
+   \pictgrid%
+   \pictpiecewise{(0,1)--(1,1)o
+                  (1,2)c--(2,2)o
+                  (2,3)c--(3,3)o
+                  (3,-3)c--(4,-3)o
+                  (4,-2)c--(5,-2)o
+                  (5,-1)c--(6,-1)o
+                  (6,0)c--(7,0)o
+                  (7,1)c--(8,1)o
+                  (8,2)c--(9,2)o
+                  (9,3)c--(10,3)o
+                  }%
+   \pictaxes%
+ \end{picture}%
+ }}
+ \qquad
+ \begin{array}{rcl}
+  \end{array}
+$$
+
+$$
+  F(x)
+  \;\; = \;\;
+  \D \Intt{2}{x}{f(t)}
+  \;\; = \;\;
+   \vcenter{\hbox{%
+   \beginpicture(0,-4)(10,4)
+     \pictgrid%
+     \pictpiecewise{          (0,-3)--(1,-2)--(2,0)--(3,3)--%
+       (4,0)--(5,-2)--(6,-3)--(7,-3)--(8,-2)--(9,0)--(10,3)
+                    }%
+     \pictaxes%
+   \end{picture}%
+  }}
+$$
+
+\newpage
+
+{\bf O TFC1 para funções escada: um método (2)}
+
+\ssk
+
+Sabemos que $F(2)=0$.
+
+Então o gráfico da $F$ passa pelo ponto $(2,F(2)) = (2,0)$.
+
+Para todo $x∈(2,3)$ temos $f(x)=3$,
+
+então para todo $x∈(2,3)$ temos $F'(x)=3$,
+
+e então entre $x=2$ e $x=3$ o gráfico da $F$ é um
+
+segmento de reta com coeficiente angular 3.
+
+Esse segmento termina no ponto $(3,3)$.
+
+\msk
+
+O gráfico da $F$ passa pelo ponto $(3,3)$.
+
+Entre $x=3$ e $x=4$ o gráfico da $F$ é um
+
+segmento de reta com coeficiente angular -3.
+
+Esse segmento termina no ponto $(4,0)$.
+
+\msk
+
+Entre $x=4$ e $x=5$ o gráfico da $F$ é um
+
+segmento de reta com coeficiente angular -2...
+
+
+\newpage
+
+% «exercicio-9»  (to ".exercicio-9")
+% (c2m211prp 46 "exercicio-9")
+% (c2m211pra    "exercicio-9")
+
+{\bf Exercício 9.}
+
+\ssk
+
+Faça as questões a e b do MT1 do semestre passado.
+
+\ssk
+
+Tem link pro MT1 do semestre passado no slide 32,
+
+e as dicas pra este exercício estão neste vídeo:
+
+\ssk
+
+{\scriptsize
+
+\url{http://angg.twu.net/eev-videos/2021-1-C2-propriedades-da-integral-3.mp4}
+
+\url{https://www.youtube.com/watch?v=J97x7MNpr90 YT}
+
+}
+
+\bsk
+\bsk
+
+Obs: a gente ainda não viu como interpretar integrais
+
+``com os limites de integração na ordem errada'', como:
+%
+$$\Intx{0}{-2}{f(x)}$$
+
+% (c2m202mt1a "title")
+% (c2m202mt1a "title" "Mini-teste 1")
+% (c2m202mt1p 5 "miniteste-questoes")
+% (c2m202mt1a   "miniteste-questoes")
+
+Vamos ver em breve! Prepare-se!
+
+
+
+\newpage
+
+
+
+
+% \newpage
+% 
+% area
+% 
+% soma horizontal
+% 
+% soma vertical
+% 
+% multiplicacao por constante h
+% 
+% multiplicacao por constante v
 
 % (find-books "__analysis/__analysis.el" "beneveri")
 
@@ -185,6 +1860,8 @@ f () { cp -fv $1.png $1.pdf       ~/2021.1-C2/
 f 20201213_area_em_funcao_de_theta
 f 20201213_area_em_funcao_de_x
 f 20201213_area_fatias_pizza
+
+
 
 
 

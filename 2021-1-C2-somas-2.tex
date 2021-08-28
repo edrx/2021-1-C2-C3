@@ -26,12 +26,34 @@
 % (find-ssr-links "c2m211somas2" "2021-1-C2-somas-2" "qR6M2U_eiwE")
 % (code-video     "c2m211somas2video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-somas-2.mp4")
 % (find-c2m211somas2video "0:00")
+%
+% «video-2»  (to ".video-2")
+% (find-ssr-links "c2m211somas2" "2021-1-C2-somas-2b" "ZOAJ8wLnFn8")
+% (code-video "c2m211somas2video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-somas-2b.mp4")
+% (find-c2m211somas2video "0:00" "28/jul/2021")
+% (find-c2m211somas2video "0:17" "miniteste exercicio 12")
+% (find-c2m211somas2video "0:28" "miniteste exercicio 14")
+% (find-c2m211somas2video "0:40" "conseguiam enxergar todos os máximos e mínimos")
+% (find-c2m211somas2video "0:45" "[max] e [min] nem sempre")
+% (find-c2m211somas2video "1:05" "enquanto o [sup] daria isso aqui")
+% (find-c2m211somas2video "2:25" "identificarem essas expressões nos desenhos")
+% (find-c2m211somas2video "2:45" "nem sempre eu escolhi as melhores cores")
+% (find-c2m211somas2video "3:07" "entre as duas aproximações")
+% (find-c2m211somas2video "3:52" "se vocês entenderem esses retângulos como áreas")
+% (find-c2m211somas2video "4:41" "6(6-2) + 4(10-6)")
+% (find-c2m211somas2video "5:09" "quando a gente conseguir entender essas desigualdades")
+% (find-c2m211somas2video "5:22" "no semestre passado")
+% (find-c2m211somas2video "5:35" "na P1")
+% (find-c2m211somas2video "5:47" "contando quadradinhos - inclusive exercício")
+% (find-c2m211somas2video "6:23" "se vocês não conseguirem calcular no olho")
+% (find-c2m211somas2video "6:40" "eu dei uma questão em que eu não dava o desenho")
 
 % Videos antigos:
 % (c2m202somas2a "video-1-imagens")
 % (c2m202somas2a "video-2-infs-e-sups")
 
 % «.video-1»			(to "video-1")
+% «.video-2»			(to "video-2")
 %
 % «.defs»			(to "defs")
 % «.title»			(to "title")
@@ -80,19 +102,8 @@
 % «.dirichlet»			(to "dirichlet")
 % «.dirichlet-2»		(to "dirichlet-2")
 % «.dirichlet-3»		(to "dirichlet-3")
-%
-% Tudo depois daqui vai ser reesscrito:
-%
-% «.exemplao»			(to "exemplao")
-% «.exercicio-10»		(to "exercicio-10")
-% «.intover-intunder»		(to "intover-intunder")
-% «.exercicio-11»		(to "exercicio-11")
-% «.exercicio-12»		(to "exercicio-12")
-% «.exercicio-13»		(to "exercicio-13")
-% «.pierluigi»			(to "pierluigi")
-%
-% «.exercicio-1»		(to "exercicio-1")
-% «.exercicio-2»		(to "exercicio-2")
+% «.exercicio-19»		(to "exercicio-19")
+% «.trailer»			(to "trailer")
 %
 % «.djvuize»	(to "djvuize")
 
@@ -179,8 +190,8 @@
 \def\inftys {\{-∞,+∞\}}
 \def\Rest{\R∪\{-∞,+∞\}}
 
-\def\Intover #1#2{\overline {∫}_{#1}#2\,dx}
-\def\Intunder#1#2{\underline{∫}_{#1}#2\,dx}
+\def\Intover     #1#2{\overline {∫}_{#1}#2\,dx}
+\def\Intunder    #1#2{\underline{∫}_{#1}#2\,dx}
 \def\Intoverunder#1#2{\Intover{#1}{#2} - \Intunder{#1}{#2}}
 
 \def\Intxover     #1#2#3{\overline {∫}_{x=#1}^{x=#2}#3\,dx}
@@ -884,7 +895,7 @@ Podemos testar se $5 ∈ \setofst{y∈\R}{∃x∈[2,4).f(x)=y} = F([2,4))$...
 \newpage
 
 % «sups-e-infs-em-portugues»  (to ".sups-e-infs-em-portugues")
-% (c2m211somas2p 21 "sups-e-infs-em-portugues")
+% (c2m211somas2p 22 "sups-e-infs-em-portugues")
 % (c2m211somas2a    "sups-e-infs-em-portugues")
 
 {\bf Sups e infs em português}
@@ -1389,7 +1400,7 @@ no intervalo $[a,b]$''.
 \newpage
 
 % «definicao-integral»  (to ".definicao-integral")
-% (c2m211somas2p 33 "definicao-integral")
+% (c2m211somas2p 34 "definicao-integral")
 % (c2m211somas2a    "definicao-integral")
 
 {\bf A definição de integral}
@@ -1505,7 +1516,7 @@ não de retângulos cujas bases estão em $y=0$.
 \newpage
 
 % «exercicio-16-defs»  (to ".exercicio-16-defs")
-% (c2m211somas2p 36 "exercicio-16-defs")
+% (c2m211somas2p 37 "exercicio-16-defs")
 % (c2m211somas2a    "exercicio-16-defs")
 % (c2m211figsa    "defs-int")
 
@@ -1580,7 +1591,7 @@ não de retângulos cujas bases estão em $y=0$.
 % \newpage
 
 % «exercicio-16-fig1»  (to ".exercicio-16-fig1")
-% (c2m211somas2p 36 "exercicio-16-fig1")
+% (c2m211somas2p 37 "exercicio-16-fig1")
 % (c2m211somas2a    "exercicio-16-fig1")
 
 \unitlength=6.5pt
@@ -2114,6 +2125,10 @@ muito próximas das outras''...
 
 \newpage
 
+% «exercicio-19»  (to ".exercicio-19")
+% (c2m211somas2p 49 "exercicio-19")
+% (c2m211somas2a    "exercicio-19")
+
 {\bf Exercício 19.}
 
 A função de Dirichlet é um dos exemplos mais simples
@@ -2148,6 +2163,10 @@ com $y=1$...)
 
 
 \newpage
+
+% «trailer»  (to ".trailer")
+% (c2m211somas2p 50 "trailer")
+% (c2m211somas2a    "trailer")
 
 {\bf Propriedades da integral: trailer}
 

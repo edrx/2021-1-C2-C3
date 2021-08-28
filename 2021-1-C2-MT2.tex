@@ -1,40 +1,41 @@
-% (find-LATEX "2021-1-C2-MT1.tex")
-% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C2-MT1.tex" :end))
-% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C2-MT1.tex" "Success!!!"))
-% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-MT1.pdf"))
-% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-MT1.pdf"))
-% (defun e () (interactive) (find-LATEX "2021-1-C2-MT1.tex"))
-% (defun o () (interactive) (find-LATEX "2021-1-C2-propriedades-da-integral.tex"))
+% (find-LATEX "2021-1-C2-MT2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C2-MT2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C2-MT2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-MT2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-MT2.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C2-MT2.tex"))
+% (defun o () (interactive) (find-LATEX "2021-1-C2-MT1.tex"))
 % (defun l () (interactive) (find-LATEX "2021-1-C2-critical-points.lua"))
-% (defun u () (interactive) (find-latex-upload-links "2021-1-C2-MT1"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C2-MT2"))
 % (defun v () (interactive) (find-2a '(e) '(d)))
-% (defun d0 () (interactive) (find-ebuffer "2021-1-C2-MT1.pdf"))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C2-MT2.pdf"))
 % (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
-%          (code-eec-LATEX "2021-1-C2-MT1")
-% (find-pdf-page   "~/LATEX/2021-1-C2-MT1.pdf")
-% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-MT1.pdf /tmp/")
-% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-MT1.pdf /tmp/pen/")
-%     (find-xournalpp "/tmp/2021-1-C2-MT1.pdf")
-%   file:///home/edrx/LATEX/2021-1-C2-MT1.pdf
-%               file:///tmp/2021-1-C2-MT1.pdf
-%           file:///tmp/pen/2021-1-C2-MT1.pdf
-% http://angg.twu.net/LATEX/2021-1-C2-MT1.pdf
+%          (code-eec-LATEX "2021-1-C2-MT2")
+% (find-pdf-page   "~/LATEX/2021-1-C2-MT2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-MT2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-MT2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C2-MT2.pdf")
+%   file:///home/edrx/LATEX/2021-1-C2-MT2.pdf
+%               file:///tmp/2021-1-C2-MT2.pdf
+%           file:///tmp/pen/2021-1-C2-MT2.pdf
+% http://angg.twu.net/LATEX/2021-1-C2-MT2.pdf
 % (find-LATEX "2019.mk")
-% (find-CN-aula-links "2021-1-C2-MT1" "2" "c2m211mt1" "c2mt1")
+% (find-CN-aula-links "2021-1-C2-MT2" "2" "c2m211mt2" "c2mt2")
 %
 % Video (not yet):
-% (find-ssr-links "c2m211mt1" "2021-1-C2-MT1")
-% (code-video     "c2m211mt1video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-MT1.mp4")
-% (find-c2m211mt1video "0:00")
+% (find-ssr-links "c2m211mt2" "2021-1-C2-MT2")
+% (code-video     "c2m211mt2video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-MT2.mp4")
+% (find-c2m211mt2video "0:00")
 
-% «.defs»	(to "defs")
-% «.title»	(to "title")
-% «.regras»	(to "regras")
-% «.questao-1»	(to "questao-1")
-% «.questao-2»	(to "questao-2")
-% «.gabarito»	(to "gabarito")
+% «.defs»		(to "defs")
+% «.title»		(to "title")
+% «.regras»		(to "regras")
+% «.defs-funcao-f»	(to "defs-funcao-f")
+% «.questoes-1-e-2»	(to "questoes-1-e-2")
+% «.questao-3»		(to "questao-3")
+% «.gabarito»		(to "gabarito")
 %
-% «.djvuize»	(to "djvuize")
+% «.djvuize»		(to "djvuize")
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
@@ -73,15 +74,12 @@
 
 %L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
 %L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
-%L dofile "2021-1-C2-critical-points.lua"
-%L -- (find-LATEX "2021-1-C2-critical-points.lua" "f_parabola_preferida")
 %L -- (find-LATEX "2021-1-C2-critical-points.lua" "Piecewisify-tests")
+%L dofile         "2021-1-C2-critical-points.lua"
 \pu
 
 % «defs»  (to ".defs")
 % (find-LATEX "edrx15.sty" "colors-2019")
-
-\def\mname#1{\text{[#1]}}
 
 \def\drafturl{http://angg.twu.net/LATEX/2021-1-C2.pdf}
 \def\drafturl{http://angg.twu.net/2021.1-C2.html}
@@ -97,8 +95,8 @@
 %                      |_|          |___/      
 %
 % «title»  (to ".title")
-% (c2m211mt1p 1 "title")
-% (c2m211mt1a   "title")
+% (c2m211mt2p 1 "title")
+% (c2m211mt2a   "title")
 
 \thispagestyle{empty}
 
@@ -110,7 +108,7 @@
 
 \bsk
 
-Mini-teste 1
+Mini-teste 2
 
 \bsk
 
@@ -123,6 +121,8 @@ Eduardo Ochs - RCN/PURO/UFF
 \newpage
 
 % «regras»  (to ".regras")
+% (c2m211mt2p 2 "regras")
+% (c2m211mt2a   "regras")
 % (c2m211mt1p 2 "regras")
 % (c2m211mt1a   "regras")
 % (c2m201mt1p 7 "miniteste-regras")
@@ -130,9 +130,9 @@ Eduardo Ochs - RCN/PURO/UFF
 
 {\bf Regras para o mini-teste}
 
-As questões do mini-teste serão disponibilizadas às 18:00 da
-sexta-feira 23/julho/2021 e você deverá entregar as respostas
-\ColorRed{escritas à mão} até as 18:00 do sábado 14/julho/2021 na
+As questões do mini-teste serão disponibilizadas às 19:00 da
+sexta-feira 13/agosto/2021 e você deverá entregar as respostas
+\ColorRed{escritas à mão} até as 19:00 do sábado 14/agosto/2021 na
 plataforma Classroom; dese\-nhos feitos no computador serão
 \ColorRed{ignorados}.
 
@@ -152,10 +152,6 @@ responderão perguntas sobre os assuntos do mini-teste mas você pode
 discutir com os seus colegas --- inclusive no grupo da turma.
 
 Este mini-teste vale 0.5 pontos extras na P1.
-
-\ssk
-
-(Aliás, vale 0.7...)
 
 \newpage
 
@@ -201,109 +197,20 @@ e o comentário sobre reler e revisar muitas vezes daqui:
 
 \newpage
 
-% «questao-1»  (to ".questao-1")
-% (c2m211mt1p 4 "questao-1")
-% (c2m211mt1a   "questao-1")
 
-{\bf Questão 1}
-
-\unitlength=12pt
-
-Seja:
+% «defs-funcao-f»  (to ".defs-funcao-f")
+% (c2m211mt2p 4 "defs-funcao-f")
+% (c2m211mt2a   "defs-funcao-f")
 %
-$$f(x) =
-  \vcenter{\hbox{%
-    \beginpicture(0,0)(10,5)
-    \pictgrid%
-    %
-    \pictpiecewise{(0,3)--(2,1)--(8,4)--(10,0)}%
-    \pictaxes%
-    \end{picture}%
-  }}
-$$
-
-\msk
-
-Em cada um dos casos abaixo represente num gráfico só
-
-a função $f$ e os dois somatórios pedidos.
-
-\msk
-
-a) (0.1 pts) $\mname{sup}_{[1,9]_{2^1}}$, $\mname{inf}_{[1,9]_{2^1}}$
-
-b) (0.1 pts) $\mname{sup}_{[1,9]_{2^2}}$, $\mname{inf}_{[1,9]_{2^2}}$
-
-c) (0.1 pts) $\mname{sup}_{[1,9]_{2^3}}$, $\mname{inf}_{[1,9]_{2^3}}$
-
-d) (0.1 pts) $\mname{max}_{[1,9]_{2^1}}$, $\mname{min}_{[1,9]_{2^1}}$
-
-e) (0.1 pts) $\mname{max}_{[1,9]_{2^2}}$, $\mname{min}_{[1,9]_{2^2}}$
-
-
-
-\newpage
-
-% «questao-2»  (to ".questao-2")
-% (c2m211mt1p 5 "questao-2")
-% (c2m211mt1a   "questao-2")
-
-{\bf Questão 2 (bonus)}
-
-(0.2 pts) Dê uma definição por casos
-
-pra função $f$ da página anterior.
-
-
-
-\bsk
-\bsk
-\bsk
-\bsk
-
-Dica: lembre que toda a notação que estamos
-
-usando vem daqui, das páginas 27 em diante...
-
-\ssk
-
-{\footnotesize
-
-% (c2m211somas2p 27 "metodos-nomes")
-% (c2m211somas2a    "metodos-nomes")
-\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2.pdf#page=27}
-
-}
-
-
-\newpage
-
-% «gabarito»  (to ".gabarito")
-% (c2m211mt1p 6 "gabarito")
-% (c2m211mt1a   "gabarito")
-% (find-LATEX "2021-1-C2-critical-points.lua" "Piecewisify-tests")
-% (c2m211somas2p 37 "exercicio-16-fig1")
-% (c2m211somas2a    "exercicio-16-fig1")
-
-% (c2m211somas2p 37 "exercicio-16-defs")
-% (c2m211somas2a    "exercicio-16-defs")
-% (c2m211somas2a    "exercicio-16-defs" "ColorUpperA")
-\long\def\ColorUpperA#1{{\color{red!20!white}#1}}
-\long\def\ColorUpperB#1{{\color{Gold1!20!white}#1}}
-\long\def\ColorUpperC#1{{\color{Green1!20!white}#1}}
-\long\def\ColorUpperD#1{{\color{Blue1!20!white}#1}}
-\long\def\ColorLowerA#1{{\color{red!80!white}#1}}
-\long\def\ColorLowerB#1{{\color{Gold1!80!white}#1}}
-\long\def\ColorLowerC#1{{\color{Green1!80!white}#1}}
-\long\def\ColorLowerD#1{{\color{Blue1!80!white}#1}}
-\long\def\ColorUpper #1{{\color{Gold}#1}}
-\long\def\ColorLower #1{{\color{Orange}#1}}
-\long\def\ColorLower #1{{\color{Orange!75!red}#1}}
-
 %L f_questao_1 = function (x)
-%L     if x < 2 then return 3-x end
-%L     if x < 8 then return x/2 end
-%L     return 20 - 2*x
+%L     if x < 1 then return 1 end
+%L     if x < 3 then return 2 end
+%L     if x < 4 then return 1 end
+%L     if x < 5 then return 0 end
+%L     if x < 6 then return -1 end
+%L     if x < 8 then return -2 end
+%L     if x < 9 then return -1 end
+%L     return 0
 %L   end
 %L
 %L pwi = Piecewisify {f = f_questao_1}
@@ -313,13 +220,29 @@ usando vem daqui, das páginas 27 em diante...
 %L   end
 \pu
 
+\def\xonetoten{%
+    \celllower=2.5pt%
+    \def\cellfont{\scriptsize}%
+    \put(1,-0.5){\cell{1}}%
+    \put(2,-0.5){\cell{2}}%
+    \put(3,-0.5){\cell{3}}%
+    \put(4,-0.5){\cell{4}}%
+    \put(5,-0.5){\cell{5}}%
+    \put(6,-0.5){\cell{6}}%
+    \put(7,-0.5){\cell{7}}%
+    \put(8,-0.5){\cell{8}}%
+    \put(9,-0.5){\cell{9}}%
+    \put(10,-0.5){\cell{10}}%
+  }
+
 \def\fwithapprs#1{%
   \vcenter{\hbox{%
-    \beginpicture(0,0)(10,5)
+    \beginpicture(0,-3)(10,3)
     \pictgrid%
     #1%
     \pictaxes%
     \expr{pwi:pw(0, 10)}
+    \xonetoten
     \end{picture}%
   }}}
 \def\fwithapprscc#1#2{
@@ -331,93 +254,141 @@ usando vem daqui, das páginas 27 em diante...
   \fwithapprscc{pwirects(#1, "#2")}{pwirects(#1, "#3")}%
   }
 
-
-{\bf Gabarito}
-
-\msk
-
-\unitlength=8pt
-
-$\text{1a) } \fwithapprsccc{2}{sup}{inf}
- \quad
- \text{1b) } \fwithapprsccc{4}{sup}{inf}
- \quad
- \text{1c) } \fwithapprsccc{8}{sup}{inf}
-$
-
-\msk
-
-$\text{1d) } \fwithapprsccc{2}{max}{min}
- \quad
- \text{1e) } \fwithapprsccc{4}{max}{min}
-$
-
-\bsk
-
-$\text{2) }
-  f(x)
-  \;\; = \;\;
-  \begin{cases}
-    3-x & \text{quando $x≤2$}, \\
-    x/2 & \text{quando $2<x≤8$}, \\
-    20-2x & \text{quando $8<x$} \\
-  \end{cases}
-$
-
-\newpage
-
-{\bf Alguns erros que muitas pessoas cometeram}
-
-\msk
-
-``$\{1,5,9\}=[1,5]∪[5,9]$'': Isto é falso!!! 
-
-$\{1,5,9\}$ é um conjunto de três elementos,
-
-e $[1,5]∪[5,9]=[1,9]$ é um conjunto infinito!...
-
-\newpage
-
-{\bf Alguns erros que muitas pessoas cometeram (2)}
-
-\bsk
-
-\def\eqfrown{\overset{\ColorRed{\text{(não!!!)}}}{=}}
-\def\NEQ{\ColorRed{≠}}
-
-$f(x)
-  \;\; = \;\;
+\def\Fwithapprs#1{%
   \vcenter{\hbox{%
-    \beginpicture(0,0)(10,5)
+    \beginpicture(0,-3)(10,3)
     \pictgrid%
-    %
-    \pictpiecewise{(0,3)--(2,1)--(8,4)--(10,0)}%
+    #1%
     \pictaxes%
+    \expr{pwiF:pw(0, 10)}
+    \xonetoten
     \end{picture}%
-  }}
-  \;\; \eqfrown \;\;
-  \begin{cases}
-    3-x & \text{quando $x≤2$}, \\
-    6-x & \text{quando $2<x≤8$}, \\
-    -2x-20 & \text{quando $8<x$} \\
-  \end{cases}
-$
+  }}}
+
+\long\def\ColorUpper #1{{\color{Gold}#1}}
+\long\def\ColorLower #1{{\color{Orange!75!red}#1}}
+
+\def\pictgrid{{\color{GrayPale}\linethickness{0.3pt}\expr{pictgrid()}}}
+\def\pictgrid{{\color{GrayPale!75!white}\linethickness{0.2pt}\expr{pictgrid()}}}
+
+\msk
+
+\unitlength=15pt
+
+
+% «questoes-1-e-2»  (to ".questoes-1-e-2")
+% (c2m211mt2p 4 "questoes-1-e-2")
+% (c2m211mt2a   "questoes-1-e-2")
+
+Sejam:
+%
+$$f(x) \;\;=\;\; \fwithapprs{}
+$$
+
+e $F(x) \;\;=\;\; \D \Intt{2}{x}{f(t)}$.
 
 \bsk
 
-Vocês deveriam ser capazes de testar esse ``$6-x$''
+1) (0.1 pts) Represente graficamente
+$F(3.5)$,
+$F(6.5)$
+e $F(6.5) - F(3.5)$.
 
-e esse ``$-2x-20$'' de cabeça em poucos segundos,
+2) (0.1 pts) Represente $\Intx{3.5}{6.5}{f(x)}$ como uma soma de retângulos
 
-fazendo algo como isto aqui:
-%
-$$\begin{array}{rcccccccc}
-  (6-x)[x:=2]     &=& 6-2      &=&   4 &\NEQ& 1 &=& f(2) \\
-  (6-x)[x:=8]     &=& 6-8      &=&  -2 &\NEQ& 4 &=& f(8)  \\
-  (-2x-20)[x:=8]  &=& -2·8-20  &=& -36 &\NEQ& 4 &=& f(8)  \\
-  (-2x-20)[x:=10] &=& -2·10-20 &=& -40 &\NEQ& 0 &=& f(10) \\
-  \end{array}
-$$
+e calcule o resultado desta soma. Dica: veja o slide 29 daqui...
+
+\ssk
+
+{\scriptsize
+
+% (c2m211prp 29 "integrando-escadas")
+% (c2m211pra    "integrando-escadas")
+%    http://angg.twu.net/LATEX/2021-1-C2-propriedades-da-integral.pdf#page=29
+\url{http://angg.twu.net/LATEX/2021-1-C2-propriedades-da-integral.pdf#page=29}
+
+}
+
+
+\newpage
+
+% «questao-3»  (to ".questao-3")
+% (c2m211mt2p 5 "questao-3")
+% (c2m211mt2a   "questao-3")
+
+3) (0.3 pts) Desenhe o gráfico da função $F(x)$ entre $x=0$ e $x=10$.
+
+Dica: faça primeiro o trecho entre $x=2$ e $x=10$ e depois descubra
+
+como fazer o trecho entre $x=0$ e $x=2$.
+
+
+\newpage
+
+% «gabarito»  (to ".gabarito")
+% (c2m211mt2p 6 "gabarito")
+% (c2m211mt2a   "gabarito")
+
+{\bf Gabarito: questão 1}
+
+% (find-LATEXfile "2021-1-C2-propriedades-da-integral.tex" "pwi:rects")
+
+\def\GabOne#1#2{%
+   \scalebox{0.7}{$
+     \fwithapprs{%
+       \ColorOrange{\expr{pwi:pol(#1, #2, "*")}}%
+     }
+   $}}
+
+1)
+$\begin{array}[t]{rcl}
+            F(3.5) &=& \GabOne{2.0}{3.5} \\
+            F(6.5) &=& \GabOne{2.0}{6.5} \\
+   F(6.5) - F(3.5) &=& \GabOne{3.5}{6.5} \\
+ \end{array}
+$
+
+\newpage
+
+{\bf Gabarito: questões 2 e 3}
+
+\bsk
+
+3) $F(6.5) - F(3.5) =
+    \pmat{
+          1·(4-3.5)    \\
+      +\; 0·(5-4)      \\
+      +\; (-1)·(6-5)   \\
+      +\; (-2)·(6.5-6) \\
+    }
+    =
+    \pmat{ 0.5 \\ +\; 0 \\ +\; (-1) \\ +\; (-1) }
+    = -1.5
+   $
+
+\bsk
+
+%L F_questao_1 = function (x)
+%L     local g = function (x0,y0, x1,y1, x)
+%L         return y0 + (x-x0)*((y1-y0)/(x1-x0))
+%L       end
+%L     if x < 1 then return x-3 end
+%L     if x < 3 then return g(1,-2, 3,2, x) end
+%L     if x < 4 then return g(3,2,  4,3, x) end
+%L     if x < 5 then return g(4,3,  5,3, x) end
+%L     if x < 6 then return g(5,3,  6,2, x) end
+%L     if x < 8 then return g(6,2,  8,-2, x) end
+%L     if x < 9 then return g(8,-2, 9,-3, x) end
+%L     return -3
+%L   end
+%L
+%L pwiF = Piecewisify {f = F_questao_1}
+%L pwiF:setpoints(2, 8, seq(0, 10, 1))
+\pu
+
+3)
+$F(x) \;\;=\;\; \Fwithapprs{}
+$
 
 
 
@@ -476,11 +447,11 @@ f 20201213_area_fatias_pizza
  (eepitch-kill)
  (eepitch-shell)
 # (find-LATEXfile "2019planar-has-1.mk")
-make -f 2019.mk STEM=2021-1-C2-MT1 veryclean
-make -f 2019.mk STEM=2021-1-C2-MT1 pdf
+make -f 2019.mk STEM=2021-1-C2-MT2 veryclean
+make -f 2019.mk STEM=2021-1-C2-MT2 pdf
 
 % Local Variables:
 % coding: utf-8-unix
-% ee-tla: "c2mt1"
-% ee-tla: "c2m211mt1"
+% ee-tla: "c2mt2"
+% ee-tla: "c2m211mt2"
 % End:

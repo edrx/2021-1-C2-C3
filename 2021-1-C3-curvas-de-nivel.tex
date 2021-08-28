@@ -45,7 +45,13 @@
 % «.exercicio-2-cont»	(to "exercicio-2-cont")
 % «.exercicio-3»	(to "exercicio-3")
 % «.exercicio-3-a»	(to "exercicio-3-a")
+% «.exercicio-4»	(to "exercicio-4")
+% «.exercicio-4-cont»	(to "exercicio-4-cont")
 %
+% «.figura-piramide»	(to "figura-piramide")
+% «.cruz»		(to "cruz")
+%
+% «.lua»		(to "lua")
 % «.djvuize»		(to "djvuize")
 
 \documentclass[oneside,12pt]{article}
@@ -80,12 +86,15 @@
 %
 \begin{document}
 
-%\catcode`\^^J=10
-%\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
 
-% %L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
-% %L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
-% \pu
+%L dofile "edrxtikz.lua"     -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"     -- (find-LATEX "edrxpict.lua")
+%L dofile "2021-1-C3-3D.lua" -- (find-LATEX "2021-1-C3-3D.lua")
+%L
+%L V3.__index.tostring = function (v) return v:v2string() end
+\pu
 
 % «defs»  (to ".defs")
 % (find-LATEX "edrx15.sty" "colors-2019")
@@ -103,6 +112,8 @@
 
 \long\def\ColorShort #1{{\color{SpringGreen4}#1}}
 \long\def\ColorLong  #1{{\color{Red1}#1}}
+
+\def\pictgray#1{{\color{GrayPale}\linethickness{0.3pt}#1}}
 
 \def\frown{\ensuremath{{=}{(}}}
 \def\True {\mathbf{V}}
@@ -471,6 +482,10 @@ Quanto vale $z$ em $(x_3,y_3)$?
 
 \newpage
 
+% «exercicio-4»  (to ".exercicio-4")
+% (c3m211cnp 10 "exercicio-4")
+% (c3m211cna    "exercicio-4")
+
 {\bf Exercício 4.}
 
 O que você acabou de fazer no exercício 3 costuma ser feito
@@ -495,6 +510,10 @@ os do exercício 3, mas na notação nova, e fazendo
 tudo de cabeça.
 
 \newpage
+
+% «exercicio-4-cont»  (to ".exercicio-4-cont")
+% (c3m211cnp 11 "exercicio-4-cont")
+% (c3m211cna    "exercicio-4-cont")
 
 {\bf Exercício 4 (cont.)}
 
@@ -524,8 +543,161 @@ d) Digamos que $(x_0,y_0) = (4,3)$ e $Δx=0.1$.
 
 Calcule $(P(x_0,y_0+Δy) - P(x_0,y_0)) / Δy$.
 
+
+\newpage
+
+O que você fez nos exercícios anteriores correponde
+
+a calcular derivadas parciais por limites, e é bem
+
+parecido com o que a gente faz no início de Cálculo 1...
+
+Depois a gente aprende a calcular derivadas ``por contas'',
+
+usando regras de derivação, e a gente quase não mexe
+
+mais com limites.
+
 \msk
 
+Em Cálculo 3 a gente vai precisar voltar à definição
+
+de derivada parcial como limite várias vezes pra gente
+
+conseguir visualizar certas derivadas complicadas em
+
+várias dimensões... então a gente geralmente vai
+
+alternar entre os dois jeitos de calcular derivadas
+
+parciais.
+
+\newpage
+
+{\bf Exercício 5.}
+
+O exercício [01] da seção 5.5 do livro do Bortolossi,
+
+na página 177 do capítulo 5, pede pra vocês calcularem
+
+algumas derivadas parciais ``por contas''/``por regras
+
+de derivação''. Os itens abaixo são adaptados do
+
+exercício [01] dele. Sejam:
+%
+$$\begin{array}{rcl}
+  f(x,y) &=& 2x^4 y^3 - xy^2 + 3y + 1, \\
+  g(x,y) &=& xe^y + y \sen(x), \\
+  h(x,y) &=& \sqrt{x^2 + 4y^2}, \\
+  m(x,y) &=& (x^3 - y^2)^2. \\
+  \end{array}
+$$
+
+a) Calcule $f_x(x,y)$ e $f_y(x,y)$.
+
+b) Calcule $g_x(x,y)$ e $g_y(x,y)$.
+
+c) Calcule $h_x(x,y)$ e $h_y(x,y)$.
+
+d) Calcule $m_x(x,y)$ e $m_y(x,y)$.
+
+\newpage
+
+{\bf Exercício 5 (cont.)}
+
+e) Calcule $f(10, 2)$, $f_x(10, 2)$, $f_y(10, 2)$. 
+
+f) Calcule $f(y, x)$, $f_x(y, x)$, $f_y(y, x)$. 
+
+g) Calcule $f(x, x)$, $f_x(x, x)$, $f_y(x, x)$. 
+
+h) Calcule $h(y, x)$, $h_x(y, x)$, $h_y(y, x)$. 
+
+
+
+\newpage
+
+% «figura-piramide»  (to ".figura-piramide")
+% (c3m211cnp 15 "figura-piramide")
+% (c3m211cna    "figura-piramide")
+
+{\bf Pirâmide}
+
+%L V3.__index.p1 = V {2.0, -0.2}
+%L V3.__index.p2 = V {0.5, 1.5}
+%L V3.__index.p3 = V {0, 0.75}
+%L
+%L fw = function (x) return max(min(x-2, 6-x), 0) end
+%L FP = function (x,y) return min(fw(x), fw(y)) end
+%L FC = function (x,y) return max(fw(x), fw(y)) end
+%L sP = Surface.new(FP, 4, 4)
+%L sC = Surface.new(FC, 4, 4)
+\pu
+
+$\vcenter{\hbox{%
+ \unitlength=14pt
+ \beginpicture(0,-2)(18,12)
+%P \pictgray{<v3():xygrid(7,7)>}
+%P <v3():axeswithticks(7,7,2)>
+%P <sP:segment(v(0,2), v(7,2), nil, 7)>
+%P <sP:segment(v(0,3), v(7,3), nil, 7)>
+%P <sP:segment(v(0,4), v(7,4), nil, 7)>
+%P <sP:segment(v(0,5), v(7,5), nil, 7)>
+%P <sP:segment(v(0,6), v(7,6), nil, 7)>
+%P %
+%P <sP:segment(v(2,0), v(2,7), nil, 7)>
+%P <sP:segment(v(3,0), v(3,7), nil, 7)>
+%P <sP:segment(v(4,0), v(4,7), nil, 7)>
+%P <sP:segment(v(5,0), v(5,7), nil, 7)>
+%P <sP:segment(v(6,0), v(6,7), nil, 7)>
+%P %
+%P <sP:segment(v(2,2), v(6,6), nil, 4)>
+%P <sP:segment(v(2,6), v(6,2), nil, 4)>
+ \pu
+ \end{picture}%
+ }}
+$
+
+\newpage
+
+% «cruz»  (to ".cruz")
+% (c3m211cnp 16 "cruz")
+% (c3m211cna    "cruz")
+
+{\bf Cruz}
+
+$\vcenter{\hbox{%
+ \unitlength=14pt
+ %\bhbox{
+ \beginpicture(0,-2)(18,12)
+%P \pictgray{<v3():xygrid(7,7)>}
+%P <v3():axeswithticks(7,7,2)>
+%P <sC:segment(v(0,0), v(7,0), nil, 7)>
+%P <sC:segment(v(7,0), v(7,7), nil, 7)>
+%P
+%P <sC:segment(v(0,0), v(0,7), nil, 7)>
+%P <sC:segment(v(0,7), v(7,7), nil, 7)>
+%P
+%P <sC:segment(v(0,2), v(7,2), nil, 7)>
+%P <sC:segment(v(0,3), v(7,3), nil, 7)>
+%P <sC:segment(v(0,4), v(7,4), nil, 7)>
+%P <sC:segment(v(0,5), v(7,5), nil, 7)>
+%P <sC:segment(v(0,6), v(7,6), nil, 7)>
+%P %
+%P <sC:segment(v(2,0), v(2,7), nil, 7)>
+%P <sC:segment(v(3,0), v(3,7), nil, 7)>
+%P <sC:segment(v(4,0), v(4,7), nil, 7)>
+%P <sC:segment(v(5,0), v(5,7), nil, 7)>
+%P <sC:segment(v(6,0), v(6,7), nil, 7)>
+%P %
+%P <sC:segment(v(2,2), v(6,6), nil, 4)>
+%P <sC:segment(v(2,6), v(6,2), nil, 4)>
+ \pu
+ \end{picture}%
+ %}
+ }}
+$
 
 
 
@@ -544,6 +716,7 @@ Calcule $(P(x_0,y_0+Δy) - P(x_0,y_0)) / Δy$.
 % | |__| |_| | (_| |
 % |_____\__,_|\__,_|
 %                   
+% «lua»  (to ".lua")
 
  (eepitch-lua51)
  (eepitch-kill)
