@@ -28,6 +28,7 @@
 
 % «.defs»	(to "defs")
 % «.title»	(to "title")
+% «.gabarito»	(to "gabarito")
 %
 % «.djvuize»	(to "djvuize")
 
@@ -63,12 +64,14 @@
 %
 \begin{document}
 
-%\catcode`\^^J=10
-%\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
 
-% %L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
-% %L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
-% \pu
+%L dofile "edrxtikz.lua"     -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"     -- (find-LATEX "edrxpict.lua")
+%L -- dofile "2021-1-C3-3D.lua" -- (find-LATEX "2021-1-C3-3D.lua")
+%L -- V3.__index.tostring = function (v) return v:v2string() end
+\pu
 
 % «defs»  (to ".defs")
 % (find-LATEX "edrx15.sty" "colors-2019")
@@ -198,7 +201,122 @@ $z \mapsto z^2$ e faça um desenho razoavelmente preciso dela.
 $$\includegraphics[height=3.5cm]{2021-1-C3/20210827_9+4_quadrados.pdf}$$
 
 
-%\printbibliography
+\newpage
+
+% «gabarito»  (to ".gabarito")
+% (c3m211mt2p 4 "gabarito")
+% (c3m211mt2a    "gabarito")
+
+{\bf Gabarito}
+
+(Usei $a=b=0.2$)
+%
+\unitlength=15pt
+%
+%L complexsquare = function (a, b)
+%L     return a*a - b*b, 2*a*b
+%L   end
+%L csq = function (vv)
+%L     return v(complexsquare(vv[1], vv[2]))
+%L   end
+%L drawsquare = function (vv, f, e)
+%L     return pformat("\\polygon%s%s%s%s",
+%L                    f(vv), f(vv+v(e,0)), f(vv+v(e,e)), f(vv+v(0,e)))
+%L   end
+%L drawline = function (vv, ww, f, n)
+%L     local g = function (k) return tostring(f(tow(vv, ww, k/n))) end
+%L     return "\\Line"..mapconcat(g, seq(0, n), "")
+%L   end
+%L drawall = function (f, eps, n)
+%L     return table.concat({
+%L       drawsquare(v(0, 0), f, eps),
+%L       drawsquare(v(0, 1), f, eps),
+%L       drawsquare(v(0, 2), f, eps),
+%L       drawsquare(v(1, 0), f, eps),
+%L       drawsquare(v(1, 1), f, eps),
+%L       drawsquare(v(1, 2), f, eps),
+%L       drawsquare(v(2, 0), f, eps),
+%L       drawsquare(v(2, 1), f, eps),
+%L       drawsquare(v(2, 2), f, eps),
+%L       drawline(v(0, 0), v(0, 2), f, n),
+%L       drawline(v(1, 0), v(1, 2), f, n),
+%L       drawline(v(2, 0), v(2, 2), f, n),
+%L       drawline(v(0, 0), v(2, 0), f, n),
+%L       drawline(v(0, 1), v(2, 1), f, n),
+%L       drawline(v(0, 2), v(2, 2), f, n),
+%L       }, "\n")
+%L   end
+\pu
+%
+$$\vcenter{\hbox{%
+    \beginpicture(-1,-1)(3,3)
+    \pictgrid%
+    {\linethickness{1.251pt}%
+     \expr{drawall(id, 0.2, 1)}%
+    }
+    \pictaxes%
+    \end{picture}%
+  }}
+  \quad
+  \mapsto
+  \quad
+  \vcenter{\hbox{%
+    \beginpicture(-6,-1)(6,10)
+    \pictgrid%
+    {\linethickness{1.25pt}%
+     \expr{drawall(csq, 0.2, 10)}%
+    }
+    \pictaxes%
+    \end{picture}%
+  }}
+$$
+
+\newpage
+
+{\bf Um jeito de fazer as contas}
+%
+\def\Lxx#1{\lim_{Δx→0} \frac{#1}{Δx}}
+\def\Lyy#1{\lim_{Δy→0} \frac{#1}{Δy}}
+%
+$$\scalebox{0.9}{$
+  \begin{array}{rcl}
+  w_x &=& \D \Lxx {w(x_0+Δx,y_0) - w}                      \\[7pt]
+      &=& \D \Lxx {(a(x_0+Δx,y_0), b(x_0+Δx,y_0)) - (a,b)} \\[7pt]
+      &=& \D \Lxx {(a + a_x Δx, b + b_x Δx) - (a,b)}       \\[7pt]
+      &=& \D \Lxx {(a_x Δx, b_x Δx)}                       \\[7pt]
+      &=& \D \Lxx {(a_x, b_x) Δx}                          \\[7pt]
+      &=& \VEC{a_x, b_x}                                   \\[7pt]
+  w_y &=& \D \Lyy {w(x_0,y_0+Δy) - w}                      \\[7pt]
+      &=& \VEC{a_y, b_y}                                   \\[7pt]
+  \end{array}
+  $}
+$$
+
+\newpage
+
+\vspace*{-0.5cm}
+
+$$w = (a,b) = (x^2 - y^2, 2xy)$$
+$$w_z = \frac{d\psm{a\\b}}{d\psm{x\\y}}
+      = \pmat{a_x & a_y \\ b_x & b_y}
+      = \pmat{2x & -2y \\ 2y & 2x}
+$$
+$$w_x = \VEC{a_x, b_x} = \VEC{2x, 2y}$$
+$$w_y = \VEC{a_y, b_y} = \VEC{-2y, 2x}$$
+
+Em $(x,y) = (2,0)$ temos $w=(4,0)$, $w_x=\VEC{4,0}$, $w_y=\VEC{0,4}$
+
+Em $(x,y) = (2,1)$ temos $w=(3,4)$, $w_x=\VEC{4,2}$, $w_y=\VEC{-2,4}$
+
+Em $(x,y) = (2,2)$ temos $w=(0,8)$, $w_x=\VEC{4,4}$, $w_y=\VEC{-4,4}$
+
+Em $(x,y) = (1,2)$ temos $w=(-3,4)$, $w_x=\VEC{2,4}$, $w_y=\VEC{-4,2}$
+
+\msk
+
+$w(1.2, 2) ≈ w(1,2) + w_x(1,2)·0.2 = (-3,4) + 0.2·\VEC{2,4}$
+
+$w(1, 2.2) ≈ w(1,2) + w_y(1,2)·0.2 = (-3,4) + 0.2·\VEC{-4,2}$
 
 \GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
 

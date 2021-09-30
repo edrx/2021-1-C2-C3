@@ -1,0 +1,554 @@
+% (find-LATEX "2021-1-C3-P1.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C3-P1.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C3-P1.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C3-P1.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C3-P1.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C3-P1.tex"))
+% (defun q () (interactive) (find-LATEX "2021-1-C3-gradiente.tex"))
+% (defun o () (interactive) (find-LATEX "2020-2-C3-P1.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C3-P1"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C3-P1.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2021-1-C3-P1")
+% (find-pdf-page   "~/LATEX/2021-1-C3-P1.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C3-P1.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C3-P1.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C3-P1.pdf")
+%   file:///home/edrx/LATEX/2021-1-C3-P1.pdf
+%               file:///tmp/2021-1-C3-P1.pdf
+%           file:///tmp/pen/2021-1-C3-P1.pdf
+% http://angg.twu.net/LATEX/2021-1-C3-P1.pdf
+% (find-LATEX "2019.mk")
+% (find-CN-aula-links "2021-1-C3-P1" "3" "c3m211p1" "c3p1")
+%
+% Video (not yet):
+% (find-ssr-links "c3m211p1" "2021-1-C3-P1")
+% (code-video     "c3m211p1video" "$S/http/angg.twu.net/eev-videos/2021-1-C3-P1.mp4")
+% (find-c3m211p1video "0:00")
+
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C3-gradiente.pdf"))
+
+% «.defs»		(to "defs")
+% «.defs-T-and-B»	(to "defs-T-and-B")
+% «.title»		(to "title")
+% «.regras-e-dicas»	(to "regras-e-dicas")
+% «.questao-1»		(to "questao-1")
+% «.questao-2»		(to "questao-2")
+% «.questao-3»		(to "questao-3")
+% «.questao-4»		(to "questao-4")
+% «.questao-1-gab»	(to "questao-1-gab")
+% «.questao-1-gab-cont»	(to "questao-1-gab-cont")
+% «.questao-2-gab»	(to "questao-2-gab")
+%
+% «.djvuize»		(to "djvuize")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%
+%\usepackage[backend=biber,
+%   style=alphabetic]{biblatex}            % (find-es "tex" "biber")
+%\addbibresource{catsem-slides.bib}        % (find-LATEX "catsem-slides.bib")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+%L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+\pu
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx15.sty" "colors-2019")
+%\long\def\ColorRed   #1{{\color{Red1}#1}}
+%\long\def\ColorViolet#1{{\color{MagentaVioletLight}#1}}
+%\long\def\ColorViolet#1{{\color{Violet!50!black}#1}}
+%\long\def\ColorGreen #1{{\color{SpringDarkHard}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreenDark}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorGray  #1{{\color{GrayLight}#1}}
+%\long\def\ColorGray  #1{{\color{black!30!white}#1}}
+%\long\def\ColorBrown #1{{\color{Brown}#1}}
+%\long\def\ColorBrown #1{{\color{brown}#1}}
+%\long\def\ColorOrange#1{{\color{orange}#1}}
+%
+%\long\def\ColorShort #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorLong  #1{{\color{Red1}#1}}
+%
+%\def\frown{\ensuremath{{=}{(}}}
+%\def\True {\mathbf{V}}
+%\def\False{\mathbf{F}}
+%\def\D    {\displaystyle}
+
+\def\drafturl{http://angg.twu.net/LATEX/2021-1-C3.pdf}
+\def\drafturl{http://angg.twu.net/2021.1-C3.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+% (c3m202p1p 6 "questao-2")
+% (c3m202p1a   "questao-2")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c3m211p1p 1 "title")
+% (c3m211p1a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 3 - 2021.1}
+
+\bsk
+
+P1 (primeira prova)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://angg.twu.net/2021.1-C3.html}
+
+\end{center}
+
+\newpage
+
+% «regras-e-dicas»  (to ".regras-e-dicas")
+
+{\bf Regras e dicas}
+
+As regras e dicas são as mesmas dos mini-testes:
+
+\ssk
+
+\url{http://angg.twu.net/LATEX/2020-2-C3-MT1.pdf}
+
+\url{http://angg.twu.net/LATEX/2020-2-C3-MT2.pdf}
+
+\ssk
+
+exceto que a prova vai ser disponibilizada às 20:00 do dia
+
+3/setembro/2021 e deve ser entregue até as 20:00 do dia
+
+4/setembro/2021.
+
+
+
+\bsk
+\bsk
+
+Todas as questões são baseadas em exercícios deste PDF:
+
+\ssk
+
+{\footnotesize
+
+% (c3mgradp 3 "exercicio-1")
+% (c3mgrada   "exercicio-1")
+%    http://angg.twu.net/LATEX/2021-1-C3-gradiente.pdf
+\url{http://angg.twu.net/LATEX/2021-1-C3-gradiente.pdf}
+
+}
+
+\ssk
+
+Vou me referir a ele como ``[G]'' (de ``Gradiente'').
+
+\newpage
+
+% «questao-1»  (to ".questao-1")
+% (c3m211p1p 3 "questao-1")
+% (c3m211p1a   "questao-1")
+% (c3mgradp 3 "exercicio-1")
+% (c3mgrada   "exercicio-1")
+
+{\bf Questão 1.}
+
+\T(Total: 2.5 pts)
+
+\ssk
+
+a) \B(0.5 pts) Faça o exercício (1c) do [G].
+
+b) \B(1.0 pts) Faça o exercício (1g) do [G].
+
+c) \B(1.0 pts) Faça o exercício (1h) do [G].
+
+
+\newpage
+
+% «questao-2»  (to ".questao-2")
+% (c3m211p1p 4 "questao-2")
+% (c3m211p1a   "questao-2")
+% (c3mgradp 5 "exercicio-2")
+% (c3mgrada   "exercicio-2")
+
+{\bf Questão 2.}
+
+\T(Total: 4.5 pts)
+
+\ssk
+
+Faça os itens abaixo do exercício 2 do [G],
+
+mas considerando que $(x_0,y_0) = (-1,1)$.
+
+\msk
+
+a) \B(1.0 pts) Faça o item (2a) do [G].
+
+b) \B(0.5 pts) Faça o item (2b) do [G].
+
+c) \B(0.5 pts) Faça o item (2c) do [G].
+
+d) \B(0.5 pts) Faça o item (2d) do [G].
+
+\msk
+
+e) \B(1.0 pts) Faça o item (2e) do [G], mas mostrando
+
+como representar graficamente $h'_\text{cima}(x_0)$ e explicando
+
+porque o seu resultado ``faz sentido''.
+
+\msk
+
+f) \B(0.5 pts) Faça o item (2f) do [G].
+
+g) \B(0.5 pts) Faça o item (2g) do [G].
+
+
+\newpage
+
+% «questao-3»  (to ".questao-3")
+% (c3m211p1p 5 "questao-3")
+% (c3m211p1a   "questao-3")
+
+{\bf Questão 3.}
+
+\T(Total: 2.0 pts)
+
+\ssk
+
+Faça os itens abaixo do exercício 3 do [G],
+
+mas considerando que $(x_0,y_0) = (-1,1)$.
+
+\msk
+
+a) \B(1.0 pts) Faça o item (3a) do [G].
+
+b) \B(0.5 pts) Faça o item (3b) do [G].
+
+c) \B(0.5 pts) Faça o item (3c) do [G].
+
+
+\newpage
+
+% «questao-4»  (to ".questao-4")
+% (c3m211p1p 6 "questao-4")
+% (c3m211p1a   "questao-4")
+
+{\bf Questão 4.}
+
+\T(Total: 1.0 pts)
+
+\ssk
+
+Generalize o seu item (3c) --- refaça ele considerando
+
+que o ponto $(x_0,y_0)$ é um ponto qualquer de $\R^2$,
+
+não necessariamente o ponto $(-1,1)$.
+
+
+
+\newpage
+
+% «questao-1-gab»  (to ".questao-1-gab")
+% (c3m211p1p 7 "questao-1-gab")
+% (c3m211p1a   "questao-1-gab")
+
+{\bf Questão 1: gabarito}
+
+
+% (find-LATEX "material-para-GA.tex" "cells")
+
+\def\cellhc#1{\hbox to 0pt{\hss\cellfont${#1}$\hss}}
+\def\cellvm#1{\setbox0#1\lower \celllower \box0}
+\def\cellvb#1{\setbox0#1\lower \ht0       \box0}
+\def\cellvm#1{\setbox0#1\lower 0.4\ht0    \box0}
+\def\cellc   #1{\cellvm{\cellhc{#1}}}
+
+%L fcells = function (f)
+%L     local bigstr = ""
+%L     for y=-3,3 do
+%L       for x=-3,3 do
+%L         bigstr = bigstr..f(x, y)
+%L       end
+%L     end
+%L     return (bigstr)
+%L   end
+%L
+%L fxyy = function (x, y)
+%L     local z = (x-y)*y
+%L     return format("\\put(%d,%d){\\cellc{%s}}%%\n", x,y, z)
+%L  end
+%L fgrad = function (x,y)
+%L     local Gx = y/10
+%L     local Gy = (x - 2*y)/10
+%L     p0 = v(x, y)
+%L     p1 = p0 + v(Gx, Gy)
+%L     return pformat("\\Line%s%s%%\n", p0, p1)
+%L   end
+
+\pu
+
+\def\fwith#1{%
+  \vcenter{\hbox{%
+    \beginpicture(-4,-4)(4,4)
+    \pictgrid%
+    #1%
+    \pictaxes%
+    \end{picture}%
+  }}}
+
+\unitlength=20pt
+
+\def\bpt#1{{%
+  \unitlength=1pt
+  \begin{picture}(0,0)
+    \put(0,-8){\scalebox{0.5}{\ColorRed{(#1)}}}
+  \end{picture}}}
+
+\bpt{0.5}%
+1a) $(x-y)y =   
+     \scalebox{1}{$
+       \fwith{\expr{fcells(fxyy)}}
+     $}
+    $
+
+\bpt{1.0}%
+1b) (Vou desenhar as curvas de nível à mão)
+
+\newpage
+
+% «questao-1-gab-cont»  (to ".questao-1-gab-cont")
+% (c3m211p1p 8 "questao-1-gab-cont")
+% (c3m211p1a    "questao-1-gab-cont")
+
+{\bf Questão 1: gabarito (cont.)}
+
+(Imagine que os tracinhos são setinhas)
+
+\bpt{1.0}%
+1c) $∇G = \VEC{\frac{y}{10}, \frac{x-2y}{10}} =
+     \scalebox{1.10}{$
+       \fwith{\expr{fcells(fgrad)}}
+     $}
+    $
+
+
+\newpage
+
+% «questao-2-gab»  (to ".questao-2-gab")
+% (c3m211p1p 9 "questao-2-gab")
+% (c3m211p1a   "questao-2-gab")
+
+{\bf Questão 2: gabarito}
+
+\bpt{1.0}%
+2a) $h_\text{cima}(x)  = (x + \sqrt{x^2 + 8})/2$, \;\;
+    $h_\text{baixo}(x) = (x - \sqrt{x^2 + 8})/2$
+
+\msk
+
+\bpt{0.5}%
+2b) (Vou desenhar o gráfico à mão)
+
+\msk
+
+\bpt{0.5}%
+2c) $h_\text{cima}(x_0) = (-1 + \sqrt{(-1)^2 + 8})/2 = 1 = y_0$
+
+\msk
+
+\bpt{0.5}%
+2d) $h'_\text{cima}(x) = \frac{x}{2\sqrt{x^2+8}} + \frac{1}{2} $
+
+\msk
+\bpt{1.0}%
+2e) $h'_\text{cima}(x_0) = \frac{-1}{2\sqrt{(-1)^2+8}} + \frac{1}{2} = \frac13$
+
+\ph{2e)} (falta o desenho)
+
+\msk
+\bpt{0.5}%
+2f) $\vv = \VEC{1, \frac13}$; desenhar
+
+\msk
+\bpt{0.5}%
+2g) $∇F = \VEC{y, x-2y}$; $∇F(x_0,y_0) = \VEC{1, -1-2·1} = \VEC{1,-3}$;
+
+\ph{2g)} $\vv·∇F(x_0,y_0) = \VEC{1, \frac13}·\VEC{1,-3} = 1-1 = 0$
+
+
+\newpage
+
+{\bf Questão 3: gabarito}
+
+\def\ddz{\frac{d}{dz}}
+
+\bpt{1.0}%
+a) $\ddz z = 0$, $\ddz z = z_x + z_y y_x$, $y_x = -\frac{z_x}{z_y}$;
+
+\ph{a)} se $z = (x-y)y = xy - y^2$ então $z_x = y$, $z_y = x-2y$,
+
+\ph{a)} $y_x = -\frac{y}{x-2y}$.
+
+\msk
+
+\bpt{0.5}%
+b) Em $(x,y)=(-1,1)$ temos $y_x = -\frac{1}{-1-2·1} = \frac13$.
+
+\msk
+
+\bpt{0.5}%
+c) Em $(x,y)=(0,1)$ temos
+
+\ph{c)} $\VEC{1,y_x}·∇F = \VEC{1, \frac13}·\VEC{1,-3} = 1-1 = 0$.
+
+
+\newpage
+
+{\bf Questão 4: gabarito}
+
+\ColorRed{(1.0 pts)}
+
+\msk
+
+$\ddz z = 0$, $\ddz z = z_x + z_y y_x$, $y_x = -\frac{z_x}{z_y}$;
+
+se $z = (x-y)y = xy - y^2$ então $z_x = y$, $z_y = x-2y$,
+
+$y_x = -\frac{y}{x-2y}$.
+
+\msk
+
+Temos $∇F = \VEC{y, x-2y}$ (num ponto $(x,y)$ qualquer).
+
+$\VEC{1,y_x}·∇F = \VEC{1, -\frac{y}{x-2y}}· \VEC{y, x-2y} = y + (-\frac{y}{x-2y}·(x-2y)) = 0$.
+
+
+
+
+%\printbibliography
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2021.1-C3/")
+# (find-fline "~/LATEX/2021-1-C3/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2021.1-C3/
+       cp -fv        $1.pdf ~/LATEX/2021-1-C3/
+       cat <<%%%
+% (find-latexscan-links "C3" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2021-1-C3-P1 veryclean
+make -f 2019.mk STEM=2021-1-C3-P1 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c3p1"
+% ee-tla: "c3m211p1"
+% End:

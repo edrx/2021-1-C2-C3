@@ -1,0 +1,985 @@
+% (find-LATEX "2021-1-C2-P1.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C2-P1.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C2-P1.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-P1.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-P1.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C2-P1.tex"))
+% (defun o () (interactive) (find-LATEX "2020-2-C2-P1.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C2-P1"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C2-P1.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2021-1-C2-P1")
+% (find-pdf-page   "~/LATEX/2021-1-C2-P1.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-P1.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C2-P1.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C2-P1.pdf")
+%   file:///home/edrx/LATEX/2021-1-C2-P1.pdf
+%               file:///tmp/2021-1-C2-P1.pdf
+%           file:///tmp/pen/2021-1-C2-P1.pdf
+% http://angg.twu.net/LATEX/2021-1-C2-P1.pdf
+% (find-LATEX "2019.mk")
+% (find-CN-aula-links "2021-1-C2-P1" "2" "c2m211p1" "c2p1")
+%
+% Video (not yet):
+% (find-ssr-links "c2m211p1" "2021-1-C2-P1")
+% (code-video     "c2m211p1video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-P1.mp4")
+% (find-c2m211p1video "0:00")
+
+% «.defs»			(to "defs")
+% «.subst-defs»			(to "subst-defs")
+% «.defs-T-and-B»		(to "defs-T-and-B")
+% «.title»			(to "title")
+% «.regras-e-dicas»		(to "regras-e-dicas")
+% «.aviso-2»			(to "aviso-2")
+% «.questao-1»			(to "questao-1")
+% «.questao-2»			(to "questao-2")
+% «.questao-3»			(to "questao-3")
+% «.questao-3-cont»		(to "questao-3-cont")
+% «.questao-1-gab»		(to "questao-1-gab")
+% «.questao-2-gab»		(to "questao-2-gab")
+% «.questao-3-gab»		(to "questao-3-gab")
+% «.apendice»			(to "apendice")
+% «.gabarito-2-2020.2»		(to "gabarito-2-2020.2")
+% «.quatro-substituicoes»	(to "quatro-substituicoes")
+% «.exercicio»			(to "exercicio")
+%
+% «.djvuize»			(to "djvuize")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%
+%\usepackage[backend=biber,
+%   style=alphabetic]{biblatex}            % (find-es "tex" "biber")
+%\addbibresource{catsem-slides.bib}        % (find-LATEX "catsem-slides.bib")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+%L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+\pu
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx15.sty" "colors-2019")
+%\long\def\ColorRed   #1{{\color{Red1}#1}}
+%\long\def\ColorViolet#1{{\color{MagentaVioletLight}#1}}
+%\long\def\ColorViolet#1{{\color{Violet!50!black}#1}}
+%\long\def\ColorGreen #1{{\color{SpringDarkHard}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreenDark}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorGray  #1{{\color{GrayLight}#1}}
+%\long\def\ColorGray  #1{{\color{black!30!white}#1}}
+%\long\def\ColorBrown #1{{\color{Brown}#1}}
+%\long\def\ColorBrown #1{{\color{brown}#1}}
+%\long\def\ColorOrange#1{{\color{orange}#1}}
+%
+%\long\def\ColorShort #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorLong  #1{{\color{Red1}#1}}
+%
+%\def\frown{\ensuremath{{=}{(}}}
+%\def\True {\mathbf{V}}
+%\def\False{\mathbf{F}}
+%\def\D    {\displaystyle}
+
+\def\drafturl{http://angg.twu.net/LATEX/2021-1-C2.pdf}
+\def\drafturl{http://angg.twu.net/2021.1-C2.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+
+% «subst-defs»  (to ".subst-defs")
+% (find-LATEX "2020-1-C2-TFC2-2.tex" "subst-defs")
+
+\def\pfo#1{\ensuremath{\mathsf{[#1]}}}
+\def\veq{\rotatebox{90}{$=$}}
+\def\Rd{\ColorRed}
+\def\D{\displaystyle}
+
+% Difference with mathstrut
+\def\Difms #1#2#3{\left. \mathstrut #3 \right|_{s=#1}^{s=#2}}
+\def\Difmu #1#2#3{\left. \mathstrut #3 \right|_{u=#1}^{u=#2}}
+\def\Difmx #1#2#3{\left. \mathstrut #3 \right|_{x=#1}^{x=#2}}
+\def\Difmth#1#2#3{\left. \mathstrut #3 \right|_{θ=#1}^{θ=#2}}
+
+\def\iequationbox#1#2{
+    \left(
+    \begin{array}{rcl}
+    \D{ #1 } &=& \D{ #2 } \\
+    \end{array}
+    \right)
+  }
+\def\isubstbox#1#2#3#4#5{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \end{array}
+    \right)
+  }}
+\def\isubstboxT#1#2#3#4#5#6{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \multicolumn{3}{l}{\text{#6}} \\%[5pt]
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \end{array}
+    \right)
+  }}
+\def\isubstboxTT#1#2#3#4#5#6#7{{
+    \def\veq{\rotatebox{90}{$=$}}
+    \def\ph{\phantom}
+    \left(
+    \begin{array}{rcl}
+    \multicolumn{3}{l}{\text{#6}} \\%[5pt]
+    \D{ #1 } &=& \D{ #2 } \\
+    {\veq#3} \\
+    \D{ #4 } &=& \D{ #5 } \\
+    \multicolumn{3}{l}{\text{#7}} \\%[5pt]
+    \end{array}
+    \right)
+  }}
+
+% Definição das fórmulas para integração por substituição.
+% Algumas são pmatrizes 3x3 usando isubstbox.
+
+\def\TFCtwo{
+  \iequationbox {\Intx{a}{b}{F'(x)}}
+                {\Difmx{a}{b}{F(x)}}
+}
+\def\TFCtwoI{
+  \iequationbox {\intx{F'(x)}}
+                {F(x)}
+}
+
+\def\Sone{
+  \isubstbox
+    {\Difmx{a}{b}{f(g(x))}}  {\Intx{a}{b}{f'(g(x))g'(x)}}
+    {\ph{mmm}}
+    {\Difmu{g(a)}{g(b)}{f(u)}} {\Intu{g(a)}{g(b)}{f'(u)}}
+}
+\def\SoneI{
+  \isubstbox
+    {f(g(x))} {\intx{f'(g(x))g'(x)}}
+    {\ph{m}}
+    {f(u)}    {\intu{f'(u)}}
+}
+
+\def\Stwo{
+  \isubstboxT
+    {\Difmx{a}{b}{F(g(x))}}   {\Intx{a}{b}{f(g(x))g'(x)}}
+    {\ph{mmm}}
+    {\Difmu{g(a)}{g(b)}{F(u)}}  {\Intu{g(a)}{g(b)}{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+}
+\def\StwoI{
+  \isubstboxT
+    {F(g(x))}  {\intx{f(g(x))g'(x)}}
+    {\ph{m}}
+    {F(u)}     {\intu{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+}
+\def\StwoI{
+  \isubstboxTT
+    {F(g(x))}  {\intx{f(g(x))g'(x)}}
+    {\ph{m}}
+    {F(u)}     {\intu{f(u)}}
+    {Se $F'(u)=f(u)$ então:}
+    {Obs: $u=g(x)$.}
+}
+
+\def\Sthree{
+  \iequationbox {\Intx{a}{b}{f(g(x))g'(x)}}
+                {\Intu{g(a)}{g(b)}{f(u)}}
+}
+\def\SthreeI{
+  \iequationbox {\intx{f(g(x))g'(x)}}
+                {\intu{f(u)}
+                 \qquad [u=g(x)]
+                }
+  % [u=g(x)]
+}
+
+\def\Sthree{
+  \pmat{
+    \D \Intx{a}{b}{f(g(x))g'(x)} \\
+    \veq \\
+    \D \Intu{g(a)}{g(b)}{f(u)}
+  }}
+
+\def\SthreeI{
+  \pmat{
+    \D \intx{f(g(x))g'(x)} \\
+       \veq \\
+    \D \intu{f(u)} \\
+    \text{Obs: $u=g(x)$.} \\
+  }}
+
+
+
+\def\Subst#1{\bmat{#1}}
+
+
+
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+% (c3m202p1p 6 "questao-2")
+% (c3m202p1a   "questao-2")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c2m211p1p 1 "title")
+% (c2m211p1a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 2 - 2021.1}
+
+\bsk
+
+P1 (primeira prova)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://angg.twu.net/2021.1-C2.html}
+
+\end{center}
+
+\newpage
+
+
+% «regras-e-dicas»  (to ".regras-e-dicas")
+% (c2m211p1p 2 "regras-e-dicas")
+% (c2m211p1a   "regras-e-dicas")
+% (c2m202mt1p 2 "regras")
+% (c2m202mt1a   "regras")
+% (c2m202mt2p 2 "regras")
+% (c2m202mt1a   "regras")
+
+As regras e dicas são as mesmas dos mini-testes:
+
+\ssk
+
+\url{http://angg.twu.net/LATEX/2020-2-C2-MT1.pdf}
+
+\url{http://angg.twu.net/LATEX/2020-2-C2-MT2.pdf}
+
+\ssk
+
+exceto que a prova vai ser disponibilizada às 22:00 do dia
+
+2/setembro/2021 e deve ser entregue até as 10:00 do dia
+
+4/setembro/2021.
+
+\newpage
+
+{\bf Aviso}
+
+Se você comparar as integrais desta prova com as de uma prova
+
+``normal'' de Cálculo 2 você vai ver que as daqui são bastante
+
+simples... isso é porque eu vou dar uma importância \ColorRed{ENORME}
+
+a detalhes de sintaxe. Por exemplo, compare:
+%
+$$\intx {e^{\sen x}} = g(x)$$
+
+com:
+%
+$$\begin{array}{c}
+  \text{Queremos encontrar uma função $g(x)$ que obedeça:} \\[10pt]
+  \D \intx {e^{\sen x}} = g(x)
+  \end{array}
+$$
+
+\newpage
+
+% «aviso-2»  (to ".aviso-2")
+% (c2m211p1p 4 "aviso-2")
+% (c2m211p1a   "aviso-2")
+
+{\bf Aviso (2)}
+
+\ssk
+
+Se você só escrever ``$\intx {e^{\sen x}} = g(x)$''
+
+a interpretação \ColorRed{default} disso pra um
+
+``leitor que não seja muito seu amigo'' ---
+
+obs: releia isto aqui:
+
+\ssk
+
+{\footnotesize
+
+% (c2m211somas24p 12)
+%    http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=12
+\url{http://angg.twu.net/LATEX/2021-1-C2-somas-2-4.pdf#page=12}
+
+}
+
+\ssk
+
+vai ser: ``\ColorRed{para toda} função $g(x)$ temos $\intx {e^{\sen x}} = g(x)$''...
+
+\ssk
+
+Então escreva com muito cuidado as suas respostas!!!
+
+\bsk
+\bsk
+
+{\bf Obs:} eu costumo pôr nas regras das provas que durante
+
+a duração das provas eu não respondo perguntas... mas
+
+eu vou abrir uma exceção pras ``perguntas sobre sintaxe''.
+
+
+
+\newpage
+
+% «questao-1»  (to ".questao-1")
+% (c2m211p1p 5 "questao-1")
+% (c2m211p1a   "questao-1")
+% (c2m211isp 28 "exercicio-5")
+% (c2m211isa    "exercicio-5")
+% (c2m202p1p 9 "gabarito-2")
+% (c2m202p1a   "gabarito-2")
+
+{\bf Questão 1}
+
+\T(Total: 1.0 pts)
+
+\msk
+
+O exercício 5 do último PDF pedia pra vocês refazerem
+
+vocês mesmos uma questão da P1 do semestre passado que
+
+tinha gabarito no final da prova. No gabarito eu pus uma
+
+solução pra ela que usava as caixinhas de anotações...
+
+\msk
+
+Traduza este passo da solução dela pra notação com chaves:
+
+$$\intv {\left(
+         \cos
+         \left( 2 + \sqrt{v}
+         \right)
+         \right)
+         /
+         \left( 2 \sqrt{v}
+         \right)
+         }
+   = \intw {\cos{\left (2 + w \right )}
+           }
+$$
+
+% Obs: $w = \sqrt{v}$.
+
+\bsk
+\bsk
+
+Links:
+
+{\footnotesize
+
+%    http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=28
+\url{http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=28}
+
+%    http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=9
+\url{http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=9}
+
+}
+
+
+\newpage
+
+% «questao-2»  (to ".questao-2")
+% (c2m211p1p 6 "questao-2")
+% (c2m211p1a   "questao-2")
+% (c2m211isp 6 "exemplo-contas")
+% (c2m211isa   "exemplo-contas")
+% (c2m211tfcsp 16 "integral-indefinida")
+% (c2m211tfcsa    "integral-indefinida")
+
+{\bf Questão 2}
+
+\T(Total: 5.0 pts)
+
+\msk
+
+Resolva estas duas integrais usando mudanças de variáveis
+
+e teste as suas respostas. Nas mudanças de variáveis use
+
+ou as caixinhas de anotações ou as anotações sob chaves.
+
+\msk
+
+a) \B(2.5 pts) $$ \intx {e^{x^5} x^4} $$
+
+b) \B(2.5 pts) $$ \intx {\sqrt{2 + \sen x} · \cos x} $$
+
+
+
+
+Dicas:
+
+{\footnotesize
+
+% (c2m211isp 6)
+%    http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=6
+\url{http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=6}
+
+% (c2m211tfcsp 16)
+%    http://angg.twu.net/LATEX/2021-1-C2-os-dois-TFCs.pdf#page=16
+\url{http://angg.twu.net/LATEX/2021-1-C2-os-dois-TFCs.pdf#page=16}
+
+}
+
+
+
+
+
+
+
+\newpage
+
+% «questao-3»  (to ".questao-3")
+% (c2m211p1p 7 "questao-3")
+% (c2m211p1a   "questao-3")
+
+{\bf Questão 3}
+
+\T(Total: 4.0 pts)
+
+\msk
+
+No curso nós vimos como usar a $\pfo{S2I}$, que é:
+
+% (c2m202isp 3 "def-S2-S2I")
+% (c2m202isa   "def-S2-S2I")
+
+$$ \pfo{S2I} \;\;=\;\; \StwoI $$
+
+\bsk
+
+para convencer os incrédulos de que certas
+
+mudanças de variáveis são válidas...
+
+
+
+\newpage
+
+% «questao-3-cont»  (to ".questao-3-cont")
+% (c2m211p1p 8 "questao-3-cont")
+% (c2m211p1a   "questao-3-cont")
+% (c2m211substp 9 "igual-depois-de-subst")
+% (c2m211substa   "igual-depois-de-subst")
+% (c2m211isp 17 "encontre-a-subst")
+% (c2m211isa    "encontre-a-subst")
+% (c2m211isp 19 "exercicio-2-cont")
+% (c2m211isa    "exercicio-2-cont")
+
+{\bf Questão 3 (cont.)}
+
+a) \B(0.5 pts) Use a mudança de variável $u=x^5$ para converter
+%
+$$ \intx {\tan(x^5) · x^4} $$
+
+em uma integral mais simples.
+
+\bsk
+
+b) \B(3.5 pts) Encontre a substituição que transforma a \pfo{S2I}
+
+numa demonstração da igualdade que você encontrou no item (a).
+
+\bsk
+\bsk
+
+Dicas pra (b):
+
+\ssk
+
+{\footnotesize
+
+% (c2m211substp 9)
+%    http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=9
+\url{http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=9}
+
+% (c2m211isp 17)
+%    http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=17
+\url{http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=17}
+
+% (c2m211isp 19)
+%    http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=19
+\url{http://angg.twu.net/LATEX/2021-1-C2-int-subst.pdf#page=19}
+
+}
+
+\ssk
+
+
+% (c2m211isp 17 "encontre-a-subst")
+% (c2m211isa    "encontre-a-subst")
+% (c2m211isp 19 "exercicio-2-cont")
+% (c2m211isa    "exercicio-2-cont")
+
+
+\newpage
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{2.0cm}
+
+{\bf \Large Gabarito}
+
+\end{center}
+
+\newpage
+
+% «questao-1-gab»  (to ".questao-1-gab")
+% (c2m211p1p 10 "questao-1-gab")
+% (c2m211p1a    "questao-1-gab")
+
+{\bf Questão 1: gabarito}
+
+\def\und#1#2{\underbrace{#1}_{#2}}
+
+$$\int   \cos( 2 + \und{\sqrt{v}}{w} )
+         ·
+         \und{\und{\left( 2 \sqrt{v} \right)^{-1}}
+                  {\frac{dw}{dv}}
+              \, dv}
+             {dw}
+   = \intw {\cos{\left (2 + w \right )}
+           }
+$$
+
+\newpage
+
+% «questao-2-gab»  (to ".questao-2-gab")
+% (c2m211p1p 11 "questao-2-gab")
+% (c2m211p1a    "questao-2-gab")
+
+{\bf Questão 2: gabarito do item a}
+
+\def\eqa{\overset{\ColorRed{?}}{=}}
+
+$$\begin{array}{l}
+    \intx {e^{x^5} x^4} \\
+    = \;\; \intu {e^u · \frac{1}{5}} \\
+    = \;\; \frac{1}{5} \intu {e^u} \\
+    = \;\; \frac{1}{5} e^u \\
+    = \;\; \frac{1}{5} e^{x^5} \\
+    \end{array}
+  \quad
+  \bmat{ u = x^5 \\
+         \frac{du}{dx} = 5 x^4 \\
+         du = 5 x^4 \, dx \\
+         \frac{1}{5} du = x^4 \, dx \\
+       }
+  \qquad
+  \begin{array}{rcl}
+  \intx {e^{x^5} x^4} &\eqa& \ph{m,}         \frac{1}{5} e^{x^5} \\
+         e^{x^5} x^4  \ph{mi} &\eqa& \ddx \, \frac{1}{5} e^{x^5} \\
+                                 &=&  \frac{1}{5} e^{x^5} 5 x^4 \\
+                                 &=&   e^{x^5} x^4 \\
+  \end{array}
+$$
+
+\newpage
+
+{\bf Questão 2: gabarito do item b}
+
+$$\begin{array}{l}
+    \intx {\sqrt{2 + \sen x} · \cos x} \\
+    = \;\; \intu {\sqrt{u}} \\
+    = \;\; \intu {u^{\frac{1}{2}}} \\
+    = \;\; \frac{2}{3} u^{\frac{3}{2}} \\
+    = \;\; \frac{2}{3} (2+\sen x)^{\frac{3}{2}} \\
+    \end{array}
+  \quad
+  \bmat{ u = 2 + \sen x \\
+         \frac{du}{dx} = \cos x \\
+         du = \cos x \, dx \\
+       }
+$$
+
+\bsk
+
+$$\begin{array}{l}
+    \ddx \left( \frac{2}{3} (2+\sen x)^{\frac{3}{2}} \right) \\
+    = \;\; \frac{2}{3} · \ddx (2+\sen x)^{\frac{3}{2}}  \\[2.5pt]
+    = \;\; \frac{2}{3} · \frac{3}{2} (2+\sen x)^{\frac{1}{2}} · \ddx (2 + \sen x) \\[2.5pt]
+    = \;\; \sqrt{2 + \sen x} · \cos x
+    \end{array}
+$$
+
+
+\newpage
+
+% «questao-3-gab»  (to ".questao-3-gab")
+% (c2m211p1p 12 "questao-3-gab")
+% (c2m211p1a    "questao-3-gab")
+
+{\bf Questão 3: gabarito}
+
+a) \quad
+$\intx {\tan(x^5)·x^4} \;\;=\;\; \intu{\tan(u)·\frac{1}{5}}
+  \qquad
+  \bmat{ u = x^5 \\
+         \frac{du}{dx} = 5 x^4 \\
+         du = 5 x^4 \, dx \\
+         \frac{1}{5} du = x^4 \, dx \\
+       }
+$
+
+\def\StwoIsetargs #1{\StwoIsetargss #1}
+\def\StwoIsetargss#1#2#3#4#5#6{
+  \sa{x}{#1} \sa{u}{#2} \sa{gx}{#3} \sa{g'x}{#4}
+  \sa{nw}{F(\ga{gx})}   \sa{ne}{#5}
+  \sa{sw}{F(\ga{u})}    \sa{se}{#6}
+  }
+\def\StwoItmp{
+  \isubstboxTT
+    {\ga{nw}}  {\int \ga{ne} \, d\ga{x}}
+    {\ph{m}}
+    {\ga{sw}}  {\int \ga{se} \, d\ga{u}}
+    {Se $F'(\ga{u})=\ga{se}$ então:}
+    {Obs:  $\ga{u} =\ga{gx}$.}
+}
+\def\StwoIsubsts{
+  \bmat{x:=\ga{x} \\
+        u:=\ga{u} \\
+        f(\ga{u}):=\ga{se} \\
+        g(\ga{x}):=\ga{gx} \\
+       g'(\ga{x}):=\ga{g'x} \\
+       }
+}
+
+\bsk
+
+b) \quad
+$\scalebox{0.65}{$
+    \StwoIsetargs{ {x} {u} {x^5} {5x^4}
+                    {\tan(u)·\frac{1}{5}·5x^4}
+                    {\tan(u)·\frac{1}{5}} }
+    \StwoI \StwoIsubsts \;\;=\;\; \StwoItmp
+ $}
+$
+
+\newpage
+
+
+% «apendice»  (to ".apendice")
+% (c2m211p1p 14 "apendice")
+% (c2m211p1a    "apendice")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{2.0cm}
+
+{\bf \Large Apêndice}
+
+\end{center}
+
+\newpage
+
+% «gabarito-2-2020.2»  (to ".gabarito-2-2020.2")
+% (c2m211p1p 15 "gabarito-2-2020.2")
+% (c2m211p1a   "gabarito-2-2020.2")
+% (c2m202p1p 9 "gabarito-2")
+% (c2m202p1a   "gabarito-2")
+
+A primeira parte do gabarito da questão 2 de 2020.2 era isto aqui...
+
+A tradução destas quatro mudanças de variável pra casos particu-
+
+lares do \pfo{S2I} está no próximo slide.
+
+\bsk
+
+$\scalebox{1.0}{$
+ \begin{array}{l}
+   \begin{array}{l}
+   \intx {\frac{3 \cos{\left (2 + \sqrt{3 x + 4} \right )}}
+         {2 \sqrt{3 x + 4}}
+         } \\
+   = \intu {\frac{\cos{\left (2 + \sqrt{u + 4} \right )}}
+           {2 \sqrt{u + 4}}
+           } \\
+   = \intv {\frac{\cos{\left (2 + \sqrt{v} \right )}}
+           {2 \sqrt{v}}
+           } \\
+   = \intw {\cos{\left (2 + w \right )}
+           } \\
+   = \inty {\cos y}
+           \\
+   = \sen y \\
+   = \sen \left( 2+w \right) \\
+   = \sen \left( 2+\sqrt{v} \right) \\
+   = \sen \left( 2+\sqrt{u+4} \right) \\
+   = \sen \left( 2+\sqrt{3x+4} \right) \\
+   \end{array}
+   %
+   \begin{array}{c}
+     \bsm{u = 3x \\ \frac{du}{dx} = 3 \\ du = 3\,dx \\ dx = \frac13 du}
+     \\[15pt]
+     \bsm{v = u+4 \\ du=dv }
+     \\[5pt]
+     \bsm{w = \sqrt{v} \\ \frac{dw}{dv} = \frac12 v^{-1/2} = \frac{1}{2\sqrt{v}} \\}
+     \\[5pt]
+     \bsm{y = 2+w \\ dy=dw }
+     \\[60pt]
+   \end{array}
+   %
+  \end{array}
+  $}
+$
+
+\newpage
+
+% «quatro-substituicoes»  (to ".quatro-substituicoes")
+% (c2m211p1p 16 "quatro-substituicoes")
+% (c2m211p1a    "quatro-substituicoes")
+
+$\scalebox{0.5}{$
+  \begin{array}{l}
+    \StwoIsetargs{ {x} {u} {3x} {3}
+                    {\frac{\cos(2+\sqrt{3x+4})}{2\sqrt{3x+4}}·3}
+                    {\frac{\cos(2+\sqrt{ u+4})}{2\sqrt{ u+4}}  } }
+    \StwoI \StwoIsubsts \;\;=\;\; \StwoItmp
+    %
+    \\[55pt]
+    %
+    \StwoIsetargs{ {u} {v} {u+4} {1}
+                    {\frac{\cos(2+\sqrt{u+4})}{2\sqrt{u+4}}·1}
+                    {\frac{\cos(2+\sqrt{ v })}{2\sqrt{ v }}} }
+    \StwoI \StwoIsubsts \;\;=\;\; \StwoItmp
+    %
+    \\[55pt]
+    %
+    \StwoIsetargs{ {v} {w} {\sqrt{v}} {(2\sqrt{v})^{-1}}
+                    {\cos(2+\sqrt{v}) ·(2\sqrt{v})^{-1}}
+                    {\cos(2+w)} }
+    \StwoI \StwoIsubsts \;\;=\;\; \StwoItmp
+    %
+    \\[55pt]
+    %
+    \StwoIsetargs{ {w} {y} {2+w} {1}
+                    {\cos(2+w)·1}
+                    {\cos(y)} }
+    \StwoI \StwoIsubsts \;\;=\;\; \StwoItmp
+    \\
+  \end{array}
+  $}
+$
+
+\newpage
+
+% «exercicio»  (to ".exercicio")
+% (c2m211p1p 17 "exercicio")
+% (c2m211p1a    "exercicio")
+
+{\bf Exercício (pra quem quiser treinar o `$[:=]$')}
+
+Refaça as quatro substituições do slide anterior:
+
+copie para uma folha de papel o \pfo{S2I} e calcule os
+
+resultados das quatro substituições abaixo. Lembre dos
+
+dois truques pra não precisar fazer nada de cabeça:
+
+\ssk
+
+{\scriptsize
+
+% (c2m211substp 9 "igual-depois-de-subst")
+% (c2m211substa   "igual-depois-de-subst")
+%    http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=9
+\url{http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=9}
+
+% (c2m211substp 28 "depoimento-pessoal")
+% (c2m211substa    "depoimento-pessoal")
+%    http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=28
+\url{http://angg.twu.net/LATEX/2021-1-C2-subst.pdf#page=28}
+
+}
+
+\msk
+
+$\scalebox{0.75}{$
+  \begin{array}{l}
+    \StwoIsetargs{ {x} {u} {3x} {3}
+                    {\frac{\cos(2+\sqrt{3x+4})}{2\sqrt{3x+4}}·3}
+                    {\frac{\cos(2+\sqrt{ u+4})}{2\sqrt{ u+4}}  } }
+    a) \;\; \pfo{S2I} \StwoIsubsts
+    %
+    \\[40pt]
+    %
+    \StwoIsetargs{ {u} {v} {u+4} {1}
+                    {\frac{\cos(2+\sqrt{u+4})}{2\sqrt{u+4}}·1}
+                    {\frac{\cos(2+\sqrt{ v })}{2\sqrt{ v }}} }
+    b) \;\; \pfo{S2I} \StwoIsubsts
+  \end{array}
+  $}
+$
+%
+\qquad
+%
+$\scalebox{0.75}{$
+  \begin{array}{l}
+    \StwoIsetargs{ {v} {w} {\sqrt{v}} {(2\sqrt{v})^{-1}}
+                    {\cos(2+\sqrt{v}) ·(2\sqrt{v})^{-1}}
+                    {\cos(2+w)} }
+    c) \;\; \pfo{S2I} \StwoIsubsts
+    %
+    \\[40pt]
+    %
+    \StwoIsetargs{ {w} {y} {2+w} {1}
+                    {\cos(2+w)·1}
+                    {\cos(y)} }
+    d) \;\; \pfo{S2I} \StwoIsubsts
+    \\
+  \end{array}
+  $}
+$
+
+
+
+
+
+%\printbibliography
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2021.1-C2/")
+# (find-fline "~/LATEX/2021-1-C2/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2021.1-C2/
+       cp -fv        $1.pdf ~/LATEX/2021-1-C2/
+       cat <<%%%
+% (find-latexscan-links "C2" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2021-1-C2-P1 veryclean
+make -f 2019.mk STEM=2021-1-C2-P1 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c2p1"
+% ee-tla: "c2m211p1"
+% End:

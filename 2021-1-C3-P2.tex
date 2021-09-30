@@ -1,0 +1,884 @@
+% (find-LATEX "2021-1-C3-P2.tex")
+% (defun c () (interactive) (find-LATEXsh "lualatex -record 2021-1-C3-P2.tex" :end))
+% (defun C () (interactive) (find-LATEXsh "lualatex 2021-1-C3-P2.tex" "Success!!!"))
+% (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C3-P2.pdf"))
+% (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C3-P2.pdf"))
+% (defun e () (interactive) (find-LATEX "2021-1-C3-P2.tex"))
+% (defun o () (interactive) (find-LATEX "2021-1-C3-P2.tex"))
+% (defun u () (interactive) (find-latex-upload-links "2021-1-C3-P2"))
+% (defun v () (interactive) (find-2a '(e) '(d)))
+% (defun d0 () (interactive) (find-ebuffer "2021-1-C3-P2.pdf"))
+% (defun cv () (interactive) (C) (ee-kill-this-buffer) (v) (g))
+%          (code-eec-LATEX "2021-1-C3-P2")
+% (find-pdf-page   "~/LATEX/2021-1-C3-P2.pdf")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C3-P2.pdf /tmp/")
+% (find-sh0 "cp -v  ~/LATEX/2021-1-C3-P2.pdf /tmp/pen/")
+%     (find-xournalpp "/tmp/2021-1-C3-P2.pdf")
+%   file:///home/edrx/LATEX/2021-1-C3-P2.pdf
+%               file:///tmp/2021-1-C3-P2.pdf
+%           file:///tmp/pen/2021-1-C3-P2.pdf
+% http://angg.twu.net/LATEX/2021-1-C3-P2.pdf
+% (find-LATEX "2019.mk")
+% (find-CN-aula-links "2021-1-C3-P2" "3" "c3m211p2" "c3p2")
+%
+% Video (not yet):
+% (find-ssr-links "c3m211p2" "2021-1-C3-P2")
+% (code-video     "c3m211p2video" "$S/http/angg.twu.net/eev-videos/2021-1-C3-P2.mp4")
+% (find-c3m211p2video "0:00")
+
+% «.defs»			(to "defs")
+% «.defs-T-and-B»		(to "defs-T-and-B")
+% «.title»			(to "title")
+% «.regras-e-dicas»		(to "regras-e-dicas")
+% «.questao-1»			(to "questao-1")
+% «.questao-1-cont»		(to "questao-1-cont")
+% «.questao-1-abcde»		(to "questao-1-abcde")
+% «.questao-1-fg»		(to "questao-1-fg")
+% «.questao-1-hij»		(to "questao-1-hij")
+% «.questao-1-k»		(to "questao-1-k")
+% «.questao-3»			(to "questao-3")
+% «.questao-3-cont»		(to "questao-3-cont")
+%
+% «.gabarito»			(to "gabarito")
+% «.gabarito-1abcde»		(to "gabarito-1abcde")
+% «.gabarito-1fgh»		(to "gabarito-1fgh")
+% «.gabarito-1ij»		(to "gabarito-1ij")
+% «.gabarito-2ab»		(to "gabarito-2ab")
+% «.gabarito-3»			(to "gabarito-3")
+%
+% «.djvuize»			(to "djvuize")
+
+\documentclass[oneside,12pt]{article}
+\usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage[x11names,svgnames]{xcolor} % (find-es "tex" "xcolor")
+\usepackage{colorweb}                  % (find-es "tex" "colorweb")
+%\usepackage{tikz}
+%
+% (find-dn6 "preamble6.lua" "preamble0")
+%\usepackage{proof}   % For derivation trees ("%:" lines)
+%\input diagxy        % For 2D diagrams ("%D" lines)
+%\xyoption{curve}     % For the ".curve=" feature in 2D diagrams
+%
+\usepackage{edrx21}               % (find-LATEX "edrx21.sty")
+\input edrxaccents.tex            % (find-LATEX "edrxaccents.tex")
+\input edrx21chars.tex            % (find-LATEX "edrx21chars.tex")
+\input edrxheadfoot.tex           % (find-LATEX "edrxheadfoot.tex")
+\input edrxgac2.tex               % (find-LATEX "edrxgac2.tex")
+%
+%\usepackage[backend=biber,
+%   style=alphabetic]{biblatex}            % (find-es "tex" "biber")
+%\addbibresource{catsem-slides.bib}        % (find-LATEX "catsem-slides.bib")
+%
+% (find-es "tex" "geometry")
+\usepackage[a6paper, landscape,
+            top=1.5cm, bottom=.25cm, left=1cm, right=1cm, includefoot
+           ]{geometry}
+%
+\begin{document}
+
+\catcode`\^^J=10
+\directlua{dofile "dednat6load.lua"}  % (find-LATEX "dednat6load.lua")
+
+%L dofile "edrxtikz.lua"  -- (find-LATEX "edrxtikz.lua")
+%L dofile "edrxpict.lua"  -- (find-LATEX "edrxpict.lua")
+\pu
+
+% «defs»  (to ".defs")
+% (find-LATEX "edrx15.sty" "colors-2019")
+%\long\def\ColorRed   #1{{\color{Red1}#1}}
+%\long\def\ColorViolet#1{{\color{MagentaVioletLight}#1}}
+%\long\def\ColorViolet#1{{\color{Violet!50!black}#1}}
+%\long\def\ColorGreen #1{{\color{SpringDarkHard}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreenDark}#1}}
+%\long\def\ColorGreen #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorGray  #1{{\color{GrayLight}#1}}
+%\long\def\ColorGray  #1{{\color{black!30!white}#1}}
+%\long\def\ColorBrown #1{{\color{Brown}#1}}
+%\long\def\ColorBrown #1{{\color{brown}#1}}
+%\long\def\ColorOrange#1{{\color{orange}#1}}
+%
+%\long\def\ColorShort #1{{\color{SpringGreen4}#1}}
+%\long\def\ColorLong  #1{{\color{Red1}#1}}
+%
+%\def\frown{\ensuremath{{=}{(}}}
+%\def\True {\mathbf{V}}
+%\def\False{\mathbf{F}}
+%\def\D    {\displaystyle}
+
+\def\degs{^\circ}
+
+\def\drafturl{http://angg.twu.net/LATEX/2021-1-C3.pdf}
+\def\drafturl{http://angg.twu.net/2021.1-C3.html}
+\def\draftfooter{\tiny \href{\drafturl}{\jobname{}} \ColorBrown{\shorttoday{} \hours}}
+
+% «defs-T-and-B»  (to ".defs-T-and-B")
+% (c3m202p1p 6 "questao-2")
+% (c3m202p1a   "questao-2")
+\long\def\ColorOrange#1{{\color{orange!90!black}#1}}
+\def\T(Total: #1 pts){{\bf(Total: #1)}}
+\def\T(Total: #1 pts){{\bf(Total: #1 pts)}}
+\def\T(Total: #1 pts){\ColorRed{\bf(Total: #1 pts)}}
+\def\B       (#1 pts){\ColorOrange{\bf(#1 pts)}}
+
+
+
+%  _____ _ _   _                               
+% |_   _(_) |_| | ___   _ __   __ _  __ _  ___ 
+%   | | | | __| |/ _ \ | '_ \ / _` |/ _` |/ _ \
+%   | | | | |_| |  __/ | |_) | (_| | (_| |  __/
+%   |_| |_|\__|_|\___| | .__/ \__,_|\__, |\___|
+%                      |_|          |___/      
+%
+% «title»  (to ".title")
+% (c3m211p2p 1 "title")
+% (c3m211p2a   "title")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\bf \Large Cálculo 3 - 2021.1}
+
+\bsk
+
+P2 (segunda prova)
+
+\bsk
+
+Eduardo Ochs - RCN/PURO/UFF
+
+\url{http://angg.twu.net/2021.1-C3.html}
+
+\end{center}
+
+\newpage
+
+% «regras-e-dicas»  (to ".regras-e-dicas")
+% (c3m211p2p 2 "regras-e-dicas")
+% (c3m211p2a   "regras-e-dicas")
+
+{\bf Regras e dicas}
+
+As regras e dicas são as mesmas dos mini-testes:
+
+\ssk
+
+\url{http://angg.twu.net/LATEX/2020-2-C3-MT1.pdf}
+
+\url{http://angg.twu.net/LATEX/2020-2-C3-MT2.pdf}
+
+\ssk
+
+exceto que a prova vai ser disponibilizada às 23:30 do dia
+
+15/setembro/2021 e deve ser entregue até as 23:30 do dia
+
+17/setembro/2021. \ColorRed{Talvez o Classroom esteja com a data
+
+de entrega errada, como se o prazo fosse só de 24 horas}.
+
+\bsk
+
+Pra fazer essa prova você vai precisar de idéias que a gente
+
+viu durante o curso todo. Se você precisar saber onde estão
+
+as idéias necessárias pra resolver algum item pergunte
+
+\ColorRed{no grupo do Telegram da turma} que eu respondo com um
+
+link pros slides, vídeos, ou livros em que aquela idéia
+
+aparece.
+
+
+
+
+\newpage
+
+% «questao-1»  (to ".questao-1")
+% (c3m211p2p 3 "questao-1")
+% (c3m211p2a   "questao-1")
+
+{\bf Questão 1.}
+
+\T(Total: 5.5 pts)
+
+\ssk
+
+Você deve ter lido que ``o gradiente de uma função aponta pra
+
+direção de maior crescimento dela''. Nesta questão nós vamos
+
+ver um modo de provar isto --- num caso particular em $\R^2$.
+
+\def\questaoumcasogeral{
+  \begin{array}[t]{rcl}
+       F &:& \R^2 → \R  \\
+     P_0 &∈& \R^2       \\
+     \vv &=& ∇F(P_0)    \\
+     \vv &=& \VEC{a,b}  \\
+     \uu &⊥& \vv, \text{ obedecendo } ||\uu|| = ||\vv|| \\
+       A &=& \setofst{Q∈\R^2}{d(P_0,Q) = ||\vv||} \\
+       B &=& \{ P_0 + \VEC{\pm a, \pm b} \}
+           ∪ \{ P_0 + \VEC{\pm b, \pm a} \} \\
+       θ &∈& \R \\
+     \ww &=& (\cos θ)\vv + (\senθ)\uu \\
+  \end{array}
+  }
+
+O caso geral vai ser este aqui:
+%
+$$\scalebox{0.8}{$
+  \questaoumcasogeral
+  $}
+$$
+
+\newpage
+
+% «questao-1-cont»  (to ".questao-1-cont")
+% (c3m211p2p 4 "questao-1-cont")
+% (c3m211p2a   "questao-1-cont")
+
+{\bf Questão 1 (cont.)}
+
+O caso particular vai ser o da coluna da direita abaixo:
+%
+$$\scalebox{0.9}{$
+  \questaoumcasogeral
+  %
+  \hspace*{-1cm}
+  %
+  \begin{array}[t]{rcl}
+    F(x,y) &=& 10 - 2x + y \\
+       P_0 &=& (3,2)       \\
+       \vv &=& ∇F(P_0)     \\[2pt]
+       \uu &=& \VEC{1,2}   \\
+  \end{array}
+  $}
+$$
+
+\ColorRed{Dica:} neste caso particular o conjunto $B$ vai ser um
+
+conjunto de 8 pontos equidistantes de $P_0$, todos com
+
+coordenadas inteiras.
+
+\ssk
+
+\newpage
+
+% «questao-1-abcde»  (to ".questao-1-abcde")
+% (c3m211p2p 5 "questao-1-abcde")
+% (c3m211p2a   "questao-1-abcde")
+
+{\bf Questão 1 (cont.)}
+
+Nesse caso particular,
+
+\msk
+
+a) \B(0.2 pts) Dê as coordenadas dos 8 pontos de $B$.
+
+\msk
+
+b) \B(0.2 pts) Represente graficamente num gráfico só:
+
+$P_0$, $P_0 + \vv$ e $P_0 + \uu$ (como setas), $A$, $B$.
+
+\msk
+
+c) \B(0.5 pts) Faça um diagrama de numerozinhos pra função
+
+$F$, mas no qual você só vai indicar os valores de $F(x,y)$ nos
+
+pontos em que $(x,y)∈B$ e em $(x,y)=P_0$.
+
+\msk
+
+d) \B(0.1 pts) Seja $P_1$ o ponto de $B$ no qual $F(x,y)$ assume
+
+o maior valor. Diga as coordenadas de $P_1$ e faça um círculo
+
+em torno de $P_1$ na figura que você fez no item (c).
+
+\msk
+
+e) \B(1.0 pts) Acrescente à figura do seu item (c) as curvas de
+
+nível da $F(x,y)$ que passam pelos pontos de $B$.
+
+\newpage
+
+% «questao-1-fg»  (to ".questao-1-fg")
+% (c3m211p2p 6 "questao-1-fg")
+% (c3m211p2a   "questao-1-fg")
+
+{\bf Questão 1 (cont.)}
+
+Ainda nesse caso particular,
+
+\msk
+
+f) \B(0.5 pts) Verifique que $P_1$ é um ponto da forma
+
+$P_0 + α\vv$ para algum $α∈\R$. Qual é o valor de $α$?
+
+\msk
+
+g) \B(0.5 pts) Sejam $P_2$ e $P_3$ os dois pontos de $B$ em que
+
+temos $F(P_0) = F(P_2) = F(P_3)$. Diga as coordenadas
+
+de $P_2$ e $P_3$ e verifique que tanto $P_2$ quanto $P_3$ são da
+
+forma $P_0 + \bb \uu$. Qual é o valor de $\bb$ associado ao $P_2$?
+
+E qual é o valor de $\bb$ associado ao $P_3$?
+
+\msk
+
+\newpage
+
+% «questao-1-hij»  (to ".questao-1-hij")
+% (c3m211p2p 7 "questao-1-hij")
+% (c3m211p2a   "questao-1-hij")
+
+{\bf Questão 1 (cont.)}
+
+Ainda nesse caso particular...
+
+\msk
+
+h) \B(0.5 pts) Na ``notação de físicos'' podemos dizer que 
+
+``$\ww$ é função de $θ$'', e podemos escrever isto assim: $\ww = \ww(θ)$.
+
+Represente graficamente num gráfico só, separado dos
+
+gráficos anteriores: $P_0$, o conjunto $A$, e $P_0+\ww(θ)$ para estes
+
+valores de $θ$: $0\degs$, $45\degs$, $90\degs$. Não esqueça de indicar qual é o $θ$
+
+associado a cada seta!
+
+\msk
+
+i) \B(1.0 pts) Encontre uma fórmula para $F(P_0+\ww(θ))$.
+
+Simplifique o resultado dela o máximo que puder.
+
+\msk
+
+j) \B(0.5 pts) Encontre uma fórmula para $\frac{d}{dθ} F(P_0+\ww(θ))$.
+
+Simplifique o resultado dela o máximo que puder.
+
+
+\newpage
+
+% «questao-1-k»  (to ".questao-1-k")
+% (c3m211p2p 8 "questao-1-k")
+% (c3m211p2a   "questao-1-k")
+
+{\bf Questão 1 (cont.)}
+
+Ainda nesse caso particular...
+
+\msk
+
+k) \B(0.5 pts) Seja $z = z(θ) = F(P_0+\ww(θ))$, pra abreviar.
+
+Faça o gráfico de $z(θ)$ --- com $θ$ crescendo pra direita e
+
+$z$ crescendo pra cima --- e mostre no gráfico para quais
+
+valores de $θ$ o valor de $z$ é maximo e mínimo.
+
+\msk
+
+\newpage
+
+{\bf Questão 2.}
+
+\T(Total: 3.0 pts)
+
+\ssk
+
+Aqui nós vamos generalizar a questão 1 ---
+
+pra um caso particular bem mais geral que o anterior,
+
+que é o da coluna da direita abaixo:
+%
+$$\scalebox{0.8}{$
+  \questaoumcasogeral
+  \hspace{-1.0cm}
+  \begin{array}[t]{rcl}
+    F(x,y) &=& αx + βy + γ \\
+    (α,β)  &≠& (0,0) \\
+    \uu    &=& \VEC{b, -a} \\
+  \end{array}
+  $}
+$$
+
+\newpage
+
+{\bf Questão 2 (cont.)}
+
+Seja $z = z(θ) = F(P_0+\ww(θ))$, pra abreviar.
+
+\msk
+
+a) \B(1.0 pts) Encontre uma fórmula para $z(θ)$.
+
+Simplifique o resultado dela o máximo que puder.
+
+\msk
+
+b) \B(1.0 pts) Encontre uma fórmula para $\frac{d}{dθ} z(θ)$.
+
+Simplifique o resultado dela o máximo que puder.
+
+\msk
+
+c) \B(1.0 pts) Faça o gráfico de $z(θ)$ --- com $θ$ crescendo
+
+pra direita e $z$ crescendo pra cima --- e mostre no gráfico
+
+para quais valores de $θ$ o valor de $z$ é maximo e mínimo.
+
+
+
+
+
+
+\newpage
+
+% «questao-3»  (to ".questao-3")
+% (c3m211p2p 11 "questao-3")
+% (c3m211p2a    "questao-3")
+
+{\bf Questão 3.}
+
+\T(Total: 2.0 pts)
+
+\ssk
+
+Na última aula antes da prova nós começamos a
+
+fazer esse ``Exercício 5'' aqui, mas não terminamos...
+
+\ssk
+
+{\scriptsize
+
+% (c3m211afp 9 "exercicio-5")
+% (c3m211afa   "exercicio-5")
+%    http://angg.twu.net/LATEX/2021-1-C3-abertos-e-fechados.pdf#page=9
+\url{http://angg.twu.net/LATEX/2021-1-C3-abertos-e-fechados.pdf#page=9}
+
+}
+
+\ssk
+
+Use as ``traduções'' dos slides 14 e 15 desse PDF sobre
+
+abertos e fechados pra traduzir isto aqui pra uma outra
+
+expressão que seja ``a mais simples possível'':
+%
+$$[2,4] \text{ não é aberto}$$
+
+
+
+\newpage
+
+% «questao-3-cont»  (to ".questao-3-cont")
+% (c3m211p2p 12 "questao-3-cont")
+% (c3m211p2a    "questao-3-cont")
+
+{\bf Questão 3 (cont.)}
+
+\ssk
+
+Dá pra definir formalmente o que quer dizer esse 
+
+``mais simples possível'' entre aspas, mas a definição
+
+formal é meio horrível. A dica é que no slide 14 desse
+
+PDF, cujo título é ``Algumas traduções'', cada igualdade
+
+da tabela é desta forma:
+%
+$$\text{expressão ``mais complicada''}
+  \;\;=\;\;
+  \text{expressão ``mais simples''}
+$$
+
+com a expressão ``mais simples'' à direita.
+
+
+\newpage
+
+% «gabarito»  (to ".gabarito")
+% (c3m211p2p 13 "gabarito")
+% (c3m211p2a    "gabarito")
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{2.0cm}
+
+{\bf \Large Gabarito}
+
+\end{center}
+
+
+\newpage
+
+% «gabarito-1abcde»  (to ".gabarito-1abcde")
+% (c3m211p2p 14 "gabarito-1abcde")
+% (c3m211p2a    "gabarito-1abcde")
+
+{\bf Questões 1a até 1e}
+
+(Os desenhos estão muito incompletos)
+
+\msk
+
+\unitlength=10pt
+
+1a)
+%
+$\vcenter{\hbox{%
+    \beginpicture(0,-1)(6,5)
+    \pictgrid%
+    \pictpiecewise{(3,2)o (5,3)c (5,1)c (4,0)c (2,0)c (1,1)c (1,3)c (2,4)c (4,4)c}%
+    \pictaxes%
+    \end{picture}%
+  }}
+$
+%
+$\begin{array}{c}
+ (2,4), (4,4),        \\
+ (1,3), \ph{m} (5,3), \\
+ (1,1), \ph{m} (5,1), \\
+ (2,0), (4,0)         \\
+ \end{array}
+$
+
+\msk
+
+1b) $\sm{
+     \vv &=& \VEC{-2,1} \\
+     \uu &=& \VEC{1,2} \\
+     }
+     \quad
+     \sm{
+     P_0 &=& (3,2) \\
+     P_0 + \vv &=& (1,3) \\
+     P_0 + \uu &=& (4,4) \\
+     }
+    $
+
+\msk
+
+% -- (c3m211p1p 7 "questao-1-gab")
+% -- (c3m211p1a   "questao-1-gab")
+%
+%  (eepitch-lua51)
+%  (eepitch-kill)
+%  (eepitch-lua51)
+%
+% F = function (x,y) return 10 - 2*x + y end
+% pts = {{3,2},
+%  {2,4}, {4,4},        
+%  {1,3}, {5,3}, 
+%  {1,1}, {5,1}, 
+%  {2,0}, {4,0}         
+% }
+% for _,xy in pairs(pts) do
+%   local x,y = xy[1], xy[2]
+%   local z = F(x,y)
+%   -- print(x, y, z)
+%   print(format("\\put(%d,%d){\\cellc{%s}}%%", x,y, z))
+% end
+
+% (c3m211p1p 7 "questao-1-gab")
+% (c3m211p1a   "questao-1-gab")
+%
+\def\cellhc#1{\hbox to 0pt{\hss\cellfont${#1}$\hss}}
+\def\cellvm#1{\setbox0#1\lower \celllower \box0}
+\def\cellvb#1{\setbox0#1\lower \ht0       \box0}
+\def\cellvm#1{\setbox0#1\lower 0.4\ht0    \box0}
+\def\cellc   #1{\cellvm{\cellhc{#1}}}
+
+1c)
+%
+$\vcenter{\hbox{%
+    \beginpicture(0,-1)(6,5)
+    \pictgrid%
+      \put(3,2){\cellc{6}}%
+      \put(2,4){\cellc{10}}%
+      \put(4,4){\cellc{6}}%
+      \put(1,3){\cellc{11}}%
+      \put(5,3){\cellc{3}}%
+      \put(1,1){\cellc{9}}%
+      \put(5,1){\cellc{1}}%
+      \put(2,0){\cellc{6}}%
+      \put(4,0){\cellc{2}}%
+    \pictaxes%
+    \end{picture}%
+  }}
+$
+
+\msk
+1d) $P_1 = (1,3)$
+
+
+\newpage
+
+% «gabarito-1fgh»  (to ".gabarito-1fgh")
+% (c3m211p2p 15 "gabarito-1fgh")
+% (c3m211p2a    "gabarito-1fgh")
+
+{\bf Questões 1f até 1h}
+
+\msk
+
+1f) $P_1 = (1,3) = P_0 + 1 \vv = (3,2) + 1 \VEC{-2,1}$
+
+\msk
+
+1g) $\begin{array}[t]{l}
+     P_2 = (2,0) = P_0 + (-1) · \uu = (3,2) + (-1)·\VEC{1, 2} \\
+     P_3 = (4,4) = P_0 + 1 · \uu = (3,2) + 1·\VEC{1, 2} \\
+     \end{array}
+    $
+
+\msk
+
+\def\sqt{\frac{\sqrt2}{2}}
+
+1h) $\scalebox{0.8}{$
+     \begin{array}{rcccl}
+     \ww(0\degs)  &=&  (\cos 0\degs)\vv +  (\sen 0\degs)\vv &=& \VEC{-2,1} + \VEC{0,0} \\
+     \ww(45\degs) &=& (\cos 45\degs)\vv + (\sen 45\degs)\vv &=& \sqt\VEC{-2,1} + \sqt\VEC{1,2} \\
+     \ww(90\degs) &=& (\cos 90\degs)\vv + (\sen 90\degs)\vv &=& \VEC{0,0} + \VEC{1,2} \\
+     P_0 + \ww(0\degs)  &=& (3,2) + \VEC{-2,1} \ph{mi}\\
+     P_0 + \ww(45\degs) &=& (3,2) + \sqt\VEC{-1,3} \\
+     P_0 + \ww(90\degs) &=& (3,2) + \VEC{1,2} \ph{miii} \\
+     \end{array}
+     $}
+    $
+%
+\unitlength=5pt
+%
+$$\vcenter{\hbox{%
+    \beginpicture(0,0)(6,5)
+    \pictgrid%
+    \pictpiecewise{(3,2)o (1,3)c (2.3,4.1)c (4,4)c}%
+    \pictaxes%
+    \end{picture}%
+  }}
+$$
+
+\newpage
+
+% «gabarito-1ij»  (to ".gabarito-1ij")
+% (c3m211p2p 16 "gabarito-1ij")
+% (c3m211p2a    "gabarito-1ij")
+
+{\bf Questões 1i e 1j}
+
+\msk
+
+1i) $\scalebox{0.8}{$
+     \begin{array}{rcl}
+     F(P_0 + \ww(θ))
+       &=& F((3,2) + (\cos θ)\VEC{-2,1} + (\senθ)\VEC{1,2}) \\
+       &=& F((3,2) + \VEC{-2\cos θ + \senθ, \cosθ + 2\senθ}) \\
+       &=& F((3 -2\cos θ + \senθ, 2 + \cosθ + 2\senθ)) \\
+       &=& 10 -2(3 -2\cos θ  + \senθ) + (2 + \cosθ + 2\senθ) \\
+       &=& 10 -6   +4\cos θ -2 \senθ  +  2 + \cosθ + 2\senθ  \\
+       &=& 6 + 5\cosθ  \\
+     \end{array}
+     $}
+    $
+
+\msk
+
+\def\ddth{\frac{d}{dθ}}
+
+1j) $\scalebox{0.8}{$
+     \begin{array}{rcl}
+     \ddth F(P_0 + \ww(θ))
+       &=& \ddth (6 + 5\cosθ) \\
+       &=& - 5\senθ \\
+     \end{array}
+     $}
+    $
+
+
+\newpage
+
+% «gabarito-2ab»  (to ".gabarito-2ab")
+% (c3m211p2p 17 "gabarito-2ab")
+% (c3m211p2a    "gabarito-2ab")
+
+{\bf Questões 2a e 2b}
+
+\msk
+
+2a) Temos $\vv = ∇F(P_0) = \VEC{α,β}$ e $\vv = \VEC{a,b}$,
+
+\ph{2a) }Então $α=a$ e $β=b$. Aí:
+%
+$$\scalebox{0.8}{$
+    \begin{array}{rcl}
+      z(θ) &=& F(P_0 + \ww(θ)) \\
+       &=& F((x_0,y_0) + (\cos θ)\VEC{a,b} + (\senθ)\VEC{b,-a}) \\
+       &=& F((x_0,y_0) + \VEC{(\cos θ)a + (\senθ)b, (\cos θ)b - (\senθ)a}) \\
+       &=& α(x_0 + (\cos θ)a + (\senθ)b) + β(y_0 + (\cos θ)b - (\senθ)a) + γ \\
+       &=& α(x_0 + (\cos θ)α + (\senθ)β) + β(y_0 + (\cos θ)β - (\senθ)α) + γ \\
+       &=& αx_0 + α^2(\cos θ) + αβ(\senθ) + βy_0 + β^2(\cos θ) - αβ(\senθ) + γ \\
+       &=& αx_0 + α^2(\cos θ)             + βy_0 + β^2(\cos θ)             + γ \\
+       &=& (αx_0 + βy_0 + γ) + (α^2 + β^2)(\cos θ)                             \\
+       &=& F(P_0)            + (α^2 + β^2)(\cos θ)                             \\
+   \end{array}
+  $}
+$$
+
+2b)
+%
+ $\scalebox{0.8}{$
+    \begin{array}{rcl}
+      \ddth z(θ) &=& \ddth((αx_0 + βy_0 + γ) + (α^2 + β^2)(\cos θ)) \\
+                 &=& (α^2 + β^2)(- \sen θ) \\
+   \end{array}
+  $}
+ $
+
+\newpage
+
+% «gabarito-3»  (to ".gabarito-3")
+% (c3m211p2p 10 "gabarito-3")
+% (c3m211p2a    "gabarito-3")
+% (c3m211afp 9 "exercicio-5")
+% (c3m211afa   "exercicio-5")
+
+{\bf Gabarito da 3}
+
+\ssk
+
+\def\BA{\mathsf{B}}
+\def\BF{\overline{\mathsf{B}}}
+
+Lembre que $A = [2,4]$. Temos:
+%
+\def\iff{\Leftrightarrow}
+%
+$$\begin{array}{c}
+  \begin{array}{lrcl}
+                 & A & \multicolumn{2}{l}{\text{não é aberto}} \\ 
+   \iff \ph{m}   & A & \not⊂ & \Int(A) \\
+   \iff          & A & \not⊂ & \setofst{P∈A}{∃ε>0.\, \BA_ε(P)⊆A} \\
+   \iff          & [2,4] & \not⊂ & \setofst{P∈[2,4]}{∃ε>0.\, \BA_ε(P)⊆[2,4]} \\
+  \end{array}
+  \\
+  [25pt]
+  \begin{array}{ll}
+   \iff & ∃x∈[2,4]. \; x \not∈ \setofst{P∈[2,4]}{∃ε>0.\, \BA_ε(P)⊆[2,4]} \\
+   \iff & ∃x∈[2,4]. ¬ (x ∈ \setofst{P∈[2,4]}{∃ε>0.\, \BA_ε(P)⊆[2,4]}) \\
+   \iff & ∃x∈[2,4]. ¬ (x ∈ [2,4] ∧ ∃ε>0.\, \BA_ε(x)⊆[2,4]) \\
+   \iff & ∃x∈[2,4]. (¬ x ∈ [2,4]) ∨ (¬ \; ∃ε>0.\, \BA_ε(x)⊆[2,4]) \\
+   \iff & ∃x∈[2,4]. (¬ x ∈ [2,4]) ∨ (∀ε>0. ¬ (\BA_ε(x)⊆[2,4])) \\
+   \iff & ∃x∈[2,4]. (¬ x ∈ [2,4]) ∨ (∀ε>0. ¬ (∀y∈\BA_ε(x).\; y∈[2,4])) \\
+   \iff & ∃x∈[2,4]. (¬ x ∈ [2,4]) ∨ (∀ε>0. \; ∃y∈\BA_ε(x).\; ¬ y∈[2,4])) \\
+   \iff & \ldots \\
+  \end{array}
+  \end{array}
+$$
+
+
+
+
+
+%\printbibliography
+
+\GenericWarning{Success:}{Success!!!}  % Used by `M-x cv'
+
+\end{document}
+
+%  ____  _             _         
+% |  _ \(_)_   ___   _(_)_______ 
+% | | | | \ \ / / | | | |_  / _ \
+% | |_| | |\ V /| |_| | |/ /  __/
+% |____// | \_/  \__,_|_/___\___|
+%     |__/                       
+%
+% «djvuize»  (to ".djvuize")
+% (find-LATEXgrep "grep --color -nH --null -e djvuize 2020-1*.tex")
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-fline "~/2021.1-C3/")
+# (find-fline "~/LATEX/2021-1-C3/")
+# (find-fline "~/bin/djvuize")
+
+cd /tmp/
+for i in *.jpg; do echo f $(basename $i .jpg); done
+
+f () { rm -v $1.pdf;  textcleaner -f 50 -o  5 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 10 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+f () { rm -v $1.pdf;  textcleaner -f 50 -o 20 $1.jpg $1.png; djvuize $1.pdf; xpdf $1.pdf }
+
+f () { rm -fv $1.png $1.pdf; djvuize $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 15" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 30" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 1.0 -f 45" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.5" $1.pdf; xpdf $1.pdf }
+f () { rm -fv $1.png $1.pdf; djvuize WHITEBOARDOPTS="-m 0.25" $1.pdf; xpdf $1.pdf }
+f () { cp -fv $1.png $1.pdf       ~/2021.1-C3/
+       cp -fv        $1.pdf ~/LATEX/2021-1-C3/
+       cat <<%%%
+% (find-latexscan-links "C3" "$1")
+%%%
+}
+
+f 20201213_area_em_funcao_de_theta
+f 20201213_area_em_funcao_de_x
+f 20201213_area_fatias_pizza
+
+
+
+%  __  __       _        
+% |  \/  | __ _| | _____ 
+% | |\/| |/ _` | |/ / _ \
+% | |  | | (_| |   <  __/
+% |_|  |_|\__,_|_|\_\___|
+%                        
+% <make>
+
+ (eepitch-shell)
+ (eepitch-kill)
+ (eepitch-shell)
+# (find-LATEXfile "2019planar-has-1.mk")
+make -f 2019.mk STEM=2021-1-C3-P2 veryclean
+make -f 2019.mk STEM=2021-1-C3-P2 pdf
+
+% Local Variables:
+% coding: utf-8-unix
+% ee-tla: "c3p2"
+% ee-tla: "c3m211p2"
+% End:

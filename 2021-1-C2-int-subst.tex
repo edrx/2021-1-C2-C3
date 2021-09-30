@@ -25,7 +25,15 @@
 % Video:
 % (find-ssr-links "c2m211is" "2021-1-C2-int-subst" "3lSrJ6sCWJI")
 % (code-video     "c2m211isvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-int-subst.mp4")
-% (find-c2m211isvideo "0:00")
+% (find-c2m211isvideo  "0:00")
+% (find-c2m211isvideo  "6:00" "a obrigação de dizer: eu não entendi esse passo")
+% (find-c2m211isvideo "11:12" "Então dá pra acreditar nesse TFC2 daqui")
+% (find-c2m211isvideo "11:22" "Eu tou definindo uma coisa chamada [S2]")
+% (find-c2m211isvideo "12:20" "e essa parte de cima eu vou chamar de a hipótese")
+% (find-c2m211isvideo "14:03" "se a gente substituir o f minúsculo")
+% (find-c2m211isvideo "14:30" "f(c+d) viraria")
+% (find-c2m211isvideo "15:02" "que lembrem, contém uma hipótese e 3 '='s")
+% (find-c2m211isvideo "15:10" "vira uma coisa que tem o mesmo formato")
 
 % «.defs»		(to "defs")
 % «.subst-defs»		(to "subst-defs")
@@ -37,13 +45,17 @@
 % «.exemplo-contas»	(to "exemplo-contas")
 % «.exemplo-contas-2»	(to "exemplo-contas-2")
 % «.subst-int-def»	(to "subst-int-def")
+% «.so-alguns-simbolos»	(to "so-alguns-simbolos")
+% «.hip-triv-true»	(to "hip-triv-true")
 % «.exercicio-1»	(to "exercicio-1")
 % «.esquerda»		(to "esquerda")
 % «.hipotese»		(to "hipotese")
+% «.encontre-a-subst»	(to "encontre-a-subst")
 % «.exercicio-2»	(to "exercicio-2")
 % «.exercicio-2-cont»	(to "exercicio-2-cont")
 % «.gambiarras-2»	(to "gambiarras-2")
 % «.gambiarras-3»	(to "gambiarras-3")
+% «.exercicio-5»	(to "exercicio-5")
 %
 % «.djvuize»	(to "djvuize")
 
@@ -107,6 +119,10 @@
 %\def\True {\mathbf{V}}
 %\def\False{\mathbf{F}}
 %\def\D    {\displaystyle}
+
+% (find-LATEX "2017planar-has-defs.tex" "sa-and-ga")
+\def\sa#1#2{\expandafter\def\csname myarg#1\endcsname{#2}}
+\def\ga#1{\csname myarg#1\endcsname}
 
 \def\Rd#1{{\ColorRed{#1}}}
 \def\Rdq {{\ColorRed{?}}}
@@ -535,6 +551,10 @@ $$
 
 \newpage
 
+% «so-alguns-simbolos»  (to ".so-alguns-simbolos")
+% (c2m211isp 9 "so-alguns-simbolos")
+% (c2m211isa   "so-alguns-simbolos")
+
 Lembre que dá pra substituir só alguns símbolos...
 
 Por exemplo:
@@ -556,6 +576,12 @@ $$\scalebox{0.9}{$
   $}
 $$
 
+\newpage
+
+% «hip-triv-true»  (to ".hip-triv-true")
+% (c2m211isp 10 "hip-triv-true")
+% (c2m211isa    "hip-triv-true")
+
 Também podemos substituir o $f$ por $F'$...
 
 E aí a hipótese passa a ser ``trivialmente verdadeira'':
@@ -572,7 +598,7 @@ $$\scalebox{0.9}{$
   \begin{array}{c}
   \pfo{S2} \;\;=\;\; \Stwo \\
   [50pt]
-  \pfo{S2}[f(x):=F'(x)] \;\;=\;\; \Stwotmp \\
+  \pfo{S2}[f(u):=F'(u)] \;\;=\;\; \Stwotmp \\
   \end{array}
   $}
 $$
@@ -590,7 +616,7 @@ Lembre que:
 $$\pfo{TFC2}
   \;\;=\;\;
   \Ps{
-       \D \Intx{a}{b}{F'(x)} \;\;=\;\; \difx{a}{b}{F(x)}
+       \D \Intx{a}{b}{\ddx F(x)} \;\;=\;\; \difx{a}{b}{F(x)}
      }
 $$
 
@@ -609,7 +635,7 @@ b) $\pfo{TFC2} \bmat{x:=u} \bmat{a:=g(a) \\ b:=g(b)}$
 
 c) o que você obteve no (a) prova o `$=$' de cima da \pfo{S2},
 
-d) o que você obteve no (b) prova o `$=$' de cima da \pfo{S2},
+d) o que você obteve no (b) prova o `$=$' de baixo da \pfo{S2},
 
 
 \newpage
@@ -735,6 +761,10 @@ $$\scalebox{0.90}{$
 $$
 
 \newpage
+
+% «encontre-a-subst»  (to ".encontre-a-subst")
+% (c2m211isp 17 "encontre-a-subst")
+% (c2m211isa    "encontre-a-subst")
 
 As pessoas costumam usar variações da $\pfo{S3I}$,
 
@@ -925,6 +955,140 @@ Nós vamos \ColorRed{evitar} usar $s$ como uma \ColorRed{abreviação} para $\se
 
 \newpage
 
+{\bf Mais sobre as caixinhas de anotações}
+
+Tudo numa caixinha de anotações é \ColorRed{consequência}
+
+da primeira linha dela, que é a que define a variável
+
+nova. Por exemplo, se definimos a variável nova como
+
+$c=\cos x$ então $\frac{dc}{dx} = \frac{d}{dx} \cos x = - \sen x$, e podemos
+
+reescrever isso na ``versão gambiarra'' como:
+
+$dc = - \sen x \, dx$, \ColorRed{e também como} $\sen x \, dx = (-1) dc$.
+
+\msk
+
+A caixinha vai ser:
+%
+$$\bmat{c = \cos x \\
+        \frac{dc}{dx} = \frac{d}{dx} \cos x = - \sen x \\
+        dc = - \sen x \, dx \\
+        \sen x \, dx = (-1) \, dc \\
+       }
+$$
+
+\newpage
+
+{\bf Mais sobre as caixinhas de anotações (2)}
+
+\ColorRed{Muito importante:} cada linha das caixinhas
+
+é uma série de igualdades --- por exemplo
+
+$𝐬{expr}_1 = 𝐬{expr}_2 = 𝐬{expr}_3$ --- e cada uma dessas
+
+expressões $𝐬{expr}_1, \ldots, 𝐬{expr}_n$ só pode mencionar
+
+\ColorRed{ou} a variável antiga \ColorRed{ou} a variável nova...
+
+\msk
+
+Então:
+
+\msk
+
+
+\ColorRed{Bom:} $dc = - \sen x \, dx$
+
+\ColorRed{Mau:} $\frac{1}{- \sen x} dc =  dx$
+
+\ColorRed{Bom:} $\frac{dc}{dx} = \frac{d}{dx} \cos x$
+
+\bsk
+
+Truque: em $\frac{dc}{dx}$ o $c$ faz o papel de uma \ColorRed{abreviação}
+
+para $\cos x$, não de uma variável.
+
+
+\newpage
+
+{\bf Mais sobre as caixinhas de anotações (3)}
+
+Quando a gente faz algo como
+%
+$$\D \int  (\und{\S}{s})^5
+           (1 - (\und{\S}{s})^2)
+           \und{
+           \und{(\C)}{\frac{ds}{dx}} \, dx
+           }{ds}
+            \\
+  \;\; = \;\;
+  \D \ints{s^5 (1-s^2)} \\
+$$
+
+Cada chave é como uma igualdade da caixa de anotações
+
+``escrita na vertical''... por exemplo, ``$\und{\S}{s}$'' é $s = \sen x$.
+
+\msk
+
+As outras chaves correspondem a outras igualdades da
+
+caixa de anotações --- \ColorRed{que têm que ser consequências
+
+desse $s = \sen x$.}
+
+
+\newpage
+
+\vspace*{-0.5cm}
+
+{\bf Mais sobre as caixinhas de anotações (3)}
+
+Isto aqui está errado:
+%
+$$\D \int %(\und{\S}{s})^5
+           (     \S    )^5
+           (1 - (\und{\S}{s})^2)
+           \und{
+           \und{(\C)}{\frac{ds}{dx}} \, dx
+           }{ds}
+            \\
+  \;\; = \;\;
+  \D \ints{(\ColorRed{\S})^5 (1-s^2)} \\
+$$
+
+À esquerda do `$=$' a gente tem uma integral na qual
+
+só aparece a ``variável antiga'', que é $x$, e à direita do `$=$'
+
+a gente tem uma integral na qual aparecem tanto a variável
+
+antiga, $x$, quanto a nova, que é $s$... \quad \frown
+
+\msk
+
+Lembre que tanto o truque das caixinhas quanto o truque das
+
+chaves servem pra gente conseguir aplicar a $\pfo{S3I}$ de um jeito
+
+mais fácil, e no $\pfo{S3I}$ uma integral usa só a variável antiga
+
+e a outra usa só a nova.
+
+
+
+
+
+
+
+
+\newpage
+
 {\bf Exercício 3.}
 
 Leia o início da seção 6.1 do APEX Calculus
@@ -972,6 +1136,92 @@ as nossas anotações em caixinhas. Link:
 \url{http://angg.twu.net/2021.1-C2/martins_martins__sec_6.1.pdf}
 
 }
+
+
+\newpage
+
+% «exercicio-5»  (to ".exercicio-5")
+% (c2m211isp 28 "exercicio-5")
+% (c2m211isa    "exercicio-5")
+
+{\bf Exercício 5.}
+
+\msk
+
+A questão 2 da P1 do semestre passado dizia que:
+%
+\begin{quote}
+{\sl Toda integral que pode ser resolvida por uma sequência de
+  mudanças de variável (ou: ``por uma sequência de integrações por
+  substituição'') pode ser resolvida por uma mudança de variável só.}
+\end{quote}
+
+E ela pedia pra vocês verificarem isso num caso específico.
+
+Tente fazer essa questão olhando poucas vezes pro gabarito dela.
+
+Link:
+
+\ssk
+
+{\footnotesize
+
+% (c2m202p1p 4)
+%    http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=4
+\url{http://angg.twu.net/LATEX/2020-2-C2-P1.pdf#page=4}
+
+}
+
+
+% (c2m202p1p 4 "questao-2")
+% (c2m202p1a   "questao-2")
+
+
+\newpage
+
+
+\sa{x}{xx}
+\sa{u}{uu}
+\sa{gx}{g(xx)}
+\sa{nw}{F(g(x))}
+\sa{ne}{f(g(x))g'(x)}
+\sa{sw}{F(u)}
+\sa{se}{f(u)}
+
+\def\StwoIsetargs#1{\StwoIsetargsss#1}
+\def\StwoIsetargsss#1#2#3#4#5#6#7{
+  \sa{x}{#1} \sa{u}{#2} \sa{gx}{#3}
+  \sa{nw}{#4} \sa{ne}{#5}
+  \sa{sw}{#6} \sa{se}{#7}
+  }
+
+% (c2m202p1p 9 "gabarito-2")
+% (c2m202p1a   "gabarito-2")
+
+\StwoIsetargsss {xx} {uu} {gguu} {NW} {NE} {SW} {SE}
+\StwoIsetargsss
+    {v} {w} {\sqrt{v}}
+    {F(\sqrt{v})} {\cos(2+\sqrt{v})·(2\sqrt{v})^{-1}}
+    {F(w)}        {\cos(2+w)}
+
+\def\StwoItmp{
+  \isubstboxTT
+    {\ga{nw}}  {\int \ga{ne} \, d\ga{x}}
+    {\ph{m}}
+    {\ga{sw}}  {\int \ga{se} \, d\ga{u}}
+    {Se $F'(\ga{u})=\ga{se}$ então:}
+    {Obs: $\ga{u}=\ga{gx}$.}
+}
+%
+$$\scalebox{0.9}{$
+  \begin{array}{c}
+  \pfo{S2} \;\;=\;\; \Stwo \\
+  [50pt]
+  \pfo{S2}[f(u):=F'(u)] \;\;=\;\; \StwoItmp \\
+  \end{array}
+  $}
+$$
+
 
 
 %\printbibliography
