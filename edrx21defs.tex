@@ -1,15 +1,20 @@
 % This file: (find-LATEX "edrx21defs.tex")
 %       See: (find-LATEX "edrx17defs.tex")
 %            (find-LATEX "edrx15defs.tex")
+% Loaded by: (find-LATEX "edrx21.sty")
 %
 % Miscellaneous defs, mostly symbols.
 
 
-% «.categories»		(to "categories")
-% «.greek-letters»	(to "greek-letters")
-% «.combinators»	(to "combinators")
-% «.colors»		(to "colors")
-% «.bhbox»		(to "bhbox")
+% «.categories»			(to "categories")
+% «.greek-letters»		(to "greek-letters")
+% «.combinators»		(to "combinators")
+% «.colors»			(to "colors")
+% «.mystrut»			(to "mystrut")
+% «.bhbox»			(to "bhbox")
+% «.bgcolorhbox»		(to "bgcolorhbox")
+% «.firstcol-anothercol»	(to "firstcol-anothercol")
+% «.co»				(to "co")
 
 
 \def\N{\mathbb{N}}
@@ -232,6 +237,11 @@
 \def\standout#1{\fcolorbox{red}{yellow}{#1}}
 
 
+% «mystrut»  (to ".mystrut")
+% (find-es "tex" "mathstrut")
+\def\mystrut#1#2{{\setbox0=\hbox{} \ht0=#1 \dp0=#2 \box0}}
+
+
 % «bhbox»  (to ".bhbox")
 % See: (find-es "tex" "bhbox")
 \def\smashedvrule#1#2#3{\vrule width#1 height#2 depth#3 \kern-#1}
@@ -245,6 +255,38 @@
     {\color{\bhboxlowercolor}{\smashedvrule{\wd0}{0pt}{\dp0}}}%
     \box0%
   }
+
+% «bgcolorhbox»  (to ".bgcolorhbox")
+% See: (find-dednat6 "tug-slides.tex" "bgcolorhbox")
+\def\bgcolorhbox#1#2{{%
+  \setbox0\hbox{#2}%
+  \setbox0\vbox{\vskip\fboxsep\box0\vskip\fboxsep}%
+  \setbox0\hbox{\kern\fboxsep\box0\kern\fboxsep}%
+  {\color{#1}{\smashedvrule{\wd0}{\ht0}{\dp0}}}%
+  \box0%
+  }}
+
+
+% «firstcol-anothercol»  (to ".firstcol-anothercol")
+% (find-es "tex" "firstcol-anothercol")
+\def\colwidth{8cm}
+\long\def\firstcol#1{\begin{minipage}[t]{\colwidth} #1 \end{minipage}}
+\long\def\anothercol#1{\qquad\firstcol{#1}}
+
+% «co»  (to ".co")
+% (find-es "tex" "co")
+% \co: a low-level way to typeset code; a poor man's "\verb"
+% It conflicts with the `\co' of Category Theory =(
+\def\co#1{{%
+  \def\%{\char37}%
+  \def\\{\char92}%
+  \def\^{\char94}%
+  \def\~{\char126}%
+  \tt#1%
+  }}
+\def\qco#1{`\co{#1}'}
+\def\qqco#1{``\co{#1}''}
+
 
 
 

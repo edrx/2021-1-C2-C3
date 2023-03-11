@@ -4,7 +4,7 @@
 % (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C3-intro.pdf"))
 % (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C3-intro.pdf"))
 % (defun e () (interactive) (find-LATEX "2021-1-C3-intro.tex"))
-% (defun o () (interactive) (find-LATEX "2021-1-C3-intro.tex"))
+% (defun o () (interactive) (find-LATEX "2020-2-C3-intro.tex"))
 % (defun u () (interactive) (find-latex-upload-links "2021-1-C3-intro"))
 % (defun v () (interactive) (find-2a '(e) '(d)))
 % (defun d0 () (interactive) (find-ebuffer "2021-1-C3-intro.pdf"))
@@ -20,15 +20,8 @@
 % http://angg.twu.net/LATEX/2021-1-C3-intro.pdf
 % (find-LATEX "2019.mk")
 % (find-CN-aula-links "2021-1-C3-intro" "3" "c3m211intro" "c3i")
-%
-% Video novo:
-% (find-ssr-links "c3m211intro" "2021-1-C3-intro" "xXOARCnYt_0")
-% (code-video     "c3m211introvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C3-intro.mp4")
-% (find-c3m211introvideo "0:00")
 
-% Video do semestre passado:
-% https://studio.youtube.com/video/3yWLubqHsic/edit
-
+% «.video-1»		(to "video-1")
 % «.defs»		(to "defs")
 % «.title»		(to "title")
 % «.introducao»		(to "introducao")
@@ -38,6 +31,17 @@
 % «.exercicio-4»	(to "exercicio-4")
 %
 % «.djvuize»		(to "djvuize")
+
+% «video-1»  (to ".video-1")
+% (c3m211introa   "video-1")
+% (find-ssr-links      "c3m211intro" "2021-1-C3-intro" "xXOARCnYt_0")
+% (code-eevvideo       "c3m211intro" "2021-1-C3-intro")
+% (code-eevvideo-local "c3m211intro" "2021-1-C3-intro")
+% (find-c3m211introvideo "0:00")
+% (find-c3m211introvideo "1:34")
+
+% Video do semestre passado:
+% (c3m202introa   "video-1")
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")

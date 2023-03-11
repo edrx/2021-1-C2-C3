@@ -1,4 +1,5 @@
 % This file: (find-LATEX "edrx21.sty")
+% Loads:     (find-LATEX "edrx21defs.tex")
 % Based on:  (find-LATEX "edrx17.sty")
 %            (find-LATEX "edrx15.sty")
 %            (find-LATEX "edrx08.sty")
@@ -16,6 +17,8 @@
 %   «.defzha»		(to "defzha")
 %   «.deftcg»		(to "deftcg")
 %   «.defub»		(to "defub")
+%   «.defftch»		(to "defftch")
+%   «.defvbt»		(to "defvbt")
 %   «.sa-and-ga»	(to "sa-and-ga")
 
 \usepackage{amsmath}
@@ -24,7 +27,7 @@
 %\usepackage{mathrsfs}
 %\usepackage{stmaryrd}
 \usepackage{array}       % (find-es "tex" "array")
-\usepackage{shortvrb}    % (find-es "tex" "shortvrb")
+%\usepackage{shortvrb}   % (find-es "tex" "shortvrb")
 \usepackage{graphicx}    % (find-es "tex" "graphicx")
 
 
@@ -92,6 +95,7 @@
 \def\mdashto {\mapstochar\dashrightarrow}
 \def\mdashot {\dashleftarrow\mapsfromchar}
 
+\def\origphi {\phi}
 
 
 
@@ -133,6 +137,7 @@
 \def\myvcenter#1{\begin{matrix}#1\end{matrix}}
 
 \def\rotl#1{\rotatebox{90}{$#1$}}
+\def\rotr#1{\rotatebox{270}{$#1$}}
 
 
 %           _              _       __     
@@ -274,7 +279,37 @@
   \fi
 }
 
+% «defftch»  (to ".defftch")
+% (find-LATEX "2021fitch.lua" "FitchGrid")
+% (find-LATEX "2021fitch.lua" "FitchGrid" "defftch =")
+\def\defftch#1#2{\expandafter\def\csname ftch-#1\endcsname{#2}}
+\def\ifftchundefined#1{\expandafter\ifx\csname ftch-#1\endcsname\relax}
+\def\ftch#1{\ifftchundefined{#1}
+    \errmessage{UNDEFINED FTCH: #1}
+  \else
+    \csname ftch-#1\endcsname
+  \fi
+}
+
+% «defvbt»  (to ".defvbt")
+% (find-LATEX "2021verbatim.lua")
+% (find-dednat6 "tug-slides.tex" "verbatim")
+% (find-dednat6 "tug-slides.tex" "verbatim" "\\def\\verbahbox")
+\def\defvbt#1#2{\expandafter\def\csname vbt-#1\endcsname{#2}}
+\def\ifvbtundefined#1{\expandafter\ifx\csname vbt-#1\endcsname\relax}
+\def\vbt#1{\ifvbtundefined{#1}
+    \errmessage{UNDEFINED VBT: #1}
+  \else
+    \csname vbt-#1\endcsname
+  \fi
+}
+\def\vbthbox#1{\hbox{\tt#1}}
+\def\vbtbgbox#1{\bgcolorhbox{YellowOrangeLight}{#1}}
+
+
 % «sa-and-ga»  (to ".sa-and-ga")
+% Example: \sa{01}{foo}
+%          \ga{01}
 \def\sa#1#2{\expandafter\def\csname myarg#1\endcsname{#2}}
 \def\ga#1{\csname myarg#1\endcsname}
 

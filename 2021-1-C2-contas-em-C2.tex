@@ -19,23 +19,35 @@
 %           file:///tmp/pen/2021-1-C2-contas-em-C2.pdf
 % http://angg.twu.net/LATEX/2021-1-C2-contas-em-C2.pdf
 % (find-LATEX "2019.mk")
-% (find-CN-aula-links "2021-1-C2-contas-em-C2" "2" "c2mcc2" "c2c")
+% (find-CN-aula-links "2021-1-C2-contas-em-C2" "2" "c2m211cc2" "c2c")
+
+% «.video-1»		(to "video-1")
+% «.video-2»		(to "video-2")
 %
-% Video:
-% (find-ssr-links "c2mcc2" "2021-1-C2-contas-em-C2" "P3fbFkCI_Bo")
-% (code-video     "c2mcc2video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-contas-em-C2.mp4")
-% (find-c2mcc2video "0:00" "1º/set/2021")
-
-% (find-ssr-links "c2mcc2" "2021-1-C2-contas-em-C2-2")
-% (code-video     "c2mcc2video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-contas-em-C2-2.mp4")
-% (find-c2mcc2video "0:00" "3/set/2021")
-
 % «.defs»		(to "defs")
 % «.title»		(to "title")
 % «.exemplo-1»		(to "exemplo-1")
 % «.exemplo-1-cont»	(to "exemplo-1-cont")
+% «.d-ln»		(to "d-ln")
+% «.d-arcsen»		(to "d-arcsen")
+% «.d-arcsen-2»		(to "d-arcsen-2")
+% «.d-arcsen-3»		(to "d-arcsen-3")
 %
 % «.djvuize»	(to "djvuize")
+
+
+% «video-1»  (to ".video-1")
+% (find-ssr-links     "c2m211cc2" "2021-1-C2-contas-em-C2" "P3fbFkCI_Bo")
+% (code-eevvideo      "c2m211cc2" "2021-1-C2-contas-em-C2" "P3fbFkCI_Bo")
+% (code-eevlinksvideo "c2m211cc2" "2021-1-C2-contas-em-C2" "P3fbFkCI_Bo")
+% (find-c2m211cc2video "0:00" "1º/set/2021")
+
+% «video-2»  (to ".video-2")
+% (find-ssr-links     "c2m211cc2" "2021-1-C2-contas-em-C2-2")
+% (code-eevvideo      "c2m211cc2" "2021-1-C2-contas-em-C2-2")
+% (code-eevlinksvideo "c2m211cc2" "2021-1-C2-contas-em-C2-2")
+% (find-c2m211cc2video "0:00" "3/set/2021")
+
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
@@ -114,8 +126,8 @@
 %                      |_|          |___/      
 %
 % «title»  (to ".title")
-% (c2mcc2p 1 "title")
-% (c2mcc2a   "title")
+% (c2m211cc2p 1 "title")
+% (c2m211cc2a   "title")
 
 \thispagestyle{empty}
 
@@ -142,8 +154,8 @@ Eduardo Ochs - RCN/PURO/UFF
 \newpage
 
 % «exemplo-1»  (to ".exemplo-1")
-% (c2mcc2p 2 "exemplo-1")
-% (c2mcc2a   "exemplo-1")
+% (c2m211cc2p 2 "exemplo-1")
+% (c2m211cc2a   "exemplo-1")
 
 {\bf Exemplo 1.}
 
@@ -184,8 +196,8 @@ $$
 \newpage
 
 % «exemplo-1-cont»  (to ".exemplo-1-cont")
-% (c2mcc2p 3 "exemplo-1-cont")
-% (c2mcc2a   "exemplo-1-cont")
+% (c2m211cc2p 3 "exemplo-1-cont")
+% (c2m211cc2a   "exemplo-1-cont")
 
 Sejam:
 %
@@ -258,6 +270,10 @@ $$
 
 \newpage
 
+% «d-ln»  (to ".d-ln")
+% (c2m211cc2p 5 "d-ln")
+% (c2m211cc2a   "d-ln")
+
 {\bf Derivada do $\ln$}
 %
 $$\pfo{DFI2}
@@ -282,6 +298,10 @@ $$
 
 
 \newpage
+
+% «d-arcsen»  (to ".d-arcsen")
+% (c2m211cc2p 6 "d-arcsen")
+% (c2m211cc2a   "d-arcsen")
 
 {\bf Derivada do $\arcsen$}
 %
@@ -331,6 +351,10 @@ $$
 
 \newpage
 
+% «d-arcsen-2»  (to ".d-arcsen-2")
+% (c2m211cc2p 7 "d-arcsen-2")
+% (c2m211cc2a   "d-arcsen-2")
+
 {\bf Derivada do $\arcsen$ (2)}
 
 Se $s = \senθ$ então $\frac{ds}{dθ} = \cos θ$, $ds = \cosθ \, dθ$, e:
@@ -349,6 +373,10 @@ $$
 
 
 \newpage
+
+% «d-arcsen-3»  (to ".d-arcsen-3")
+% (c2m211cc2p 8 "d-arcsen-3")
+% (c2m211cc2a   "d-arcsen-3")
 
 {\bf Derivada do $\arcsen$ (3)}
 
@@ -487,4 +515,5 @@ make -f 2019.mk STEM=2021-1-C2-contas-em-C2 pdf
 % coding: utf-8-unix
 % ee-tla: "c2c"
 % ee-tla: "c2mcc2"
+% ee-tla: "c2m211cc2"
 % End:

@@ -25,20 +25,23 @@
 % (find-LATEX "2020-2-C2-edovs.tex" "videos")
 
 % «video-1»  (to ".video-1")
-% (find-ssr-links "c2m211edovs" "2021-1-C2-edovs" "xfjjGhtavno")
-% (code-video     "c2m211edovsvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-edovs.mp4")
-% (find-c2m211edovsvideo "0:00")
-% (find-c2m211edovsvideo "6:45" "nesses testes eu também uso o [:=]")
-% (find-c2m211edovsvideo "6:57" "deixa eu só fazer um comentário")
-% (find-c2m211edovsvideo "7:12" "questão 1: encontre a substituição certa")
-% (find-c2m211edovsvideo "7:35" "o jeito mais rápido é por tentativa e erro")
-% (find-c2m211edovsvideo "7:49" "gabarito")
-% (find-c2m211edovsvideo "8:57" "typo")
-% (find-c2m211edovsvideo "9:23" "se a gente for seguir a regra")
-% (find-c2m211edovsvideo "9:38" "na verdade eu peguei uma questão do semestre passado")
+% (c2m211edovsa   "video-1")
+% (find-ssr-links     "c2m211edovs" "2021-1-C2-edovs" "xfjjGhtavno")
+% (code-eevvideo      "c2m211edovs" "2021-1-C2-edovs" "xfjjGhtavno")
+% (code-eevlinksvideo "c2m211edovs" "2021-1-C2-edovs" "xfjjGhtavno")
+% (find-c2m211edovsvideo  "0:00")
+% (find-c2m211edovsvideo  "6:45" "nesses testes eu também uso o [:=]")
+% (find-c2m211edovsvideo  "6:57" "deixa eu só fazer um comentário")
+% (find-c2m211edovsvideo  "7:12" "questão 1: encontre a substituição certa")
+% (find-c2m211edovsvideo  "7:35" "o jeito mais rápido é por tentativa e erro")
+% (find-c2m211edovsvideo  "7:49" "gabarito")
+% (find-c2m211edovsvideo  "8:57" "typo")
+% (find-c2m211edovsvideo  "9:23" "se a gente for seguir a regra")
+% (find-c2m211edovsvideo  "9:38" "na verdade eu peguei uma questão do semestre passado")
 % (find-c2m211edovsvideo "10:03" "pra vocês terem exemplos suficientes")
 % (find-c2m211edovsvideo "10:24" "e depois eu até peço como exercício")
 % (find-c2m211edovsvideo "11:25" "só mais uma coisa")
+% (find-c2m211edovsvideo "11:48" "(Figuras do Thomas)")
 % (find-c2m211edovsvideo "12:10" "mas é uma explicação quase toda em texto")
 % (find-c2m211edovsvideo "12:30" "pra transformar num caso particular")
 
@@ -53,6 +56,8 @@
 % «.campos-dirs»		(to "campos-dirs")
 % «.exercicio-1»		(to "exercicio-1")
 % «.exercicio-2»		(to "exercicio-2")
+% «.links»			(to "links")
+% «.EDOVSG»			(to "EDOVSG")
 % «.como-testar-uma-sol»	(to "como-testar-uma-sol")
 % «.exercicio-3»		(to "exercicio-3")
 % «.funcoes-inversas»		(to "funcoes-inversas")
@@ -208,7 +213,7 @@ Eduardo Ochs - RCN/PURO/UFF
 
 % «introducao»  (to ".introducao")
 % (c2m211edovsp 2 "introducao")
-% (c2m211edovs    "introducao")
+% (c2m211edovsa   "introducao")
 
 {\bf Introdução}
 
@@ -255,7 +260,7 @@ $$f'(x) = 2x, \qquad f(2)=5$$
 
 % «campos-dirs»  (to ".campos-dirs")
 % (c2m211edovsp 4 "campos-dirs")
-% (c2m211edovs    "campos-dirs")
+% (c2m211edovsa   "campos-dirs")
 
 {\bf Campos de direções}
 
@@ -315,7 +320,7 @@ coeficientes angulares naqueles pontos são gráficos de
 
 % «exercicio-1»  (to ".exercicio-1")
 % (c2m211edovsp 5 "exercicio-1")
-% (c2m211edovs    "exercicio-1")
+% (c2m211edovsa   "exercicio-1")
 
 {\bf Exercício 1.}
 
@@ -345,7 +350,7 @@ g) & $\dydx = -y/x$ \\
 
 % «exercicio-2»  (to ".exercicio-2")
 % (c2m211edovsp 6 "exercicio-2")
-% (c2m211edovs    "exercicio-2")
+% (c2m211edovsa   "exercicio-2")
 
 {\bf Exercício 2.}
 
@@ -374,6 +379,10 @@ d) $y=\sqrt{1-x^2}$
 
 \newpage
 
+% «links»  (to ".links")
+% (c2m211edovsp 7 "links")
+% (c2m211edovsa   "links")
+
 Na página seguinte temos o método geral para resolver EDOs
 
 com variáveis separáveis. Vou chamá-lo de $\pfo{EDOVSG}$ pra
@@ -386,11 +395,53 @@ como ``substituindo $f(x)$ por $▁▁$ acima obtemos...''.
 
 \ssk
 
-O método \pfo{EDOVSG} usa algumas gambiarras --- veja o
+O método \pfo{EDOVSG} usa algumas gambiarras --- veja os
 
-vídeo pra explicações.
+vídeos pra explicações.
+
+\bsk
+
+{\scriptsize
+
+(Links adicionados em 2022jul19):
+
+\ssk
+
+% (c2m211edovsa "video-1")
+\url{http://angg.twu.net/eev-videos/2021-1-C2-edovs.mp4}
+
+\url{https://www.youtube.com/watch?v=xfjjGhtavno}
+
+\ssk
+
+% (c2m202edovsa "video-1")
+% (find-c2m202edovsvideo "5:54" "a gente vai interpretar esse f'(x)")
+% (find-c2m202edovsvideo "6:30" "desenhando os coefs angs só desses 10 pontos daqui")
+% (find-c2m202edovsvideo "7:37" "Exercício 1")
+\url{http://angg.twu.net/eev-videos/2020-2-C2-edovs.mp4}
+
+\url{https://www.youtube.com/watch?v=bNfZUomf1xg}
+
+\url{https://www.youtube.com/watch?v=bNfZUomf1xg\#t=5m54s} (Exercício 1)
+
+\ssk
+
+% (c2m202edovsa "video-2")
+\url{http://angg.twu.net/eev-videos/2020-2-C2-edovs-2.mp4}
+
+\url{https://www.youtube.com/watch?v=Ejr2wvpBiTE}
+
+
+}
+
+
+
 
 \newpage
+
+% «EDOVSG»  (to ".EDOVSG")
+% (c2m211edovsp 8 "EDOVSG")
+% (c2m211edovsa   "EDOVSG")
 
 $\pfo{EDOVSG} =
  \left(
@@ -443,7 +494,7 @@ $
 
 % «como-testar-uma-sol»  (to ".como-testar-uma-sol")
 % (c2m211edovsp 11 "como-testar-uma-sol")
-% (c2m211edovs     "como-testar-uma-sol")
+% (c2m211edovsa    "como-testar-uma-sol")
 
 {\bf Como testar uma solução}
 
@@ -505,7 +556,7 @@ delas como constantes.
 
 % «exercicio-3»  (to ".exercicio-3")
 % (c2m211edovsp 13 "exercicio-3")
-% (c2m211edovs     "exercicio-3")
+% (c2m211edovsa    "exercicio-3")
 
 {\bf Exercício 3.}
 
@@ -609,7 +660,7 @@ chegou na inversa certa.
 
 % «exercicio-4»  (to ".exercicio-4")
 % (c2m211edovsp 17 "exercicio-4")
-% (c2m211edovs     "exercicio-4")
+% (c2m211edovsa    "exercicio-4")
 
 {\bf Exercício 4.} 
 
@@ -667,7 +718,7 @@ e a operação `$[:=]$'.
 
 % «exercicio-5»  (to ".exercicio-5")
 % (c2m211edovsp 18 "exercicio-5")
-% (c2m211edovs     "exercicio-5")
+% (c2m211edovsa    "exercicio-5")
 
 {\bf Exercício 5.}
 

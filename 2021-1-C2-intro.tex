@@ -4,7 +4,7 @@
 % (defun D () (interactive) (find-pdf-page      "~/LATEX/2021-1-C2-intro.pdf"))
 % (defun d () (interactive) (find-pdftools-page "~/LATEX/2021-1-C2-intro.pdf"))
 % (defun e () (interactive) (find-LATEX "2021-1-C2-intro.tex"))
-% (defun o () (interactive) (find-LATEX "2021-1-C2-intro.tex"))
+% (defun o () (interactive) (find-LATEX "2020-2-C2-intro.tex"))
 % (defun u () (interactive) (find-latex-upload-links "2021-1-C2-intro"))
 % (defun v () (interactive) (find-2a '(e) '(d)))
 % (defun d0 () (interactive) (find-ebuffer "2021-1-C2-intro.pdf"))
@@ -20,16 +20,8 @@
 % http://angg.twu.net/LATEX/2021-1-C2-intro.pdf
 % (find-LATEX "2019.mk")
 % (find-CN-aula-links "2021-1-C2-intro" "2" "c2m211intro" "c2i")
-%
-% Video:
-% (find-ssr-links "c2m211intro" "2021-1-C2-intro" "AIv4N8go1Bg")
-% (code-video     "c2m211introvideo" "$S/http/angg.twu.net/eev-videos/2021-1-C2-intro.mp4")
-% (find-c2m211introvideo "0:00")
 
-% Video do semestre passado:
-% (find-ssr-links "c2m202intro" "2020.2-C2-intro" "ZbKOS5yElzg")
-% https://www.youtube.com/watch?v=ZbKOS5yElzg#t=8m50s
-
+% «.videos»			(to "videos")
 % «.defs»			(to "defs")
 % «.title»			(to "title")
 % «.EDOs»			(to "EDOs")
@@ -37,6 +29,69 @@
 % «.exercicio-1»		(to "exercicio-1")
 %
 % «.djvuize»			(to "djvuize")
+
+
+% Video:
+% «videos»  (to ".videos")
+% (c2m211introa  "videos")
+%
+% (find-ssr-links     "c2m211intro" "2021-1-C2-intro" "AIv4N8go1Bg")
+% (code-eevvideo      "c2m211intro" "2021-1-C2-intro" "AIv4N8go1Bg")
+% (code-eevlinksvideo "c2m211intro" "2021-1-C2-intro" "AIv4N8go1Bg")
+% (find-c2m211introvideo  "0:00" "")
+% (find-c2m211introvideo  "0:23" "que a gente nunca mais vai usar")
+% (find-c2m211introvideo  "1:00" "O curso tem principalmente dois temas")
+% (find-c2m211introvideo  "1:10" "função f(x) com esse gráfico daqui")
+% (find-c2m211introvideo  "1:33" "quando a gente for definir direito essa integral")
+% (find-c2m211introvideo  "1:51" "e dividir ela num monte de retângulos")
+% (find-c2m211introvideo  "2:06" "se a gente divide em, digamos, 10 retângulos")
+% (find-c2m211introvideo  "2:33" "as manipulações com objetos infinitos vão ser úteis")
+% (find-c2m211introvideo  "3:14" "é fácil dividir em dois")
+% (find-c2m211introvideo  "3:56" "vários jeitos de aproximar por rtângulos")
+% (find-c2m211introvideo  "4:15" "em dois retângulos tudo é fácil de visualizar")
+% (find-c2m211introvideo  "4:29" "visualizar o que acontece quando")
+% (find-c2m211introvideo  "4:40" "vários vídeos cokm animações incríveis")
+% (find-c2m211introvideo  "4:48" "e^(i theta)")
+% (find-c2m211introvideo  "5:27" "prometi que eu ia mostrar um vídeo")
+% (find-c2m211introvideo  "6:25" "parece meio absurdo mas funciona")
+% (find-c2m211introvideo  "6:49" "e imaginar o que acontece quando")
+% (find-c2m211introvideo  "7:35" "outra coisa que vai acontecer nesse curso")
+% (find-c2m211introvideo  "7:40" "C2 é como se fosse Prog 2")
+% (find-c2m211introvideo  "7:59" "em C1 quase tudo que vocês faziam")
+% (find-c2m211introvideo  "8:20" "aqui estruturas bem mais complicadas")
+% (find-c2m211introvideo  "8:39" "A gente vai usar ... o [:=]")
+% (find-c2m211introvideo  "8:39" "vai nos ajudar a chutar soluções e testá-las")
+% (find-c2m211introvideo  "9:35" "A operação [:=] está se tornando cada vez mais comum")
+% (find-c2m211introvideo  "9:46" "trecho da minha interação com um programa")
+% (find-c2m211introvideo  "9:56" "a partir deste momento f é esta expressão daqui")
+% (find-c2m211introvideo "10:07" "f não é um número, f é uma expressão")
+% (find-c2m211introvideo "10:30" ".subs(x, y+z)")
+% (find-c2m211introvideo "11:00" "...os livros usam o [:=] de forma disfarçada")
+% (find-c2m211introvideo "11:10" "escrevem em português de vários jeitos")
+% (find-c2m211introvideo "11:34" "repara que também tem um x aqui à direita")
+% (find-c2m211introvideo "11:46" "aqui é a expressão natiga")
+% (find-c2m211introvideo "11:57" "aqui tem um zoom da expressão de baixo")
+% (find-c2m211introvideo "12:22" "cada linha é da forma <var> := <expr>")
+% (find-c2m211introvideo "12:42" "pode ser usada pra testar equações")
+% (find-c2m211introvideo "12:46" "resolver x+2=5 por chutar e testar")
+% (find-c2m211introvideo "13:25" "pra pegar teoremas e ver casos particulares")
+% (find-c2m211introvideo "13:41" "`[RC] :=' é bem parecido com")
+% (find-c2m211introvideo "14:05" "eu tou pegando essa igualdade daqui e")
+% (find-c2m211introvideo "14:18" "e aí eu passo a usar esse [RC] como uma abreviação")
+% (find-c2m211introvideo "14:25" "[f := sen]")
+% (find-c2m211introvideo "14:47" "e mandassem fotos pro grupo")
+% (find-c2m211introvideo "14:58" "aulas presenciais - atividades em gruppo")
+% (find-c2m211introvideo "15:22" "Sobre aulas por Telegram")
+% (find-c2m211introvideo "15:25" "Dica 7")
+% (find-c2m211introvideo "16:09" "fácil de ler e fácil de verificar")
+% (find-c2m211introvideo "16:30" "você mesmo horas depois ou no dia seguinte")
+% (find-c2m211introvideo "17:14" "aulas por Telegram - improvisar um pouco")
+% (find-c2m211introvideo "17:27" "grande atividade de grupo - discussão por Telegram")
+% (find-c2m211introvideo "17:45" "Se as outras pessoas acharem que ler")
+
+% Video do semestre passado:
+% (find-ssr-links "c2m202intro" "2020.2-C2-intro" "ZbKOS5yElzg")
+% https://www.youtube.com/watch?v=ZbKOS5yElzg#t=8m50s
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")

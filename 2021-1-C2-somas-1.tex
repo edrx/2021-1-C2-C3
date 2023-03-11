@@ -20,33 +20,45 @@
 % http://angg.twu.net/LATEX/2021-1-C2-somas-1.pdf
 % (find-LATEX "2019.mk")
 % (find-CN-aula-links "2021-1-C2-somas-1" "2" "c2m211somas1" "c2so")
+
+% «.videos»			(to "videos")
+% «.defs»			(to "defs")
+% «.title»			(to "title")
+% «.fig-hernandez-1»		(to "fig-hernandez-1")
+% «.shoelace»			(to "shoelace")
+% «.areas-de-trapezios»		(to "areas-de-trapezios")
+% «.exercicio-1»		(to "exercicio-1")
+% «.jeito-esperto»		(to "jeito-esperto")
+% «.exercicios-2-e-3»		(to "exercicios-2-e-3")
+% «.particoes»			(to "particoes")
+% «.exercicio-4»		(to "exercicio-4")
+% «.exercicio-5»		(to "exercicio-5")
+% «.ponto-decimal»		(to "ponto-decimal")
+% «.partition-sum»		(to "partition-sum")
+% «.subst»			(to "subst")
+% «.exercicio-9»		(to "exercicio-9")
+% «.exercicio-9-dicas»		(to "exercicio-9-dicas")
+%   «.simplificar-fracoes»	(to "simplificar-fracoes")
+% «.trapezios»			(to "trapezios")
 %
+% «.djvuize»		(to "djvuize")
+
+
+% «videos»  (to ".videos")
+% (c2m211somas1a "videos")
 % Videos antigos:
 % (c2m202somas1a "video")
 %
 % Video sobre o exercicio 9:
-% (find-ssr-links "c2m211somas1" "2021-1-C2-somas-1" "Ht5iLKGlysM")
-% (code-video     "c2m211somas1video" "$S/http/angg.twu.net/eev-videos/2021-1-C2-somas-1.mp4")
+% (find-ssr-links     "c2m211somas1" "2021-1-C2-somas-1" "Ht5iLKGlysM")
+% (code-eevvideo      "c2m211somas1" "2021-1-C2-somas-1" "Ht5iLKGlysM")
+% (code-eevlinksvideo "c2m211somas1" "2021-1-C2-somas-1" "Ht5iLKGlysM")
+% (find-c2m211somas1video "0:00")
+% (find-c2m211somas1video)
 % (find-c2m211somas1video "0:00")
 % (find-c2m211somas1video "5:00" "erro da fórmula")
 % (find-c2m211somas1video "5:16" "monte de hipóteses")
 % (find-c2m211somas1video "5:35" "coisas que a gente tem certeza")
-
-% «.defs»		(to "defs")
-% «.title»		(to "title")
-% «.fig-hernandez-1»	(to "fig-hernandez-1")
-% «.shoelace»		(to "shoelace")
-% «.areas-de-trapezios»	(to "areas-de-trapezios")
-% «.exercicio-1»	(to "exercicio-1")
-% «.jeito-esperto»	(to "jeito-esperto")
-% «.exercicios-2-e-3»	(to "exercicios-2-e-3")
-% «.particoes»		(to "particoes")
-% «.exercicio-4»	(to "exercicio-4")
-% «.exercicio-9»	(to "exercicio-9")
-% «.exercicio-9-dicas»	(to "exercicio-9-dicas")
-% «.trapezios»		(to "trapezios")
-%
-% «.djvuize»		(to "djvuize")
 
 \documentclass[oneside,12pt]{article}
 \usepackage[colorlinks,citecolor=DarkRed,urlcolor=DarkRed]{hyperref} % (find-es "tex" "hyperref")
@@ -308,6 +320,8 @@ entre $x=0$ e $x=4$.
 \newpage
 
 % «jeito-esperto»  (to ".jeito-esperto")
+% (c2m211somas1p 7 "jeito-esperto")
+% (c2m211somas1a   "jeito-esperto")
 % (c2sop 7 "jeito-esperto")
 % (c2soa   "jeito-esperto")
 % (c2m202somas1p 5 "jeito-esperto")
@@ -428,6 +442,8 @@ numa tabela. Neste caso quem são $a$, $b$ e $N$?
 \newpage
 
 % «exercicio-5»  (to ".exercicio-5")
+% (c2m211somas1p 11 "exercicio-5")
+% (c2m211somas1a    "exercicio-5")
 % (c2m202somas1p 9 "exercicio-5")
 % (c2m202somas1    "exercicio-5")
 
@@ -493,8 +509,10 @@ $$
 \newpage
 
 % «subst»  (to ".subst")
+% (c2m211somas1p 13 "subst")
+% (c2m211somas1a    "subst")
 % (c2m202somas1p 11 "subst")
-% (c2m202somas1     "subst")
+% (c2m202somas1a    "subst")
 
 Note que a expressão $\sum_{i=a}^b \mathsf{expr}$ quer dizer ``some
 várias cópias da expressão $\mathsf{expr}$, a primeira com $i$
@@ -594,6 +612,7 @@ f(\frac{a_i+b_i}{2})·(b_i-a_i)$ e compare as duas expansões.
 % «exercicio-9-dicas»  (to ".exercicio-9-dicas")
 % (c2m211somas1p 16 "exercicio-9-dicas")
 % (c2m211somas1a    "exercicio-9-dicas")
+% «simplificar-fracoes»  (to ".simplificar-fracoes")
 
 {\bf Dicas pro exercício 9}
 
